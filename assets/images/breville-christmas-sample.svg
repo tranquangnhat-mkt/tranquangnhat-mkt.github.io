@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-label="CHRISTMAS CHALLENGE">
+<defs>
+  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+    <stop stop-color="#8f171a"/><stop offset="1" stop-color="#da563d"/>
+  </linearGradient>
+</defs>
+<rect width="1200" height="760" rx="38" fill="url(#g)"/>
+<circle cx="960" cy="165" r="230" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/>
+<circle cx="960" cy="165" r="150" fill="none" stroke="#fff" stroke-opacity=".20" stroke-width="2"/>
+<rect x="680" y="155" width="310" height="390" rx="34" fill="#fff" fill-opacity=".11" stroke="#fff" stroke-opacity=".28"/>
+<rect x="735" y="205" width="200" height="260" rx="22" fill="#fff" fill-opacity=".14"/>
+<circle cx="835" cy="335" r="58" fill="#f2d69a" fill-opacity=".85"/>
+<path d="M0 620C210 520 355 750 595 610c195-112 379-72 605 25v125H0Z" fill="#0d1620" fill-opacity=".24"/>
+<text x="68" y="105" fill="#fff" font-size="34" font-family="Arial, sans-serif" font-weight="700">CHRISTMAS CHALLENGE</text>
+<text x="68" y="150" fill="#fff" fill-opacity=".72" font-size="21" font-family="Arial, sans-serif">Breville · Brand Campaign · 2023</text>
+<text x="68" y="660" fill="#fff" font-size="62" font-family="Arial, sans-serif" font-weight="800">SAMPLE VISUAL</text>
+</svg>
