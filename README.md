@@ -80,7 +80,7 @@ assets/documents/Tran-Quang-Nhat-Marketing-CV.pdf
 ```
 
 ## Nội dung cần kiểm tra trước khi công khai
-
+GitHub Pages republish: 2026-07-03
 - LinkedIn hiện vẫn là dữ liệu mẫu nên chưa hiển thị.
 - Số điện thoại trong file Excel chưa đủ rõ ràng nên không được đưa lên website.
 - Hình ảnh dự án hiện là hình minh họa.
