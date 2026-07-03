@@ -85,3 +85,4 @@ assets/documents/Tran-Quang-Nhat-Marketing-CV.pdf
 - Số điện thoại trong file Excel chưa đủ rõ ràng nên không được đưa lên website.
 - Hình ảnh dự án hiện là hình minh họa.
 - Case study của SMEG, Lavazza và E-commerce mới chỉ có phần tóm tắt.
+Deployment refresh: 2026-07-03
