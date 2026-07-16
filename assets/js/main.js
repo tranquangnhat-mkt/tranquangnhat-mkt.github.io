@@ -4,7 +4,6 @@ const langToggle = document.getElementById("langToggle");
 const menuToggle = document.getElementById("menuToggle");
 const mobileNav = document.getElementById("mobileNav");
 const toast = document.getElementById("toast");
-const modal = document.getElementById("projectModal");
 
 const translations = {
   vi: {
@@ -59,8 +58,8 @@ const translations = {
     "experience.saintSummary": "Tham gia triển khai các hoạt động Marketing cho ngành hàng thiết bị làm đẹp và chăm sóc cá nhân. Nội dung chi tiết sẽ được cập nhật ở phiên bản tiếp theo.",
     "projects.eyebrow": "DỰ ÁN TIÊU BIỂU",
     "projects.title": "Một dự án tốt cần có vấn đề, lựa chọn và kết quả.",
-    "projects.note": "Hình ảnh hiện tại là hình mẫu. Bạn có thể thay bằng ảnh thật mà không cần thay đổi bố cục.",
-    "projects.brevilleSummary": "Chiến dịch kết hợp influencer, social content và minigame nhằm tăng nhận diện thương hiệu, chứng minh giá trị sản phẩm và tạo tương tác trực tiếp với khách hàng.",
+    "projects.note": "Các dự án được trình bày theo bối cảnh, lựa chọn chiến lược, vai trò và kết quả thực tế.",
+    "projects.brevilleSummary": "Chiến dịch sử dụng creator content và thử thách UGC để đưa máy pha cà phê Breville vào những tình huống sử dụng gần gũi trong mùa Giáng sinh.",
     "projects.viewCase": "Xem case study",
     "projects.ecomTitle": "E-commerce Growth",
     "projects.ecomSummary": "Kết hợp nội dung, influencer, affiliate và hoạt động thúc đẩy bán hàng để nâng mức độ hiện diện của thương hiệu trên Shopee và Lazada.",
@@ -74,17 +73,7 @@ const translations = {
     "contact.title": "Bạn đang có một bài toán Marketing cần được giải?",
     "contact.text": "Tôi sẵn sàng trao đổi về các cơ hội trong Brand Marketing, Digital Marketing, IMC, Trade Marketing và các ngành hàng FMCG, thực phẩm, đồ uống.",
     "contact.linkedinNote": "LinkedIn và CV sẽ được cập nhật sau.",
-    "footer.note": "Built with strategy, curiosity and vibe coding.",
-    "case.contextTitle": "Bối cảnh",
-    "case.context": "Breville là thương hiệu uy tín tại Úc, châu Âu và Bắc Mỹ nhưng vẫn còn mới với nhiều khách hàng Việt Nam, đặc biệt trong ngành hàng máy pha cà phê cao cấp. Thách thức là vừa mở rộng nhận diện, vừa chứng minh chất lượng và giá trị tương xứng của sản phẩm.",
-    "case.objectiveTitle": "Mục tiêu",
-    "case.objective": "Tăng nhận diện và tương tác với thương hiệu, được theo dõi qua lượt tiếp cận, lượt tương tác và mức độ tham gia thử thách trên các nền tảng social media.",
-    "case.roleTitle": "Vai trò",
-    "case.role": "Lên ý tưởng và kế hoạch, phối hợp với agency và influencer, xây dựng nội dung social, viết kịch bản video, theo dõi số liệu và báo cáo cho quản lý cùng các bên liên quan.",
-    "case.resultTitle": "Kết quả",
-    "case.result": "Gần 800.000 lượt xem, gần 20.000 lượt thích, hơn 500 lượt chia sẻ, hơn 50 bài dự thi và hơn 1.000 lượt đề cập #BrevilleVietnam. Sản phẩm được xuất hiện trên Kênh14.",
-    "case.learningTitle": "Bài học",
-    "case.learning": "Minigame kết hợp influencer không phải một chiến thuật mới, nhưng hiệu quả phụ thuộc vào việc lựa chọn đúng người, đúng sản phẩm và đúng thời điểm. Khi được thiết kế thành một hành trình thống nhất, influencer content và hoạt động tương tác có thể hỗ trợ lẫn nhau thay vì tồn tại như các video rời rạc."
+    "footer.note": "Built with strategy, curiosity and vibe coding."
   },
 
   en: {
@@ -139,8 +128,8 @@ const translations = {
     "experience.saintSummary": "Supported marketing activities for beauty and personal-care appliances. More details will be added in the next version.",
     "projects.eyebrow": "SELECTED PROJECTS",
     "projects.title": "A strong project needs a problem, a decision and a result.",
-    "projects.note": "The current visuals are placeholders. They can be replaced with real project images without changing the layout.",
-    "projects.brevilleSummary": "An influencer, social-content and minigame campaign designed to build brand awareness, demonstrate product value and create direct customer participation.",
+    "projects.note": "Projects are structured around context, strategic choices, individual contribution and measurable outcomes.",
+    "projects.brevilleSummary": "A creator-led UGC campaign that placed Breville coffee machines in relatable Christmas use cases and encouraged community participation.",
     "projects.viewCase": "View case study",
     "projects.ecomTitle": "E-commerce Growth",
     "projects.ecomSummary": "Combined content, influencer, affiliate and sales-promotion activities to strengthen Breville's presence on Shopee and Lazada.",
@@ -154,17 +143,7 @@ const translations = {
     "contact.title": "Do you have a Marketing challenge to solve?",
     "contact.text": "I am open to opportunities in Brand Marketing, Digital Marketing, IMC, Trade Marketing and FMCG, food and beverage categories.",
     "contact.linkedinNote": "LinkedIn and CV will be updated later.",
-    "footer.note": "Built with strategy, curiosity and vibe coding.",
-    "case.contextTitle": "Context",
-    "case.context": "Breville is well established in Australia, Europe and North America but was still unfamiliar to many Vietnamese consumers, particularly in the premium coffee-machine category. The challenge was to expand awareness while demonstrating product quality and value.",
-    "case.objectiveTitle": "Objective",
-    "case.objective": "Increase brand awareness and engagement through social reach, interactions and participation in the campaign challenge.",
-    "case.roleTitle": "My role",
-    "case.role": "Developed the idea and plan, coordinated with the agency and influencers, created supporting social content, wrote video scripts, tracked performance and reported to managers and stakeholders.",
-    "case.resultTitle": "Results",
-    "case.result": "Nearly 800,000 views, almost 20,000 likes, more than 500 shares, over 50 challenge entries and more than 1,000 #BrevilleVietnam mentions. The product was also featured on Kenh14.",
-    "case.learningTitle": "Learning",
-    "case.learning": "Influencer minigames are not new, but performance depends on choosing the right creator, product and timing. When designed as one connected journey, influencer content and audience participation can reinforce each other instead of becoming isolated videos."
+    "footer.note": "Built with strategy, curiosity and vibe coding."
   }
 };
 
@@ -222,27 +201,6 @@ document.querySelectorAll(".experience-tab").forEach((tab) => {
     tab.classList.add("active");
     document.getElementById(`experience-${tab.dataset.experience}`).classList.add("active");
   });
-});
-
-document.querySelectorAll(".project-open").forEach((button) => {
-  button.addEventListener("click", () => {
-    modal.classList.add("active");
-    document.body.classList.add("modal-open");
-  });
-});
-
-document.querySelectorAll("[data-close-modal]").forEach((button) => {
-  button.addEventListener("click", () => {
-    modal.classList.remove("active");
-    document.body.classList.remove("modal-open");
-  });
-});
-
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    modal.classList.remove("active");
-    document.body.classList.remove("modal-open");
-  }
 });
 
 document.getElementById("cvButton").addEventListener("click", () => {
