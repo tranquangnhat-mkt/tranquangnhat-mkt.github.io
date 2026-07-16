@@ -35,7 +35,7 @@ jobs:
           mkdir -p _site
           cp index.html _site/
           cp -R assets _site/
-
+          cp -R projects _site/
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v5
         with:
