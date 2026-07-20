@@ -13,6 +13,10 @@ Tài liệu này cho biết nội dung trong Excel đã được đưa vào đâ
 | 02_Kinh nghiệm | Maybe Group | Experience — updating |
 | 02_Kinh nghiệm | Saint L'Beau | Experience — updating |
 | 03_Dự án | Christmas Challenge with Breville | Featured Project + Case Study |
+| 03_Dự án | SMEG Vietnam Digital Brand System | Project Card + Case Study |
+| 03_Dự án | E-commerce Growth & Marketplace Operations | Project Card + Case Study |
+| 03_Dự án | B2B Event Marketing & Trade Show Activation | Project Card + Case Study |
+| 03_Dự án | EPICURE Website Replatforming | Project Card + Case Study |
 | 04_Kỹ năng | Brand, Digital, Trade, Strategy | Skills |
 | 06_Liên hệ_SEO | Email, title, meta description | Contact + SEO |
 
