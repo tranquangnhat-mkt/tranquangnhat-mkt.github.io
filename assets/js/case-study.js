@@ -131,7 +131,7 @@ function setCaseLanguage(language) {
     const key = element.dataset.i18n;
     if (copy[key]) element.textContent = copy[key];
   });
-  langToggle.textContent = language === "vi" ? "EN" : "VI";
+  if (langToggle) langToggle.textContent = language === "vi" ? "EN" : "VI";
   localStorage.setItem("portfolio-language", language);
 }
 
@@ -148,14 +148,18 @@ themeToggle.addEventListener("click", () => {
 
 setCaseLanguage(localStorage.getItem("portfolio-language") || "vi");
 
-langToggle.addEventListener("click", () => {
-  setCaseLanguage(document.documentElement.lang === "vi" ? "en" : "vi");
-});
+if (langToggle) {
+  langToggle.addEventListener("click", () => {
+    setCaseLanguage(document.documentElement.lang === "vi" ? "en" : "vi");
+  });
+}
 
-menuToggle.addEventListener("click", () => mobileNav.classList.toggle("open"));
-mobileNav.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => mobileNav.classList.remove("open"));
-});
+if (menuToggle && mobileNav) {
+  menuToggle.addEventListener("click", () => mobileNav.classList.toggle("open"));
+  mobileNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => mobileNav.classList.remove("open"));
+  });
+}
 
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
