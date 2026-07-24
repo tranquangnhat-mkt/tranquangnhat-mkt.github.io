@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="TRẦN QUANG NHẬT">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d4513d"/><stop offset="1" stop-color="#1f5147"/></linearGradient></defs>
+<rect width="800" height="1000" rx="40" fill="url(#g)"/>
+<circle cx="590" cy="180" r="210" fill="none" stroke="#ffffff" stroke-opacity=".18" stroke-width="2"/>
+<circle cx="590" cy="180" r="140" fill="none" stroke="#ffffff" stroke-opacity=".20" stroke-width="2"/>
+<circle cx="400" cy="365" r="145" fill="#f3d4bd"/>
+<path d="M255 340c15-125 82-190 165-190 104 0 170 86 170 210-75-52-170-59-335-20Z" fill="#172036"/>
+<path d="M165 1000c14-285 109-435 235-435s221 150 235 435Z" fill="#f5b66e"/>
+<path d="M263 615c38 46 82 70 137 70 56 0 101-24 137-70l70 385H193Z" fill="#172036" opacity=".72"/>
+<text x="54" y="80" fill="#fff" font-size="30" font-family="Arial, sans-serif" font-weight="700">TRẦN QUANG NHẬT</text>
+<text x="54" y="120" fill="#fff" fill-opacity=".7" font-size="19" font-family="Arial, sans-serif">Marketing Executive</text>
+</svg>
