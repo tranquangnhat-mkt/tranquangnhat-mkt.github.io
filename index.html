@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Integrated Marketing portfolio of Tran Quang Nhat — brand, digital commerce, content and experiential marketing." />
+  <meta name="description" content="Marketing portfolio of Tran Quang Nhat — brand building, digital commerce, content and experiential marketing." />
   <meta name="author" content="Tran Quang Nhat" />
-  <meta property="og:title" content="Tran Quang Nhat | Integrated Marketing Portfolio" />
-  <meta property="og:description" content="Selected marketing work across premium consumer, coffee and lifestyle categories." />
+  <meta property="og:title" content="Tran Quang Nhat | Marketing Portfolio" />
+  <meta property="og:description" content="Selected marketing projects across premium consumer, coffee and lifestyle categories." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/images/social-preview.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700&subset=vietnamese&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="assets/images/favicon.png" />
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <title>Tran Quang Nhat | Integrated Marketing Portfolio</title>
+  <link rel="stylesheet" href="assets/css/homepage.css" />
+  <title>Tran Quang Nhat | Marketing Portfolio</title>
 </head>
 <body>
   <div class="progress" id="scrollProgress"></div>
@@ -19,13 +23,13 @@
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="#home" aria-label="Back to top">
-        <span class="brand-mark">N</span>
+        <span class="brand-mark">N.</span>
         <span>TRAN QUANG NHAT</span>
       </a>
       <nav class="desktop-nav" aria-label="Primary navigation">
-        <a href="#about" data-en="About" data-vi="Giới thiệu">About</a>
-        <a href="#work" data-en="Selected Work" data-vi="Dự án">Selected Work</a>
-        <a href="#experience" data-en="Experience" data-vi="Kinh nghiệm">Experience</a>
+        <a href="#home" data-en="Home" data-vi="Trang chủ">Home</a>
+        <a href="#projects" data-en="Projects" data-vi="Dự án">Projects</a>
+        <a href="#skills" data-en="Skills & Courses" data-vi="Kỹ năng & Khóa học">Skills & Courses</a>
         <a href="#contact" data-en="Contact" data-vi="Liên hệ">Contact</a>
       </nav>
       <div class="nav-actions">
@@ -35,195 +39,147 @@
       </div>
     </div>
     <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
-      <a href="#about" data-en="About" data-vi="Giới thiệu">About</a>
-      <a href="#work" data-en="Selected Work" data-vi="Dự án">Selected Work</a>
-      <a href="#experience" data-en="Experience" data-vi="Kinh nghiệm">Experience</a>
+      <a href="#home" data-en="Home" data-vi="Trang chủ">Home</a>
+      <a href="#projects" data-en="Projects" data-vi="Dự án">Projects</a>
+      <a href="#skills" data-en="Skills & Courses" data-vi="Kỹ năng & Khóa học">Skills & Courses</a>
       <a href="#contact" data-en="Contact" data-vi="Liên hệ">Contact</a>
     </nav>
   </header>
 
   <main>
     <section class="hero" id="home">
-      <div class="container hero-heading reveal">
-        <p class="eyebrow">INTEGRATED MARKETING · HO CHI MINH CITY</p>
-        <h1>
-          <span data-en="I connect brand ideas" data-vi="Tôi kết nối ý tưởng thương hiệu">I connect brand ideas</span>
-          <em data-en="with commercial execution." data-vi="với triển khai thương mại.">with commercial execution.</em>
-        </h1>
-        <div class="hero-bottom">
-          <p data-en="4+ years across brand building, digital commerce, content and experiential marketing."
-             data-vi="Hơn 4 năm kinh nghiệm trong brand building, digital commerce, content và experiential marketing.">
-            4+ years across brand building, digital commerce, content and experiential marketing.
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow" data-en="MARKETING PORTFOLIO · HO CHI MINH CITY" data-vi="MARKETING PORTFOLIO · TP. HỒ CHÍ MINH">MARKETING PORTFOLIO · HO CHI MINH CITY</p>
+          <h1>
+            <span data-en="Hi, I’m" data-vi="Xin chào, tôi là">Hi, I’m</span>
+            <strong>Quang Nhat.</strong>
+          </h1>
+          <p class="hero-role" data-en="Integrated Marketing Professional" data-vi="Chuyên viên Marketing Tích hợp">Integrated Marketing Professional</p>
+          <p class="hero-description"
+             data-en="With 4+ years of experience, I turn business priorities into brand campaigns, content systems, digital commerce and customer experiences. My work spans premium home appliances, coffee, lifestyle and healthcare categories."
+             data-vi="Với hơn 4 năm kinh nghiệm, tôi chuyển hóa ưu tiên kinh doanh thành chiến dịch thương hiệu, hệ thống nội dung, thương mại điện tử và trải nghiệm khách hàng. Tôi từng làm việc trong các ngành thiết bị gia dụng cao cấp, cà phê, lifestyle và chăm sóc sức khỏe.">
+            With 4+ years of experience, I turn business priorities into brand campaigns, content systems, digital commerce and customer experiences. My work spans premium home appliances, coffee, lifestyle and healthcare categories.
           </p>
-          <a class="round-link" href="#work" aria-label="View selected work">↘</a>
-        </div>
-      </div>
-      <div class="container hero-collage reveal">
-        <a class="hero-tile hero-tile-main" href="projects/smeg-digital-brand-system.html">
-          <img src="assets/images/projects/smeg-digital-brand-system/smeg-cover.jpg" alt="SMEG Vietnam social media project" />
-          <span>SMEG · BRAND BUILDING</span>
-        </a>
-        <a class="hero-tile" href="projects/b2b-event-marketing-trade-show-activation.html">
-          <img src="assets/images/projects/b2b-event-activation/event-homepage-cover.jpg" alt="B2B event activation project" />
-          <span>EPICURE · EXPERIENCE</span>
-        </a>
-        <a class="hero-tile" href="projects/epicure-website-replatforming.html">
-          <img src="assets/images/projects/epicure-website-replatforming/website-homepage-cover.jpg" alt="EPICURE website rebuild project" />
-          <span>EPICURE · DIGITAL</span>
-        </a>
-      </div>
-    </section>
-
-    <section class="about-band" id="about">
-      <div class="container about-grid reveal">
-        <div>
-          <p class="eyebrow" data-en="ABOUT ME" data-vi="GIỚI THIỆU">ABOUT ME</p>
-          <h2 data-en="A marketer shaped by content craft and business execution."
-              data-vi="Một marketer trưởng thành từ kỹ năng nội dung và triển khai kinh doanh.">
-            A marketer shaped by content craft and business execution.
-          </h2>
-        </div>
-        <div class="about-copy">
-          <p data-en="My work sits between strategy and delivery: translating business priorities into campaigns, content systems, commerce operations and brand experiences."
-             data-vi="Công việc của tôi nằm giữa chiến lược và triển khai: chuyển hóa ưu tiên kinh doanh thành chiến dịch, hệ thống nội dung, vận hành thương mại và trải nghiệm thương hiệu.">
-            My work sits between strategy and delivery: translating business priorities into campaigns, content systems, commerce operations and brand experiences.
-          </p>
-          <div class="about-actions">
-            <a class="button button-light" href="#work" data-en="Explore my work" data-vi="Khám phá dự án">Explore my work</a>
-            <button class="text-button" id="cvButton" type="button" data-en="Download résumé ↗" data-vi="Tải CV ↗">Download résumé ↗</button>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects" data-en="View my projects" data-vi="Xem dự án">View my projects</a>
+            <button class="button button-secondary" id="cvButton" type="button" data-en="Download CV" data-vi="Tải CV">Download CV</button>
           </div>
         </div>
+
+        <div class="hero-visual reveal" aria-label="Selected marketing work">
+          <a class="visual-main" href="projects/smeg-digital-brand-system.html">
+            <img src="assets/images/projects/smeg-digital-brand-system/smeg-cover.jpg" alt="SMEG Vietnam digital brand project" />
+            <span>SMEG · DIGITAL BRAND</span>
+          </a>
+          <a class="visual-small visual-event" href="projects/b2b-event-marketing-trade-show-activation.html">
+            <img src="assets/images/projects/b2b-event-activation/event-homepage-cover.jpg" alt="EPICURE event marketing project" />
+          </a>
+          <a class="visual-small visual-web" href="projects/epicure-website-replatforming.html">
+            <img src="assets/images/projects/epicure-website-replatforming/website-homepage-cover.jpg" alt="EPICURE website rebuild project" />
+          </a>
+          <div class="visual-badge">4+<small>YEARS</small></div>
+        </div>
       </div>
+
       <div class="container metric-grid reveal">
-        <article><strong>4+</strong><span data-en="Years in marketing" data-vi="Năm kinh nghiệm">Years in marketing</span></article>
-        <article><strong>15+</strong><span data-en="Events delivered" data-vi="Sự kiện triển khai">Events delivered</span></article>
-        <article><strong>2×</strong><span data-en="E-commerce YoY" data-vi="Doanh số e-commerce YoY">E-commerce YoY</span></article>
-        <article><strong>1M+</strong><span data-en="OCPB video views" data-vi="Lượt xem video OCPB">OCPB video views</span></article>
+        <article><strong>4+</strong><span data-en="Years in Marketing" data-vi="Năm làm Marketing">Years in Marketing</span></article>
+        <article><strong>15+</strong><span data-en="Events Delivered" data-vi="Sự kiện đã triển khai">Events Delivered</span></article>
+        <article><strong>2×</strong><span data-en="E-commerce YoY" data-vi="Doanh số E-commerce YoY">E-commerce YoY</span></article>
+        <article><strong>1M+</strong><span data-en="OCPB Video Views" data-vi="Lượt xem video OCPB">OCPB Video Views</span></article>
       </div>
     </section>
 
-    <section class="work-section" id="work">
-      <div class="container section-title reveal">
-        <div>
-          <p class="eyebrow" data-en="SELECTED WORK" data-vi="DỰ ÁN TIÊU BIỂU">SELECTED WORK</p>
-          <h2 data-en="Projects with a clear business story." data-vi="Những dự án có câu chuyện kinh doanh rõ ràng.">Projects with a clear business story.</h2>
-        </div>
-        <p data-en="Selected cases across brand, digital transformation, commerce and customer experience."
-           data-vi="Các case tiêu biểu về brand, digital transformation, commerce và customer experience.">
-          Selected cases across brand, digital transformation, commerce and customer experience.
+    <section class="projects-section" id="projects">
+      <div class="container section-heading reveal">
+        <p class="eyebrow" data-en="SELECTED WORK" data-vi="DỰ ÁN TIÊU BIỂU">SELECTED WORK</p>
+        <h2 data-en="Projects" data-vi="Dự án">Projects</h2>
+        <p data-en="A selection of projects that show how I connect strategy, execution and measurable outcomes."
+           data-vi="Các dự án tiêu biểu thể hiện cách tôi kết nối chiến lược, triển khai và kết quả đo lường.">
+          A selection of projects that show how I connect strategy, execution and measurable outcomes.
         </p>
       </div>
 
-      <div class="container project-grid">
-        <article class="project-card project-card-wide reveal">
-          <a class="project-visual" href="projects/smeg-digital-brand-system.html">
-            <img src="assets/images/projects/smeg-digital-brand-system/smeg-cover.jpg" alt="SMEG Vietnam brand presence" />
-            <span class="project-number">01</span>
-          </a>
-          <div class="project-info">
-            <span>BRAND BUILDING · SOCIAL</span>
-            <h3>Building SMEG Vietnam’s Digital Brand Presence from Zero</h3>
-            <div class="proof-pill"><strong>10K+</strong> Facebook · <strong>9K</strong> Instagram</div>
-            <a href="projects/smeg-digital-brand-system.html">View case study ↗</a>
-          </div>
-        </article>
+      <div class="container projects-grid">
+        <a class="project-card project-card-large reveal" href="projects/smeg-digital-brand-system.html">
+          <div class="project-image"><img src="assets/images/projects/smeg-digital-brand-system/smeg-cover.jpg" alt="SMEG Vietnam digital brand system" /></div>
+          <div class="project-overlay"><span>BRAND BUILDING · SOCIAL MEDIA</span><h3>SMEG Vietnam Digital Brand System</h3><p><strong>10K+</strong> Facebook · <strong>9K</strong> Instagram</p></div>
+        </a>
 
-        <article class="project-card reveal">
-          <a class="project-visual" href="projects/epicure-website-replatforming.html">
-            <img src="assets/images/projects/epicure-website-replatforming/website-homepage-cover.jpg" alt="EPICURE digital platform rebuild" />
-            <span class="project-number">02</span>
-          </a>
-          <div class="project-info">
-            <span>DIGITAL TRANSFORMATION</span>
-            <h3>Rebuilding EPICURE’s Platform for Portfolio Expansion</h3>
-            <div class="proof-pill">WordPress → Haravan · GA4 · GTM</div>
-            <a href="projects/epicure-website-replatforming.html">View case study ↗</a>
-          </div>
-        </article>
+        <a class="project-card reveal" href="projects/epicure-website-replatforming.html">
+          <div class="project-image"><img src="assets/images/projects/epicure-website-replatforming/website-homepage-cover.jpg" alt="EPICURE website rebuild" /></div>
+          <div class="project-overlay"><span>DIGITAL TRANSFORMATION</span><h3>EPICURE Website Rebuild</h3><p>WordPress → Haravan · GA4 · GTM</p></div>
+        </a>
 
-        <article class="project-card reveal">
-          <a class="project-visual" href="projects/ecommerce-growth-marketplace-operations.html">
-            <img src="assets/images/projects/ecommerce-growth/ecommerce-cover.jpg" alt="Multi-brand marketplace stores" />
-            <span class="project-number">03</span>
-          </a>
-          <div class="project-info">
-            <span>DIGITAL COMMERCE</span>
-            <h3>Scaling Multi-brand E-Commerce Across Marketplaces</h3>
-            <div class="proof-pill"><strong>2×</strong> YoY sales · Top 4 internal assessment</div>
-            <a href="projects/ecommerce-growth-marketplace-operations.html">View case study ↗</a>
-          </div>
-        </article>
+        <a class="project-card reveal" href="projects/ecommerce-growth-marketplace-operations.html">
+          <div class="project-image"><img src="assets/images/projects/ecommerce-growth/ecommerce-cover.jpg" alt="E-commerce marketplace operations" /></div>
+          <div class="project-overlay"><span>DIGITAL COMMERCE</span><h3>Multi-brand E-Commerce Management</h3><p><strong>2×</strong> YoY sales</p></div>
+        </a>
 
-        <article class="project-card project-card-wide project-card-dark reveal">
-          <a class="project-visual" href="projects/b2b-event-marketing-trade-show-activation.html">
-            <img src="assets/images/projects/b2b-event-activation/event-homepage-cover.jpg" alt="EPICURE B2B event activation" />
-            <span class="project-number">04</span>
-          </a>
-          <div class="project-info">
-            <span>EXPERIENTIAL MARKETING</span>
-            <h3>Turning B2B Events into Product Experiences and Leads</h3>
-            <div class="proof-pill"><strong>15+</strong> events · <strong>100</strong> qualified leads</div>
-            <a href="projects/b2b-event-marketing-trade-show-activation.html">View case study ↗</a>
-          </div>
-        </article>
+        <a class="project-card project-card-large reveal" href="projects/b2b-event-marketing-trade-show-activation.html">
+          <div class="project-image"><img src="assets/images/projects/b2b-event-activation/event-homepage-cover.jpg" alt="B2B event marketing and trade show activation" /></div>
+          <div class="project-overlay"><span>EXPERIENTIAL MARKETING</span><h3>B2B Event Marketing & Activation</h3><p><strong>15+</strong> events · <strong>100</strong> qualified leads</p></div>
+        </a>
+
+        <a class="project-card reveal" href="projects/ong-chu-plant-based.html">
+          <div class="project-image"><img src="assets/images/projects/ong-chu-plant-based/ong-chu-cover.webp" alt="Ông Chú Plant-Based content project" /></div>
+          <div class="project-overlay"><span>SHORT-FORM CONTENT</span><h3>Ông Chú Plant-Based</h3><p><strong>1M+</strong> views in 3 months</p></div>
+        </a>
+
+        <a class="project-card reveal" href="projects/breville-christmas-challenge.html">
+          <div class="project-image"><img src="assets/images/projects/breville-christmas-challenge/breville-christmas-cover.webp" alt="Breville Christmas creator campaign" /></div>
+          <div class="project-overlay"><span>INFLUENCER CAMPAIGN</span><h3>Breville Christmas Challenge</h3><p><strong>30</strong> participation videos</p></div>
+        </a>
       </div>
     </section>
 
-    <section class="experience-section" id="experience">
-      <div class="container experience-grid">
-        <div class="experience-intro reveal">
-          <p class="eyebrow" data-en="EXPERIENCE" data-vi="KINH NGHIỆM">EXPERIENCE</p>
-          <h2 data-en="From content production to integrated marketing."
-              data-vi="Từ sản xuất nội dung đến marketing tích hợp.">
-            From content production to integrated marketing.
-          </h2>
-        </div>
-        <div class="career-list reveal">
-          <article><span>2023—2026</span><h3>EPICURE</h3><p>Marketing Executive</p></article>
-          <article><span>2023</span><h3>Maybe Group</h3><p>Content Editor</p></article>
-          <article><span>2021—2023</span><h3>Saint L’Beau</h3><p>Marketing Executive</p></article>
-        </div>
+    <section class="skills-section" id="skills">
+      <div class="container section-heading section-heading-light reveal">
+        <p class="eyebrow" data-en="CAPABILITIES & LEARNING" data-vi="NĂNG LỰC & HỌC TẬP">CAPABILITIES & LEARNING</p>
+        <h2 data-en="Skills & Courses" data-vi="Kỹ năng & Khóa học">Skills & Courses</h2>
+        <p data-en="This section is prepared as a flexible frame. Verified skills, tools and completed certifications will be added later."
+           data-vi="Phần này được tạo dưới dạng khung linh hoạt. Kỹ năng, công cụ và các chứng chỉ đã hoàn thành sẽ được bổ sung sau.">
+          This section is prepared as a flexible frame. Verified skills, tools and completed certifications will be added later.
+        </p>
       </div>
-      <div class="container capability-line reveal">
-        <span>IMC PLANNING</span><span>BRAND EXECUTION</span><span>E-COMMERCE</span>
-        <span>CONTENT STRATEGY</span><span>WEBSITE & SEO</span><span>EVENT ACTIVATION</span>
-        <span>GA4 / GTM</span><span>AGENCY MANAGEMENT</span>
-      </div>
-    </section>
 
-    <section class="archive-section">
-      <div class="container section-title reveal">
-        <div>
-          <p class="eyebrow" data-en="CONTENT FOUNDATION" data-vi="NỀN TẢNG NỘI DUNG">CONTENT FOUNDATION</p>
-          <h2 data-en="Earlier work that shaped how I communicate."
-              data-vi="Những dự án đầu tiên định hình cách tôi làm nội dung.">
-            Earlier work that shaped how I communicate.
-          </h2>
+      <div class="container skills-layout">
+        <div class="skills-panel reveal">
+          <div class="panel-title"><span>01</span><h3 data-en="Core Skills" data-vi="Kỹ năng cốt lõi">Core Skills</h3></div>
+          <div class="skill-tags">
+            <span>IMC Planning</span><span>Brand Execution</span><span>Content Strategy</span>
+            <span>E-Commerce</span><span>Event Activation</span><span>Website & SEO</span>
+            <span>Agency Management</span><span>GA4 / GTM</span>
+          </div>
         </div>
-      </div>
-      <div class="container archive-grid">
-        <a class="archive-card reveal" href="projects/ong-chu-plant-based.html">
-          <img src="assets/images/projects/ong-chu-plant-based/ong-chu-cover.webp" alt="Ông Chú Plant-Based editorial content" />
-          <div><span>SHORT-FORM CONTENT · 2023</span><h3>Ông Chú Plant-Based</h3><strong>1M+ organic views ↗</strong></div>
-        </a>
-        <a class="archive-card reveal" href="projects/breville-christmas-challenge.html">
-          <img src="assets/images/projects/breville-christmas-challenge/breville-christmas-cover.webp" alt="Breville Christmas creator campaign" />
-          <div><span>CREATOR CAMPAIGN · 2023</span><h3>Breville Christmas Challenge</h3><strong>30 participation videos ↗</strong></div>
-        </a>
+
+        <div class="courses-panel reveal">
+          <div class="panel-title"><span>02</span><h3 data-en="Courses & Certificates" data-vi="Khóa học & Chứng chỉ">Courses & Certificates</h3></div>
+          <div class="course-placeholder">
+            <div class="certificate-icon">＋</div>
+            <div>
+              <strong data-en="Certificate frame ready" data-vi="Khung chứng chỉ đã sẵn sàng">Certificate frame ready</strong>
+              <p data-en="Course name · Issuing organization · Completion date"
+                 data-vi="Tên khóa học · Đơn vị cấp · Thời gian hoàn thành">Course name · Issuing organization · Completion date</p>
+            </div>
+          </div>
+          <div class="course-placeholder muted-placeholder">
+            <div class="certificate-icon">＋</div>
+            <div>
+              <strong data-en="Add another course" data-vi="Thêm khóa học khác">Add another course</strong>
+              <p data-en="Credential link and key learning can be added here."
+                 data-vi="Liên kết chứng chỉ và kiến thức chính có thể được thêm tại đây.">Credential link and key learning can be added here.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="contact-section" id="contact">
       <div class="container contact-grid reveal">
         <p class="eyebrow">LET’S CONNECT</p>
-        <h2 data-en="Have a marketing opportunity in mind?"
-            data-vi="Bạn đang có một cơ hội Marketing phù hợp?">
-          Have a marketing opportunity in mind?
-        </h2>
-        <p data-en="Open to Marketing Executive and brand-focused roles in consumer-led industries."
-           data-vi="Sẵn sàng trao đổi về các vị trí Marketing Executive và brand-focused trong ngành hàng tiêu dùng.">
-          Open to Marketing Executive and brand-focused roles in consumer-led industries.
-        </p>
+        <h2 data-en="Let’s build meaningful marketing work."
+            data-vi="Hãy cùng tạo nên những dự án Marketing có giá trị.">Let’s build meaningful marketing work.</h2>
         <a class="contact-email" href="mailto:tranquangnhat.mkt@gmail.com">tranquangnhat.mkt@gmail.com ↗</a>
       </div>
     </section>
