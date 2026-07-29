@@ -31,10 +31,11 @@ h1,h2,h3,p{margin-top:0}.container{width:min(calc(100% - 80px),var(--max));margi
 .hero-description{max-width:720px;margin-bottom:36px;color:var(--muted);font-size:1.1rem;line-height:1.75}
 .hero-actions{display:flex;gap:16px;flex-wrap:wrap}.button{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 27px;border:1px solid var(--ink);border-radius:100px;font-size:.9rem;font-weight:700;cursor:pointer}
 .button-primary{color:var(--bg);background:var(--ink)}.button-secondary{color:var(--ink);background:transparent}
-.hero-visual{position:relative;min-height:560px}.hero-visual a{position:absolute;overflow:hidden;box-shadow:0 22px 55px rgba(22,22,16,.18)}
-.hero-visual img{height:100%;object-fit:cover;transition:transform .55s}.hero-visual a:hover img{transform:scale(1.035)}
-.visual-main{z-index:2;top:0;left:5%;width:57%;height:82%;border-radius:36px}.visual-main span{position:absolute;right:18px;bottom:18px;left:18px;padding:11px 14px;color:#fff;background:rgba(10,10,8,.76);font-size:.68rem;font-weight:800;letter-spacing:.11em}
+.hero-visual{position:relative;min-height:560px}.hero-visual .visual-photo{position:absolute;margin:0;overflow:hidden;box-shadow:0 22px 55px rgba(22,22,16,.18)}
+.hero-visual img{height:100%;object-fit:cover;transition:transform .55s}.hero-visual .visual-photo:hover img{transform:scale(1.035)}
+.visual-main{z-index:2;top:0;left:5%;width:57%;height:82%;border-radius:36px}.visual-main figcaption{position:absolute;right:18px;bottom:18px;left:18px;padding:11px 14px;color:#fff;background:rgba(10,10,8,.76);font-size:.68rem;font-weight:800;letter-spacing:.11em}
 .visual-small{width:40%;height:43%;border:8px solid var(--bg)}.visual-event{z-index:3;right:1%;bottom:2%;transform:rotate(4deg)}.visual-web{z-index:1;top:12%;right:2%;transform:rotate(-4deg)}
+.visual-main img{object-position:center 35%}.visual-event img{object-position:center}.visual-web img{object-position:center 32%}
 .visual-badge{position:absolute;z-index:4;right:36%;bottom:1%;display:grid;place-items:center;width:116px;aspect-ratio:1;color:#171713;background:var(--accent);border-radius:50%;font-size:2rem;font-weight:900;line-height:.8;transform:rotate(-8deg)}
 .visual-badge small{display:block;font-size:.55rem;letter-spacing:.14em}
 .metric-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:62px}
@@ -101,7 +102,7 @@ h1,h2,h3,p{margin-top:0}.container{width:min(calc(100% - 80px),var(--max));margi
 .skills-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px}.skills-panel,.courses-panel{padding:34px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.055)}
 .panel-title{display:flex;align-items:center;gap:17px;margin-bottom:30px}.panel-title>span{display:grid;place-items:center;width:40px;aspect-ratio:1;color:#171713;background:var(--accent);border-radius:50%;font-size:.78rem;font-weight:800}.panel-title h3{margin:0;font-size:1.38rem}
 .skill-tags{display:flex;gap:10px;flex-wrap:wrap}.skill-tags span{padding:12px 15px;border:1px solid rgba(255,255,255,.22);font-size:.8rem;font-weight:600}
-.course-placeholder{display:flex;align-items:center;gap:18px;padding:20px;border:1px dashed rgba(255,255,255,.32)}.course-placeholder+.course-placeholder{margin-top:12px}.certificate-icon{display:grid;place-items:center;flex:0 0 48px;aspect-ratio:1;color:#171713;background:var(--accent);border-radius:6px;font-size:1.3rem}.course-placeholder strong{display:block;margin-bottom:5px;font-size:.95rem}.course-placeholder p{margin:0;color:rgba(255,255,255,.55);font-size:.8rem}.muted-placeholder{opacity:.63}
+.certificate-list{display:grid;gap:12px}.certificate-card{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:17px;padding:20px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.035);transition:transform .25s ease,border-color .25s ease,background .25s ease}.certificate-card:hover,.certificate-card:focus-visible{border-color:var(--accent);background:rgba(255,255,255,.08);transform:translateX(6px);outline:none}.certificate-index{display:grid;place-items:center;flex:0 0 48px;width:48px;aspect-ratio:1;color:#171713;background:var(--accent);font-size:.78rem;font-weight:900}.certificate-card strong{display:block;margin-bottom:6px;font-size:.92rem;line-height:1.35}.certificate-card p{margin:0;color:rgba(255,255,255,.58);font-size:.76rem;line-height:1.5}.certificate-link{font-size:1.15rem}
 .contact-section{padding:105px 0;color:#fff;background:#26271f}.contact-grid{text-align:center}.contact-grid h2{max-width:850px;margin:0 auto 28px;font-size:clamp(2.7rem,5vw,5.2rem);font-weight:800;line-height:1;letter-spacing:-.05em}.contact-email{font-size:clamp(1rem,2vw,1.5rem);font-weight:600;text-decoration:underline;text-underline-offset:8px}
 footer{padding:28px 0;color:rgba(255,255,255,.5);background:#26271f;border-top:1px solid rgba(255,255,255,.12)}.footer-inner{display:flex;justify-content:space-between;font-size:.66rem}
 .toast{position:fixed;right:24px;bottom:24px;z-index:300;max-width:360px;padding:14px 18px;color:#fff;background:#171713;box-shadow:0 18px 50px rgba(0,0,0,.22);transform:translateY(30px);opacity:0;pointer-events:none;transition:.25s}.toast.show{transform:none;opacity:1}
@@ -125,9 +126,9 @@ footer{padding:28px 0;color:rgba(255,255,255,.5);background:#26271f;border-top:1
   .project-overlay h3{margin:7px 0 5px;font-size:1.45rem}
   .project-card:hover,.project-card:focus-visible{transform:translateY(-5px)}
   .project-card:hover .project-overlay,.project-card:focus-visible .project-overlay{transform:none}
-  .skills-panel,.courses-panel{padding:24px}.course-placeholder{align-items:flex-start;padding:16px}.footer-inner{display:grid;gap:6px}
+  .skills-panel,.courses-panel{padding:24px}.certificate-card{grid-template-columns:auto 1fr;align-items:start;padding:16px}.certificate-index{width:40px}.certificate-link{display:none}.footer-inner{display:grid;gap:6px}
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.project-image img,.hero-visual img{transition:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.project-image img,.hero-visual img,.certificate-card{transition:none}}
 
 /* V11 — rebuilt proportional system inspired by the reference layout */
 :root{--max:1640px}
