@@ -3,211 +3,341 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ông Chú Plant-Based — case study về long-form-to-short-form content repurposing của Trần Quang Nhật." />
+  <meta name="description" content="Case study Ông Chú Plant-Based — xây dựng và chuẩn hóa hệ thống nội dung video ngắn đa nền tảng cho thương hiệu Vinamit." />
   <meta name="author" content="Trần Quang Nhật" />
   <meta property="og:title" content="Ông Chú Plant-Based | Trần Quang Nhật" />
-  <meta property="og:description" content="Tái cấu trúc nội dung dài thành 36 video giáo dục ngắn gọn và xây dựng một hệ thống biên tập đa nền tảng." />
+  <meta property="og:description" content="Xây dựng và chuẩn hóa hệ thống nội dung video ngắn đa nền tảng cho dự án Ông Chú Plant-Based của Vinamit." />
   <meta property="og:type" content="article" />
-  <meta property="og:image" content="../assets/images/projects/ong-chu-plant-based/ong-chu-cover.webp" />
+  <meta property="og:image" content="../assets/images/projects/ong-chu-plant-based/v20/project-cover.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700&subset=vietnamese&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
-  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/ocpb-tailwind.css?v=21" />
   <title>Ông Chú Plant-Based | Trần Quang Nhật</title>
 </head>
-<body class="case-page portfolio-case-page ocpb-case-page">
-  <div class="progress" id="scrollProgress"></div>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="../index.html#home" aria-label="Về trang portfolio"><span class="brand-mark">N</span><span class="brand-copy"><strong>Trần Quang Nhật</strong><small>Marketing Executive</small></span></a>
-      <nav class="desktop-nav" aria-label="Điều hướng chính"><a href="../index.html#about">Giới thiệu</a><a href="../index.html#experience">Kinh nghiệm</a><a href="../index.html#projects">Dự án</a><a href="../index.html#contact">Liên hệ</a></nav>
-      <div class="nav-actions"><button class="text-toggle" id="langToggle" type="button" aria-label="Đổi ngôn ngữ">EN</button><button class="icon-button" id="themeToggle" type="button" aria-label="Đổi giao diện sáng tối">☾</button><button class="icon-button mobile-only" id="menuToggle" type="button" aria-label="Mở menu">☰</button></div>
+<body class="ocpb-light-surface overflow-x-hidden">
+  <div class="ocpb-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <header class="ocpb-header" id="siteHeader">
+    <div class="ocpb-shell flex h-[74px] items-center justify-between gap-5">
+      <a class="flex items-center gap-3 text-white" href="../index.html#home" aria-label="Trở về trang chủ Portfolio">
+        <span class="grid h-9 w-9 place-items-center rounded-full bg-[#6c3795] text-xs font-black">N.</span>
+        <span class="hidden text-[11px] font-extrabold uppercase tracking-[0.16em] sm:block">Tran Quang Nhat</span>
+      </a>
+
+      <nav class="hidden items-center gap-8 lg:flex" aria-label="Điều hướng chính">
+        <a class="ocpb-nav-link" href="../index.html#home" data-vi="Trang chủ" data-en="Home">Trang chủ</a>
+        <a class="ocpb-nav-link" href="../index.html#projects" data-vi="Dự án" data-en="Projects">Dự án</a>
+        <a class="ocpb-nav-link" href="../index.html#skills" data-vi="Kỹ năng" data-en="Skills">Kỹ năng</a>
+        <a class="ocpb-nav-link" href="../index.html#contact" data-vi="Liên hệ" data-en="Contact">Liên hệ</a>
+      </nav>
+
+      <div class="flex items-center gap-3 text-white">
+        <div class="ocpb-language flex items-center gap-1 rounded-full border border-white/40 bg-black/20 px-3 py-2 text-[10px] font-extrabold tracking-[0.12em]" role="group" aria-label="Chọn ngôn ngữ">
+          <button type="button" data-language="vi" aria-pressed="true">VI</button>
+          <span class="text-white/40">|</span>
+          <button type="button" data-language="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="grid h-9 w-9 place-items-center rounded-full border border-white/40 bg-black/20 text-sm" id="themeToggle" type="button" aria-label="Đổi giao diện sáng tối">☾</button>
+        <button class="grid h-9 w-9 place-items-center rounded-full border border-white/40 bg-black/20 text-sm lg:hidden" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Mở menu">☰</button>
+      </div>
     </div>
-    <nav class="mobile-nav" id="mobileNav" aria-label="Điều hướng di động"><a href="../index.html#about">Giới thiệu</a><a href="../index.html#experience">Kinh nghiệm</a><a href="../index.html#projects">Dự án</a><a href="../index.html#contact">Liên hệ</a></nav>
+
+    <nav class="ocpb-mobile-nav border-t border-white/20 bg-neutral-950/95 px-5 py-5 text-center backdrop-blur-xl lg:hidden" id="mobileNav" aria-label="Điều hướng di động">
+      <a class="ocpb-nav-link py-2" href="../index.html#home" data-vi="Trang chủ" data-en="Home">Trang chủ</a>
+      <a class="ocpb-nav-link py-2" href="../index.html#projects" data-vi="Dự án" data-en="Projects">Dự án</a>
+      <a class="ocpb-nav-link py-2" href="../index.html#skills" data-vi="Kỹ năng" data-en="Skills">Kỹ năng</a>
+      <a class="ocpb-nav-link py-2" href="../index.html#contact" data-vi="Liên hệ" data-en="Contact">Liên hệ</a>
+    </nav>
   </header>
 
   <main>
-    <section class="case-hero">
-      <div class="container">
-        <a class="case-back-link" href="../index.html#projects"><span aria-hidden="true">←</span> Quay lại danh sách dự án</a>
-        <div class="case-header-grid">
-          <div class="reveal">
-            <p class="eyebrow">CASE STUDY · MAYBE GROUP · 06–08/2023</p>
-            <h1 class="case-title">Ông Chú Plant-Based</h1>
-            <p class="case-subtitle">Short-form Educational Content Growth</p>
-            <p class="case-overview">Tái cấu trúc nội dung dài của Host thành một series video giáo dục cô đọng, dễ tiếp cận và phù hợp với hành vi xem nội dung ngắn. Dự án kết hợp nghiên cứu nguồn, transcript mapping, xây lại mạch kể chuyện, rough cut và phối hợp hậu kỳ; đồng thời mở rộng sang hai video giới thiệu sản phẩm từ footage nông trại.</p>
-            <div class="case-role-tags" aria-label="Phạm vi công việc"><span>Content Research</span><span>Transcript Mapping</span><span>Narrative Restructuring</span><span>Footage Selection</span><span>Rough Cut</span><span>Music Integration</span><span>Post-production Coordination</span><span>Distribution Support</span></div>
+    <section class="ocpb-hero relative flex items-end overflow-hidden bg-neutral-950 pb-16 pt-32 md:pb-24">
+      <picture class="absolute inset-0 h-full w-full">
+        <source media="(max-width: 640px)" srcset="../assets/images/projects/ong-chu-plant-based/v20/hero-mobile.jpg" />
+        <img class="h-full w-full object-cover" src="../assets/images/projects/ong-chu-plant-based/v20/hero-desktop.jpg" alt="Thu hoạch mít tại vùng nguyên liệu của Vinamit" />
+      </picture>
+      <div class="ocpb-shell relative z-10 text-white">
+        <a class="mb-24 inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white/80 transition hover:text-[#88c54f] md:mb-40" href="../index.html#projects">
+          <span aria-hidden="true">←</span><span data-vi="Quay lại danh sách dự án" data-en="Back to selected projects">Quay lại danh sách dự án</span>
+        </a>
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.25em] text-[#88c54f]" data-vi="Dự án" data-en="Project">Dự án</p>
+        <h1 class="max-w-5xl text-4xl font-black uppercase leading-[1.02] tracking-[0.04em] sm:text-5xl md:text-7xl">Ông Chú Plant-Based</h1>
+        <p class="mt-6 text-[10px] font-extrabold uppercase tracking-[0.16em] text-white/90 md:text-xs">Case Study | Short-form Content | 11/2021 – 01/2023</p>
+      </div>
+    </section>
+
+    <section class="ocpb-section bg-white">
+      <div class="ocpb-shell grid items-center gap-12 lg:grid-cols-[1.25fr_.75fr]">
+        <div>
+          <h2 class="max-w-3xl text-4xl font-black uppercase leading-[1.06] tracking-[0.12em] md:text-6xl">
+            <span class="text-[#6c3795]">Ông Chú</span><br />
+            <span class="text-[#88c54f]">Plant-Based</span>
+          </h2>
+          <p class="mt-8 max-w-3xl text-xs font-semibold uppercase leading-7 tracking-[0.17em] text-neutral-600"
+             data-vi="Xây dựng và chuẩn hóa hệ thống nội dung video ngắn đa nền tảng cho dự án “Ông Chú Plant-Based” của thương hiệu Vinamit."
+             data-en="Built and standardized a multi-platform short-form video content system for Vinamit’s “Ông Chú Plant-Based” project.">
+            Xây dựng và chuẩn hóa hệ thống nội dung video ngắn đa nền tảng cho dự án “Ông Chú Plant-Based” của thương hiệu Vinamit.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 items-center gap-6">
+          <div class="ocpb-image-frame aspect-square bg-white p-3"><img class="!object-contain" src="../assets/images/projects/ong-chu-plant-based/v20/logo-ocpb.jpg" alt="Logo Ông Chú Plant-Based" loading="lazy" /></div>
+          <div class="ocpb-image-frame aspect-square bg-white p-3"><img class="!object-contain" src="../assets/images/projects/ong-chu-plant-based/v20/logo-vinamit.jpg" alt="Logo Vinamit" loading="lazy" /></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ocpb-section bg-neutral-50">
+      <div class="ocpb-shell">
+        <div class="mx-auto max-w-4xl text-center">
+          <p class="ocpb-kicker" data-vi="Tổng quan" data-en="Overview">Tổng quan</p>
+          <p class="text-sm font-medium uppercase leading-7 tracking-[0.14em] text-neutral-700 md:text-base md:leading-8"
+             data-vi="Thực hiện các nội dung mang tính giáo dục, truyền tải kiến thức về dinh dưỡng và sức khỏe; qua đó quảng bá đến khán giả những sản phẩm dinh dưỡng, sức khỏe đến từ thương hiệu Vinamit."
+             data-en="Produced educational content that shared knowledge about nutrition and health, while introducing audiences to Vinamit’s nutrition and wellness products.">
+            Thực hiện các nội dung mang tính giáo dục, truyền tải kiến thức về dinh dưỡng và sức khỏe; qua đó quảng bá đến khán giả những sản phẩm dinh dưỡng, sức khỏe đến từ thương hiệu Vinamit.
+          </p>
+        </div>
+
+        <div class="mt-14 text-center">
+          <p class="ocpb-kicker" data-vi="Vai trò" data-en="Responsibilities">Vai trò</p>
+          <div class="mx-auto mt-7 grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            <article class="rounded-2xl bg-[#88c54f] px-5 py-8 text-xs font-extrabold uppercase leading-5 tracking-[0.08em] text-neutral-950" data-vi="Nghiên cứu và phân tích tư liệu" data-en="Research and material analysis">Nghiên cứu và phân tích tư liệu</article>
+            <article class="rounded-2xl bg-[#88c54f] px-5 py-8 text-xs font-extrabold uppercase leading-5 tracking-[0.08em] text-neutral-950" data-vi="Dựng nháp và xử lý thô" data-en="Rough cut and initial editing">Dựng nháp và xử lý thô</article>
+            <article class="rounded-2xl bg-[#88c54f] px-5 py-8 text-xs font-extrabold uppercase leading-5 tracking-[0.08em] text-neutral-950" data-vi="Hoàn thiện hậu kỳ" data-en="Post-production completion">Hoàn thiện hậu kỳ</article>
+            <article class="rounded-2xl bg-[#88c54f] px-5 py-8 text-xs font-extrabold uppercase leading-5 tracking-[0.08em] text-neutral-950" data-vi="Kiểm duyệt chuyên môn" data-en="Subject-matter review">Kiểm duyệt chuyên môn</article>
+            <article class="rounded-2xl bg-[#88c54f] px-5 py-8 text-xs font-extrabold uppercase leading-5 tracking-[0.08em] text-neutral-950 sm:col-span-2 lg:col-span-1" data-vi="Đóng gói và phân phối" data-en="Packaging and distribution">Đóng gói và phân phối</article>
           </div>
-          <div class="case-hero-visual reveal"><img src="../assets/images/projects/ong-chu-plant-based/ong-chu-hero.webp" alt="Ông Chú Plant-Based trong bối cảnh vườn cây, thư viện và nông trại" /></div>
         </div>
       </div>
     </section>
 
-    <section class="case-section case-impact-section" aria-labelledby="ocpb-impact">
-      <div class="container">
-        <div class="case-section-heading reveal"><p class="eyebrow">01 · PROJECT IMPACT</p><h2 id="ocpb-impact">Từ kênh mới đến hàng triệu lượt xem tự nhiên</h2></div>
-        <div class="case-impact-grid reveal">
-          <article class="case-impact-card"><strong>43.6K</strong><span>TikTok followers trong ba tháng</span></article>
-          <article class="case-impact-card"><strong>3M+</strong><span>Organic TikTok views</span></article>
-          <article class="case-impact-card"><strong>1.1M</strong><span>Lượt xem của video hiệu quả nhất</span></article>
-          <article class="case-impact-card case-impact-card-dark"><strong>36</strong><span>Video được biên tập và phát hành</span></article>
+    <section class="ocpb-section bg-white">
+      <div class="ocpb-shell">
+        <div class="mx-auto max-w-3xl text-center">
+          <p class="ocpb-kicker" data-vi="Kết quả đạt được" data-en="Results achieved">Kết quả đạt được</p>
+          <p class="ocpb-body" data-vi="Kết quả ghi nhận được dựa trên báo cáo nội bộ, trong khoảng ba tháng đầu tiên kể từ ngày phát hành nội dung trên các nền tảng digital." data-en="Results were recorded from internal reports covering approximately the first three months after the content was released across digital platforms.">Kết quả ghi nhận được dựa trên báo cáo nội bộ, trong khoảng ba tháng đầu tiên kể từ ngày phát hành nội dung trên các nền tảng digital.</p>
         </div>
-        <div class="ocpb-impact-secondary reveal">
-          <article><strong>148K</strong><span>Tổng lượt thích TikTok tại mốc lưu trữ</span></article>
-          <article><strong>17,657</strong><span>Lượt xem tự nhiên trên playlist YouTube</span></article>
-        </div>
-        <p class="case-measurement-note reveal">TikTok metrics được tổng hợp từ project records và ảnh lưu trữ trong giai đoạn 06–08/2023. Kênh TikTok gốc hiện không còn truy cập công khai theo quyết định nội bộ; các liên kết YouTube được dùng làm mẫu nội dung còn khả dụng.</p>
-      </div>
-    </section>
-
-    <section class="case-section case-context-section" aria-labelledby="ocpb-context">
-      <div class="container"><div class="case-context-card reveal">
-        <div><p class="eyebrow">02 · CONTEXT &amp; CHALLENGE</p><h2 id="ocpb-context">Biến kiến thức phức tạp thành nội dung dễ theo dõi</h2></div>
-        <div class="case-copy"><p>Ông Chú Plant-Based là dự án nội dung giáo dục về dinh dưỡng, sức khỏe và lối sống plant-based. Footage dài từ Host cần được chuyển thành video ngắn, đồng thời lồng ghép nhận diện cho sản phẩm nước mía lên men của Vinamit một cách nhất quán.</p><ul><li>Chủ đề sức khỏe cần dễ hiểu nhưng không được diễn giải quá mức.</li><li>Footage dài có đoạn lặp, ngập ngừng và nhiều ý phụ.</li><li>Mỗi video cần có một luận điểm đủ rõ để đứng độc lập.</li><li>Tần suất phát hành đòi hỏi một cấu trúc có thể tái sử dụng.</li><li>Nội dung phải qua bước kiểm tra nguồn và review chuyên môn trước khi xuất bản.</li></ul></div>
-      </div></div>
-    </section>
-
-    <section class="case-section" aria-labelledby="ocpb-objectives">
-      <div class="container">
-        <div class="case-section-heading reveal"><p class="eyebrow">03 · OBJECTIVES</p><h2 id="ocpb-objectives">Ba mục tiêu định hướng hệ thống nội dung</h2></div>
-        <div class="case-card-grid three">
-          <article class="case-info-card reveal"><span class="case-number">01</span><h3>Accessible Education</h3><p>Chuyển kiến thức dài và chuyên môn thành những luận điểm ngắn, dễ hiểu và có giá trị độc lập.</p></article>
-          <article class="case-info-card reveal"><span class="case-number">02</span><h3>Repeatable Production</h3><p>Xây cấu trúc biên tập có thể áp dụng liên tục để duy trì chất lượng và tần suất của series.</p></article>
-          <article class="case-info-card reveal"><span class="case-number">03</span><h3>Platform Reach</h3><p>Điều chỉnh nội dung và hình thức trình bày để hỗ trợ phân phối trên TikTok, YouTube, Facebook và Instagram.</p></article>
+        <div class="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="ocpb-stat"><strong data-vi="43,6K" data-en="43.6K">43,6K</strong><span data-vi="Tổng số người theo dõi kênh TikTok Ông Chú Plant-Based" data-en="TikTok followers on the Ông Chú Plant-Based channel">Tổng số người theo dõi kênh TikTok Ông Chú Plant-Based</span></article>
+          <article class="ocpb-stat"><strong>148K</strong><span data-vi="Lượt thích video trên kênh TikTok Ông Chú Plant-Based" data-en="Video likes on the Ông Chú Plant-Based TikTok channel">Lượt thích video trên kênh TikTok Ông Chú Plant-Based</span></article>
+          <article class="ocpb-stat"><strong>3M+</strong><span data-vi="Hơn 3 triệu lượt xem, trong đó có một video đạt 1 triệu lượt xem trên TikTok" data-en="More than 3 million views, including one TikTok video that reached 1 million views">Hơn 3 triệu lượt xem, trong đó có một video đạt 1 triệu lượt xem trên TikTok</span></article>
+          <article class="ocpb-stat"><strong>17K+</strong><span data-vi="Lượt xem trên nền tảng YouTube, thuộc kênh Maybe Podcast" data-en="Views on YouTube through the Maybe Podcast channel">Lượt xem trên nền tảng YouTube, thuộc kênh Maybe Podcast</span></article>
         </div>
       </div>
     </section>
 
-    <section class="case-section case-soft-section" aria-labelledby="ocpb-workflow-title">
-      <div class="container">
-        <div class="case-section-heading reveal"><p class="eyebrow">04 · STRATEGIC APPROACH</p><h2 id="ocpb-workflow-title">Long-form-to-short-form content repurposing workflow</h2><p class="ocpb-section-intro">Quy trình bảy bước giúp mỗi video giữ đúng trọng tâm, được kiểm tra nguồn và sẵn sàng cho hậu kỳ trong một hệ thống sản xuất có thể lặp lại.</p></div>
-        <div class="ocpb-workflow">
-          <article class="reveal" data-step="1"><span>STEP 01</span><h3>Research &amp; Source Review</h3><p>Nghiên cứu, đối chiếu nguồn y khoa và dinh dưỡng đáng tin cậy trước khi gửi nội dung qua vòng review chuyên môn.</p></article>
-          <article class="reveal" data-step="2"><span>STEP 02</span><h3>Transcript Mapping</h3><p>Đọc transcript, đánh dấu luận điểm, ví dụ, phần lặp và những đoạn có tiềm năng trở thành hook.</p></article>
-          <article class="reveal" data-step="3"><span>STEP 03</span><h3>Highlight Extraction</h3><p>Chọn một ý đủ mạnh và đủ rõ để mỗi short-form video có thể hoạt động như một đơn vị độc lập.</p></article>
-          <article class="reveal" data-step="4"><span>STEP 04</span><h3>Narrative Reconstruction</h3><p>Sắp xếp lại thứ tự phát biểu để tạo mạch Hook → Context → Explanation → Payoff.</p></article>
-          <article class="reveal" data-step="5"><span>STEP 05</span><h3>Rough Cut &amp; Cleanup</h3><p>Cắt đoạn vấp, lặp từ, khoảng dừng dài và các ý phụ làm loãng nội dung chính.</p></article>
-          <article class="reveal" data-step="6"><span>STEP 06</span><h3>Visual Reinforcement</h3><p>Đề xuất B-roll, caption, hình minh họa, punch-in và motion assets theo đúng ngữ cảnh.</p></article>
-          <article class="reveal" data-step="7"><span>STEP 07</span><h3>Review &amp; Publication</h3><p>Phối hợp hậu kỳ, kiểm tra phiên bản cuối và hỗ trợ copy/distribution sau khi nội dung được duyệt.</p></article>
+    <section class="ocpb-section bg-neutral-950 text-white">
+      <div class="ocpb-shell">
+        <div class="grid gap-14 lg:grid-cols-[.78fr_1.22fr]">
+          <div>
+            <p class="ocpb-kicker !text-[#88c54f]" data-vi="02 · Thử thách" data-en="02 · Challenges">02 · Thử thách</p>
+            <h2 class="max-w-lg text-4xl font-black leading-tight tracking-[-0.035em] md:text-5xl" data-vi="Giữ sự chính xác trong một định dạng phải thật cuốn hút." data-en="Maintaining accuracy in a format that must stay engaging.">Giữ sự chính xác trong một định dạng phải thật cuốn hút.</h2>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <article class="rounded-3xl border border-white/15 bg-white/5 p-6"><h3 class="text-sm font-extrabold text-[#88c54f]" data-vi="Kiến thức chuyên môn" data-en="Subject expertise">Kiến thức chuyên môn</h3><p class="mt-3 text-sm leading-7 text-white/65" data-vi="Chủ đề sức khỏe nhạy cảm, đòi hỏi độ chính xác về y khoa." data-en="Sensitive health topics required a high degree of medical accuracy.">Chủ đề sức khỏe nhạy cảm, đòi hỏi độ chính xác về y khoa.</p></article>
+            <article class="rounded-3xl border border-white/15 bg-white/5 p-6"><h3 class="text-sm font-extrabold text-[#88c54f]" data-vi="Xử lý dữ liệu thô" data-en="Raw material processing">Xử lý dữ liệu thô</h3><p class="mt-3 text-sm leading-7 text-white/65" data-vi="Tư liệu quay gốc rất dài và các ý tưởng bị phân mảnh." data-en="Raw footage was extensive and ideas were fragmented across the source material.">Tư liệu quay gốc rất dài và các ý tưởng bị phân mảnh.</p></article>
+            <article class="rounded-3xl border border-white/15 bg-white/5 p-6"><h3 class="text-sm font-extrabold text-[#88c54f]" data-vi="Cân bằng nội dung" data-en="Content balance">Cân bằng nội dung</h3><p class="mt-3 text-sm leading-7 text-white/65" data-vi="Cần dung hòa giữa yếu tố lôi cuốn, hấp dẫn và việc truyền tải thông tin chính xác." data-en="The content needed to balance audience appeal with accurate information.">Cần dung hòa giữa yếu tố lôi cuốn, hấp dẫn và việc truyền tải thông tin chính xác.</p></article>
+            <article class="rounded-3xl border border-white/15 bg-white/5 p-6"><h3 class="text-sm font-extrabold text-[#88c54f]" data-vi="Thẩm mỹ và nhịp điệu" data-en="Aesthetics and rhythm">Thẩm mỹ và nhịp điệu</h3><p class="mt-3 text-sm leading-7 text-white/65" data-vi="Khung hình và góc máy phải đẹp, đồng thời ăn khớp với nhịp dựng chung của video." data-en="Framing and camera angles had to look strong while matching the editing rhythm.">Khung hình và góc máy phải đẹp, đồng thời ăn khớp với nhịp dựng chung của video.</p></article>
+          </div>
+        </div>
+
+        <div class="mt-24">
+          <p class="ocpb-kicker !text-[#88c54f]" data-vi="03 · Chiến lược thực hiện" data-en="03 · Strategic approach">03 · Chiến lược thực hiện</p>
+          <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            <article class="rounded-3xl bg-[#88c54f] p-7 text-neutral-950"><span class="text-[10px] font-black tracking-[0.2em]">01</span><h3 class="mt-5 text-lg font-black" data-vi="Nghiên cứu chuyên sâu" data-en="In-depth research">Nghiên cứu chuyên sâu</h3><p class="mt-3 text-sm leading-7" data-vi="Tìm hiểu và đào sâu về chủ đề, tài liệu y khoa uy tín." data-en="Investigated each topic through credible medical sources.">Tìm hiểu và đào sâu về chủ đề, tài liệu y khoa uy tín.</p></article>
+            <article class="rounded-3xl bg-[#88c54f] p-7 text-neutral-950"><span class="text-[10px] font-black tracking-[0.2em]">02</span><h3 class="mt-5 text-lg font-black" data-vi="Hệ thống hóa nội dung" data-en="Content systemization">Hệ thống hóa nội dung</h3><p class="mt-3 text-sm leading-7" data-vi="Phân loại tư liệu hình ảnh và nội dung theo từng tuyến trong chiến dịch." data-en="Classified visual assets and content into clear campaign themes.">Phân loại tư liệu hình ảnh và nội dung theo từng tuyến trong chiến dịch.</p></article>
+            <article class="rounded-3xl bg-[#88c54f] p-7 text-neutral-950"><span class="text-[10px] font-black tracking-[0.2em]">03</span><h3 class="mt-5 text-lg font-black" data-vi="Chắt lọc điểm nhấn" data-en="Highlight extraction">Chắt lọc điểm nhấn</h3><p class="mt-3 text-sm leading-7" data-vi="Đặt các chi tiết đắt giá, thông tin gây sốc hoặc yếu tố gây bất ngờ lên đầu." data-en="Moved valuable details, surprising information or unexpected moments to the beginning.">Đặt các chi tiết đắt giá, thông tin gây sốc hoặc yếu tố gây bất ngờ lên đầu.</p></article>
+            <article class="rounded-3xl bg-[#6c3795] p-7 text-white"><span class="text-[10px] font-black tracking-[0.2em]">04</span><h3 class="mt-5 text-lg font-black" data-vi="Tái cấu trúc kịch bản" data-en="Script restructuring">Tái cấu trúc kịch bản</h3><p class="mt-3 text-sm leading-7 text-white/75" data-vi="Sắp xếp lại đường dây câu chuyện theo mạch logic: Điểm nhấn → Nổi bật → Giải thích → Điểm giải quyết → Kết thúc." data-en="Reordered the narrative into a clear flow: Highlight → Standout point → Explanation → Resolution → Ending.">Sắp xếp lại đường dây câu chuyện theo mạch logic: Điểm nhấn → Nổi bật → Giải thích → Điểm giải quyết → Kết thúc.</p></article>
+            <article class="rounded-3xl bg-[#6c3795] p-7 text-white"><span class="text-[10px] font-black tracking-[0.2em]">05</span><h3 class="mt-5 text-lg font-black" data-vi="Bổ trợ thị giác" data-en="Visual reinforcement">Bổ trợ thị giác</h3><p class="mt-3 text-sm leading-7 text-white/75" data-vi="Sử dụng hình ảnh và các tư liệu minh họa khác để giúp khán giả hình dung nội dung." data-en="Used imagery and supporting visual material to help audiences understand each idea.">Sử dụng hình ảnh và các tư liệu minh họa khác để giúp khán giả hình dung nội dung.</p></article>
+            <article class="rounded-3xl bg-[#6c3795] p-7 text-white"><span class="text-[10px] font-black tracking-[0.2em]">06</span><h3 class="mt-5 text-lg font-black" data-vi="Chuẩn hóa video" data-en="Video standardization">Chuẩn hóa video</h3><p class="mt-3 text-sm leading-7 text-white/75" data-vi="Đồng bộ các thành phần nhận diện và kỹ thuật cho toàn bộ series." data-en="Standardized brand and technical components across the full series.">Đồng bộ các thành phần nhận diện và kỹ thuật cho toàn bộ series.</p></article>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="case-section" aria-labelledby="ocpb-structure-title">
-      <div class="container">
-        <div class="case-section-heading reveal"><p class="eyebrow">05 · VIDEO ARCHITECTURE</p><h2 id="ocpb-structure-title">Một cấu trúc ngắn, đủ để giữ mạch và nhận diện</h2><p class="ocpb-section-intro">Cấu trúc năm phần tạo nhịp xem rõ ràng: thu hút chú ý, định hướng vấn đề, truyền tải giá trị, chốt luận điểm và duy trì nhận diện series.</p></div>
-        <div class="ocpb-structure-grid reveal">
-          <article><span>01 · ATTENTION</span><h3>Hook / Highlight</h3><p>Đưa phát biểu đáng chú ý lên đầu để tạo câu hỏi hoặc sự tò mò.</p></article>
-          <article><span>02 · ORIENTATION</span><h3>Context</h3><p>Đặt lại bối cảnh và vấn đề để người xem hiểu chủ đề đang được giải thích.</p></article>
-          <article><span>03 · VALUE</span><h3>Explanation</h3><p>Giữ phần lập luận chính, loại bỏ ý phụ và củng cố bằng visual phù hợp.</p></article>
-          <article><span>04 · RESOLUTION</span><h3>Payoff</h3><p>Kết lại bằng luận điểm hoặc thông tin người xem có thể ghi nhớ.</p></article>
-          <article><span>05 · RECOGNITION</span><h3>Brand Outro</h3><p>Khép lại bằng đoạn nhận diện sản phẩm thống nhất giữa các tập.</p></article>
+    <section class="ocpb-section bg-white">
+      <div class="ocpb-shell">
+        <div class="max-w-3xl"><p class="ocpb-kicker" data-vi="Bối cảnh sản xuất" data-en="Production context">Bối cảnh sản xuất</p><h2 class="ocpb-heading" data-vi="Từ vùng nguyên liệu đến trường quay ngoài trời." data-en="From raw-material farms to outdoor production sets.">Từ vùng nguyên liệu đến trường quay ngoài trời.</h2></div>
+        <div class="mt-12 grid auto-rows-[180px] grid-cols-2 gap-3 md:auto-rows-[250px] md:grid-cols-4 md:gap-5">
+          <figure class="ocpb-image-frame row-span-2"><img src="../assets/images/projects/ong-chu-plant-based/v20/gallery-vertical-01.jpg" alt="Vườn rau tại vùng nguyên liệu" loading="lazy" /></figure>
+          <figure class="ocpb-image-frame row-span-2"><img src="../assets/images/projects/ong-chu-plant-based/v20/gallery-vertical-02.jpg" alt="Thu hoạch tại vườn cây" loading="lazy" /></figure>
+          <figure class="ocpb-image-frame row-span-2"><img src="../assets/images/projects/ong-chu-plant-based/v20/gallery-vertical-03.jpg" alt="Nhân vật tại khu vực trồng rau" loading="lazy" /></figure>
+          <figure class="ocpb-image-frame row-span-2"><img src="../assets/images/projects/ong-chu-plant-based/v20/gallery-vertical-04.jpg" alt="Phỏng vấn trong không gian thư viện" loading="lazy" /></figure>
+          <figure class="ocpb-image-frame col-span-2"><img src="../assets/images/projects/ong-chu-plant-based/v20/gallery-horizontal-01.jpg" alt="Trao đổi tại hiện trường" loading="lazy" /></figure>
+          <figure class="ocpb-image-frame col-span-2"><img src="../assets/images/projects/ong-chu-plant-based/v20/gallery-horizontal-02.jpg" alt="Chuẩn bị quay ngoài trời" loading="lazy" /></figure>
+          <figure class="ocpb-image-frame col-span-2 md:col-span-4"><img src="../assets/images/projects/ong-chu-plant-based/v20/gallery-horizontal-03.jpg" alt="Bối cảnh vùng nguyên liệu của dự án" loading="lazy" /></figure>
         </div>
       </div>
     </section>
 
-    <section class="case-section case-soft-section" aria-labelledby="ocpb-system-title">
-      <div class="container">
-        <div class="case-section-heading reveal"><p class="eyebrow">06 · EDITORIAL SYSTEM</p><h2 id="ocpb-system-title">Bốn nguyên tắc giữ chất lượng và nhận diện nhất quán</h2></div>
-        <div class="case-card-grid">
-          <article class="case-info-card reveal"><span class="case-number">01</span><h3>Dialogue Cleanup</h3><p>Loại bỏ đoạn vấp, từ lặp và khoảng dừng không cần thiết để nhịp nói tự nhiên và tập trung hơn.</p></article>
-          <article class="case-info-card reveal"><span class="case-number">02</span><h3>Narrative Restructuring</h3><p>Tái sắp xếp các đoạn nói theo logic tiếp nhận của người xem short-form, thay vì giữ nguyên thứ tự footage gốc.</p></article>
-          <article class="case-info-card reveal"><span class="case-number">03</span><h3>Visual Enhancement</h3><p>Định hướng caption, keyword emphasis, punch-in, B-roll và animation để minh họa cho nội dung đang được nói.</p></article>
-          <article class="case-info-card reveal"><span class="case-number">04</span><h3>Series Standardization</h3><p>Duy trì cấu trúc hook, typography, caption style, nhịp dựng và brand outro để 36 video tạo thành một hệ thống nhất quán.</p></article>
+    <section class="ocpb-section bg-neutral-50">
+      <div class="ocpb-shell">
+        <div class="max-w-4xl"><p class="ocpb-kicker" data-vi="Hệ thống hóa nội dung" data-en="Content systemization">Hệ thống hóa nội dung</p><h2 class="ocpb-heading" data-vi="Xem, đọc transcript và phân loại nội dung theo chủ đề, câu chuyện, insight và câu nói nổi bật." data-en="Reviewed transcripts and classified content by topic, story, insight and standout quote.">Xem, đọc transcript và phân loại nội dung theo chủ đề, câu chuyện, insight và câu nói nổi bật.</h2></div>
+        <div class="mt-12 grid gap-5 md:grid-cols-3">
+          <figure class="ocpb-image-frame aspect-square"><img src="../assets/images/projects/ong-chu-plant-based/v20/content-system-01.jpg" alt="Thumbnail Cân bằng vi sinh giúp ngừa đột quỵ" loading="lazy" /></figure>
+          <figure class="ocpb-image-frame aspect-square"><img src="../assets/images/projects/ong-chu-plant-based/v20/content-system-02.jpg" alt="Thumbnail Cách chữa bệnh trào ngược" loading="lazy" /></figure>
+          <figure class="ocpb-image-frame aspect-square"><img src="../assets/images/projects/ong-chu-plant-based/v20/content-system-03.jpg" alt="Thumbnail Giảm béo thất bại" loading="lazy" /></figure>
+        </div>
+        <figure class="ocpb-image-frame mt-5 aspect-video"><img src="../assets/images/projects/ong-chu-plant-based/v20/video-thumbnail-horizontal.jpg" alt="Thumbnail video Sinh vật có hại trong thực phẩm" loading="lazy" /></figure>
+      </div>
+    </section>
+
+    <section class="ocpb-section bg-white">
+      <div class="ocpb-shell">
+        <div class="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
+          <div><p class="ocpb-kicker" data-vi="Nghiên cứu chuyên sâu" data-en="In-depth research">Nghiên cứu chuyên sâu</p><h2 class="ocpb-heading" data-vi="Nhiều nguồn y khoa cho mỗi nội dung video." data-en="Multiple medical sources for every video topic.">Nhiều nguồn y khoa cho mỗi nội dung video.</h2></div>
+          <div class="ocpb-body space-y-3"><p data-vi="Với mỗi nội dung video đều cần có sự research và tra cứu từ nhiều nguồn tài liệu y khoa khác nhau." data-en="Each video required research and cross-checking across multiple medical references.">Với mỗi nội dung video đều cần có sự research và tra cứu từ nhiều nguồn tài liệu y khoa khác nhau.</p><p data-vi="Trước khi phát hành và đăng tải, video được kiểm duyệt qua cấp Quản lý và Bác sĩ chuyên ngành." data-en="Before publication, each video was reviewed by project management and a medical specialist.">Trước khi phát hành và đăng tải, video được kiểm duyệt qua cấp Quản lý và Bác sĩ chuyên ngành.</p></div>
+        </div>
+        <div class="mt-12 grid gap-5 md:grid-cols-3">
+          <figure class="ocpb-image-frame aspect-video"><img src="../assets/images/projects/ong-chu-plant-based/v20/research-01.jpg" alt="Hình minh họa y khoa từ footage 1" loading="lazy" /></figure>
+          <figure class="ocpb-image-frame aspect-video"><img src="../assets/images/projects/ong-chu-plant-based/v20/research-02.jpg" alt="Hình minh họa y khoa từ footage 2" loading="lazy" /></figure>
+          <figure class="ocpb-image-frame aspect-video"><img src="../assets/images/projects/ong-chu-plant-based/v20/research-03.jpg" alt="Hình minh họa y khoa từ footage 3" loading="lazy" /></figure>
+        </div>
+        <p class="mt-6 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500" data-vi="Ảnh minh họa từ footage trong video" data-en="Illustrative frames from the video footage">Ảnh minh họa từ footage trong video</p>
+        <div class="mt-14 grid gap-5 md:grid-cols-2">
+          <figure class="ocpb-image-frame aspect-[8/5]"><img class="!object-contain" src="../assets/images/projects/ong-chu-plant-based/v20/medical-source-01.jpg" alt="Nguồn y tế tham khảo 1" loading="lazy" /></figure>
+          <figure class="ocpb-image-frame aspect-[8/5]"><img class="!object-contain" src="../assets/images/projects/ong-chu-plant-based/v20/medical-source-02.jpg" alt="Nguồn y tế tham khảo 2" loading="lazy" /></figure>
+        </div>
+        <p class="mt-6 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500" data-vi="Một số nguồn y tế uy tín được tham khảo" data-en="Selected credible medical references">Một số nguồn y tế uy tín được tham khảo</p>
+      </div>
+    </section>
+
+    <section class="ocpb-section bg-neutral-50">
+      <div class="ocpb-shell">
+        <div class="max-w-4xl"><p class="ocpb-kicker" data-vi="Bổ trợ hình và video minh họa" data-en="Supporting images and footage">Bổ trợ hình và video minh họa</p><h2 class="ocpb-heading" data-vi="Giúp người xem hiểu khái niệm, nhận diện sản phẩm, theo dõi số liệu, hình dung tình huống và duy trì sự chú ý." data-en="Helped viewers understand concepts, recognize products, follow data, picture scenarios and stay engaged.">Giúp người xem hiểu khái niệm, nhận diện sản phẩm, theo dõi số liệu, hình dung tình huống và duy trì sự chú ý.</h2></div>
+        <div class="mt-12 grid gap-8 md:grid-cols-2">
+          <figure><div class="ocpb-image-frame aspect-video"><img src="../assets/images/projects/ong-chu-plant-based/v20/visual-support-01.jpg" alt="Minh họa biến chứng xơ vữa động mạch" loading="lazy" /></div><figcaption class="mt-4 text-xs leading-6 text-neutral-500" data-vi="Ví dụ hình ảnh minh họa biến chứng xơ vữa động mạch trong video Ông Chú Plant-Based." data-en="An illustrative visual explaining complications of atherosclerosis in an Ông Chú Plant-Based video.">Ví dụ hình ảnh minh họa biến chứng xơ vữa động mạch trong video Ông Chú Plant-Based.</figcaption></figure>
+          <figure><div class="ocpb-image-frame aspect-video"><img src="../assets/images/projects/ong-chu-plant-based/v20/visual-support-02.jpg" alt="Minh họa quá trình chuyển hóa glucose thành glycogen" loading="lazy" /></div><figcaption class="mt-4 text-xs leading-6 text-neutral-500" data-vi="Ví dụ minh họa quá trình chuyển hóa glucose thành glycogen trong video Ông Chú Plant-Based." data-en="An illustrative visual showing the conversion of glucose into glycogen in an Ông Chú Plant-Based video.">Ví dụ minh họa quá trình chuyển hóa glucose thành glycogen trong video Ông Chú Plant-Based.</figcaption></figure>
         </div>
       </div>
     </section>
 
-    <section class="case-section" aria-labelledby="ocpb-bts-title">
-      <div class="container">
-        <div class="case-section-heading reveal"><p class="eyebrow">07 · PRODUCTION CONTEXT</p><h2 id="ocpb-bts-title">Behind the scenes</h2><p class="ocpb-section-intro">Ảnh tư liệu ghi lại quá trình chuẩn bị bối cảnh, thiết bị và quay nội dung ngoài trời. Chúng giúp xác thực quy trình sản xuất thực tế; phạm vi chuyên môn chính của tôi trong dự án vẫn là biên tập nội dung và phối hợp hậu kỳ.</p></div>
-        <div class="case-gallery">
-          <figure class="reveal"><img src="../assets/images/projects/ong-chu-plant-based/behind-scenes-coordination.webp" alt="Đội ngũ trao đổi trong quá trình quay ngoài trời" loading="lazy" /><figcaption><strong>On-site Coordination</strong><span>Trao đổi bối cảnh, thiết bị và phương án triển khai tại hiện trường.</span></figcaption></figure>
-          <figure class="reveal"><img src="../assets/images/projects/ong-chu-plant-based/behind-scenes-setup.webp" alt="Đội ngũ lắp đặt thiết bị quay trong vườn cây" loading="lazy" /><figcaption><strong>Production Setup</strong><span>Chuẩn bị hệ thống phông và khu vực ghi hình ngoài trời.</span></figcaption></figure>
-          <figure class="reveal"><img src="../assets/images/projects/ong-chu-plant-based/behind-scenes-location.webp" alt="Bối cảnh nông trại và vườn cây dùng cho nội dung Ông Chú Plant-Based" loading="lazy" /><figcaption><strong>Location &amp; Visual Context</strong><span>Nông trại, vườn cây và nông sản tạo chất liệu hình ảnh phù hợp với chủ đề.</span></figcaption></figure>
-          <figure class="reveal"><img src="../assets/images/projects/ong-chu-plant-based/behind-scenes-subject.webp" alt="Cảnh quay cận sản phẩm nông nghiệp tại hiện trường" loading="lazy" /><figcaption><strong>Subject Detail</strong><span>Tư liệu cận cảnh được ghi nhận để hỗ trợ minh họa nội dung.</span></figcaption></figure>
+    <section class="ocpb-section bg-white">
+      <div class="ocpb-shell">
+        <div class="max-w-4xl"><p class="ocpb-kicker" data-vi="Chắt lọc điểm nhấn" data-en="Highlight extraction">Chắt lọc điểm nhấn</p><h2 class="ocpb-heading" data-vi="Đánh dấu đoạn có thể đứng độc lập và có thông tin cụ thể, yếu tố bất ngờ, xung đột, cảm xúc hoặc một câu kết mạnh." data-en="Marked clips that could stand alone through specific information, surprise, conflict, emotion or a strong closing line.">Đánh dấu đoạn có thể đứng độc lập và có thông tin cụ thể, yếu tố bất ngờ, xung đột, cảm xúc hoặc một câu kết mạnh.</h2></div>
+        <div class="mt-12 grid gap-5 md:grid-cols-3">
+          <a class="group relative overflow-hidden rounded-[26px] bg-neutral-950" href="https://youtu.be/xdNZR03pYIQ" target="_blank" rel="noopener noreferrer"><img class="aspect-video h-full w-full object-cover opacity-60 transition duration-700 group-hover:scale-105" src="../assets/images/projects/ong-chu-plant-based/v20/video-thumbnail-horizontal.jpg" alt="Video mẫu 1" loading="lazy" /><span class="ocpb-play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" aria-hidden="true">▶</span><span class="absolute bottom-5 left-5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-white">Sample 01 ↗</span></a>
+          <a class="group relative overflow-hidden rounded-[26px] bg-neutral-950" href="https://youtu.be/LsbflGj3A-Y" target="_blank" rel="noopener noreferrer"><img class="aspect-video h-full w-full object-cover opacity-60 transition duration-700 group-hover:scale-105" src="../assets/images/projects/ong-chu-plant-based/v20/video-thumbnail-horizontal.jpg" alt="Video mẫu 2" loading="lazy" /><span class="ocpb-play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" aria-hidden="true">▶</span><span class="absolute bottom-5 left-5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-white">Sample 02 ↗</span></a>
+          <a class="group relative overflow-hidden rounded-[26px] bg-neutral-950" href="https://youtu.be/fELoYFKPzsw" target="_blank" rel="noopener noreferrer"><img class="aspect-video h-full w-full object-cover opacity-60 transition duration-700 group-hover:scale-105" src="../assets/images/projects/ong-chu-plant-based/v20/video-thumbnail-horizontal.jpg" alt="Video mẫu 3" loading="lazy" /><span class="ocpb-play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" aria-hidden="true">▶</span><span class="absolute bottom-5 left-5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-white">Sample 03 ↗</span></a>
         </div>
       </div>
     </section>
 
-    <section class="case-section case-soft-section" aria-labelledby="ocpb-distribution-title">
-      <div class="container">
-        <div class="case-section-heading reveal"><p class="eyebrow">08 · CONTENT DISTRIBUTION</p><h2 id="ocpb-distribution-title">Một hệ thống biên tập, nhiều điểm chạm nội dung</h2></div>
-        <div class="case-gallery">
-          <figure class="reveal"><img src="../assets/images/projects/ong-chu-plant-based/youtube-series-archive.webp" alt="Playlist YouTube của Ông Chú Plant-Based" loading="lazy" /><figcaption><strong>Public YouTube Archive</strong><span>36 video còn được lưu trong playlist và dùng làm work samples công khai.</span></figcaption></figure>
-          <figure class="reveal"><img src="../assets/images/projects/ong-chu-plant-based/branded-episode-visual.webp" alt="Thiết kế nội dung Ông Chú Plant-Based về sinh vật có hại trong thực phẩm" loading="lazy" /><figcaption><strong>Platform-adapted Creative</strong><span>Thông điệp, hình ảnh Host và chủ đề được đóng gói thành một creative dễ nhận diện.</span></figcaption></figure>
+    <section class="ocpb-section bg-neutral-950 text-white">
+      <div class="ocpb-shell">
+        <div class="grid gap-10 lg:grid-cols-[.72fr_1.28fr] lg:items-end">
+          <div>
+            <p class="ocpb-kicker !text-[#88c54f]" data-vi="Tái cấu trúc kịch bản" data-en="Script restructuring">Tái cấu trúc kịch bản</p>
+            <h2 class="text-4xl font-black leading-tight tracking-[-0.035em] md:text-5xl" data-vi="Không chỉ cắt ngắn, mà thiết kế lại nhịp tiếp nhận." data-en="Not merely shortening content, but redesigning the viewing rhythm.">Không chỉ cắt ngắn, mà thiết kế lại nhịp tiếp nhận.</h2>
+          </div>
+          <p class="max-w-2xl text-sm leading-7 text-white/65" data-vi="Loại bỏ từ đệm, câu lặp, phần nói vấp, khoảng nghỉ quá dài và những câu không phục vụ luận điểm chính. Jump cut, punch-in hoặc B-roll được dùng để che điểm cắt. Năm đoạn dưới đây minh họa cách một nội dung dài được tổ chức lại thành mạch xem hoàn chỉnh." data-en="Removed filler words, repeated lines, stumbles, extended pauses and sentences that did not support the core argument. Jump cuts, punch-ins and B-roll were used to cover edits. The five clips below show how long-form material was rebuilt into one complete viewing flow.">Loại bỏ từ đệm, câu lặp, phần nói vấp, khoảng nghỉ quá dài và những câu không phục vụ luận điểm chính. Jump cut, punch-in hoặc B-roll được dùng để che điểm cắt. Năm đoạn dưới đây minh họa cách một nội dung dài được tổ chức lại thành mạch xem hoàn chỉnh.</p>
+        </div>
+
+        <ol class="mt-14 grid gap-6 md:grid-cols-2">
+          <li class="ocpb-script-step">
+            <video controls preload="none" playsinline poster="../assets/images/projects/ong-chu-plant-based/v21/step-01-highlight.jpg" aria-label="Bước 1: Điểm nhấn"><source src="../assets/videos/projects/ong-chu-plant-based/v21/step-01-highlight.mp4" type="video/mp4" /><span data-vi="Trình duyệt không hỗ trợ video HTML5." data-en="Your browser does not support HTML5 video.">Trình duyệt không hỗ trợ video HTML5.</span></video>
+            <div class="ocpb-script-caption"><span>01</span><div><strong data-vi="Điểm nhấn" data-en="Highlight">Điểm nhấn</strong><p data-vi="Mở đầu bằng chi tiết đủ mạnh để giữ người xem trong những giây đầu tiên." data-en="Open with a strong detail that earns attention in the first few seconds.">Mở đầu bằng chi tiết đủ mạnh để giữ người xem trong những giây đầu tiên.</p></div></div>
+          </li>
+          <li class="ocpb-script-step">
+            <video controls preload="none" playsinline poster="../assets/images/projects/ong-chu-plant-based/v21/step-02-context.jpg" aria-label="Bước 2: Nổi bật và bối cảnh"><source src="../assets/videos/projects/ong-chu-plant-based/v21/step-02-context.mp4" type="video/mp4" /><span data-vi="Trình duyệt không hỗ trợ video HTML5." data-en="Your browser does not support HTML5 video.">Trình duyệt không hỗ trợ video HTML5.</span></video>
+            <div class="ocpb-script-caption"><span>02</span><div><strong data-vi="Nổi bật · Bối cảnh" data-en="Standout point · Context">Nổi bật · Bối cảnh</strong><p data-vi="Thiết lập vấn đề và bối cảnh để người xem hiểu điều gì đang được bàn luận." data-en="Establish the issue and context so viewers understand what is being discussed.">Thiết lập vấn đề và bối cảnh để người xem hiểu điều gì đang được bàn luận.</p></div></div>
+          </li>
+          <li class="ocpb-script-step">
+            <video controls preload="none" playsinline poster="../assets/images/projects/ong-chu-plant-based/v21/step-03-explanation.jpg" aria-label="Bước 3: Giải thích"><source src="../assets/videos/projects/ong-chu-plant-based/v21/step-03-explanation.mp4" type="video/mp4" /><span data-vi="Trình duyệt không hỗ trợ video HTML5." data-en="Your browser does not support HTML5 video.">Trình duyệt không hỗ trợ video HTML5.</span></video>
+            <div class="ocpb-script-caption"><span>03</span><div><strong data-vi="Giải thích" data-en="Explanation">Giải thích</strong><p data-vi="Triển khai luận điểm chính bằng thông tin rõ ràng và mạch lạc." data-en="Develop the central argument with clear, coherent information.">Triển khai luận điểm chính bằng thông tin rõ ràng và mạch lạc.</p></div></div>
+          </li>
+          <li class="ocpb-script-step">
+            <video controls preload="none" playsinline poster="../assets/images/projects/ong-chu-plant-based/v21/step-04-payoff.jpg" aria-label="Bước 4: Điểm giải quyết"><source src="../assets/videos/projects/ong-chu-plant-based/v21/step-04-payoff.mp4" type="video/mp4" /><span data-vi="Trình duyệt không hỗ trợ video HTML5." data-en="Your browser does not support HTML5 video.">Trình duyệt không hỗ trợ video HTML5.</span></video>
+            <div class="ocpb-script-caption"><span>04</span><div><strong data-vi="Điểm giải quyết" data-en="Payoff · Resolution">Điểm giải quyết</strong><p data-vi="Hoàn tất lời hứa của phần mở đầu bằng kết luận hoặc giá trị thực tế." data-en="Fulfil the opening promise with a conclusion or practical value.">Hoàn tất lời hứa của phần mở đầu bằng kết luận hoặc giá trị thực tế.</p></div></div>
+          </li>
+          <li class="ocpb-script-step md:col-span-2 md:grid md:grid-cols-[1.35fr_.65fr] md:items-stretch">
+            <video class="md:!aspect-auto md:h-full" controls preload="none" playsinline poster="../assets/images/projects/ong-chu-plant-based/v21/step-05-outro.jpg" aria-label="Bước 5: Kết thúc"><source src="../assets/videos/projects/ong-chu-plant-based/v21/step-05-outro.mp4" type="video/mp4" /><span data-vi="Trình duyệt không hỗ trợ video HTML5." data-en="Your browser does not support HTML5 video.">Trình duyệt không hỗ trợ video HTML5.</span></video>
+            <div class="ocpb-script-caption md:content-center"><span>05</span><div><strong data-vi="Kết thúc · Brand Outro" data-en="Ending · Brand outro">Kết thúc · Brand Outro</strong><p data-vi="Khép lại bằng câu kết chung và tín hiệu nhận diện thương hiệu nhất quán cho toàn series." data-en="Close with a shared ending and consistent brand cue across the series.">Khép lại bằng câu kết chung và tín hiệu nhận diện thương hiệu nhất quán cho toàn series.</p></div></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="ocpb-section bg-white">
+      <div class="ocpb-shell">
+        <div class="max-w-4xl"><p class="ocpb-kicker" data-vi="Chuẩn hóa chuỗi video" data-en="Video series standardization">Chuẩn hóa chuỗi video</p><h2 class="ocpb-heading" data-vi="Một hệ thống nhận diện thống nhất trên YouTube, TikTok và Reels." data-en="A consistent identity system across YouTube, TikTok and Reels.">Một hệ thống nhận diện thống nhất trên YouTube, TikTok và Reels.</h2><p class="ocpb-body mt-6" data-vi="Chuẩn hóa cách viết hook, font và subtitle, nhịp dựng, logo, CTA, thời lượng, câu giới thiệu sản phẩm và tỷ lệ khung hình đáp ứng với từng nền tảng." data-en="Standardized hook writing, fonts and subtitles, editing rhythm, logos, calls to action, duration, product introductions and aspect ratios for each platform.">Chuẩn hóa cách viết hook, font và subtitle, nhịp dựng, logo, CTA, thời lượng, câu giới thiệu sản phẩm và tỷ lệ khung hình đáp ứng với từng nền tảng.</p></div>
+        <div class="mt-12 grid gap-5 md:grid-cols-3">
+          <article class="ocpb-card"><span class="ocpb-pill" data-vi="Phụ đề" data-en="Subtitles">Phụ đề</span><h3 class="mt-6 text-xl font-black" data-vi="Quy chuẩn phụ đề" data-en="Subtitle guidelines">Quy chuẩn phụ đề</h3><p class="mt-4 text-sm leading-7 text-neutral-600" data-vi="Dịch sát theo lối của Host; sử dụng font chữ thống nhất với viền xanh; nhấn mạnh thông tin quan trọng bằng chữ màu vàng đậm." data-en="Stayed close to the Host’s voice, used a consistent green-outlined typeface and emphasized key information in bold yellow text.">Dịch sát theo lối của Host; sử dụng font chữ thống nhất với viền xanh; nhấn mạnh thông tin quan trọng bằng chữ màu vàng đậm.</p></article>
+          <article class="ocpb-card"><span class="ocpb-pill" data-vi="Thương hiệu" data-en="Branding">Thương hiệu</span><h3 class="mt-6 text-xl font-black" data-vi="Định vị thương hiệu" data-en="Brand placement">Định vị thương hiệu</h3><p class="mt-4 text-sm leading-7 text-neutral-600" data-vi="Logo được chèn cố định ở góc phải trên mọi nền tảng. Câu giới thiệu sản phẩm và cấu trúc viết hook theo một mô típ thống nhất." data-en="Placed the logo consistently in the upper-right corner across platforms, with a repeatable product introduction and hook format.">Logo được chèn cố định ở góc phải trên mọi nền tảng. Câu giới thiệu sản phẩm và cấu trúc viết hook theo một mô típ thống nhất.</p></article>
+          <article class="ocpb-card"><span class="ocpb-pill" data-vi="Âm thanh" data-en="Audio">Âm thanh</span><h3 class="mt-6 text-xl font-black" data-vi="Yếu tố âm thanh" data-en="Audio identity">Yếu tố âm thanh</h3><p class="mt-4 text-sm leading-7 text-neutral-600" data-vi="Chuẩn hóa ảnh bìa theo template cố định và sử dụng chung một dải âm thanh nhận diện cho phần mở đầu và kết thúc." data-en="Standardized thumbnails with a fixed template and used a shared audio identity for intros and outros.">Chuẩn hóa ảnh bìa theo template cố định và sử dụng chung một dải âm thanh nhận diện cho phần mở đầu và kết thúc.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="case-section" aria-labelledby="ocpb-evidence-title">
-      <div class="container">
-        <div class="case-section-heading reveal"><p class="eyebrow">09 · ARCHIVED PERFORMANCE</p><h2 id="ocpb-evidence-title">Bằng chứng kết quả từ dữ liệu lưu trữ</h2></div>
-        <figure class="case-full-visual reveal"><img src="../assets/images/projects/ong-chu-plant-based/archived-tiktok-performance.webp" alt="Ảnh lưu trữ hiệu quả TikTok Ông Chú Plant-Based với 43,6 nghìn follower và các video có lượt xem cao" loading="lazy" /><figcaption><strong>Archived TikTok Performance</strong><span>Ảnh chụp lưu trữ cho thấy 43.6K followers, 148K likes và các video đạt 383.2K, 936.4K và 1.1M views.</span></figcaption></figure>
-        <p class="case-note reveal">Ảnh được dùng như project record vì kênh TikTok gốc không còn truy cập công khai. Không tái dựng giao diện analytics và không sử dụng claim vượt quá phạm vi dữ liệu đã lưu.</p>
-      </div>
-    </section>
-
-    <section class="case-section case-soft-section" aria-labelledby="ocpb-work-title">
-      <div class="container">
-        <div class="case-section-heading reveal"><p class="eyebrow">10 · SELECTED EDITORIAL WORK</p><h2 id="ocpb-work-title">Ba mẫu nội dung còn truy cập công khai</h2><p class="ocpb-section-intro">YouTube links được cung cấp để chứng minh sản phẩm biên tập; chúng không được gắn nhãn “top-performing” vì dữ liệu thành tích chính thuộc TikTok.</p></div>
-        <figure class="case-full-visual reveal"><img src="../assets/images/projects/ong-chu-plant-based/selected-editorial-works.webp" alt="Ba nội dung biên tập chọn lọc của Ông Chú Plant-Based" loading="lazy" /><figcaption><strong>Selected Editorial Work</strong><span>Ba chủ đề minh họa cách đóng gói kiến thức sức khỏe thành nội dung ngắn và nhất quán.</span></figcaption></figure>
-        <div class="ocpb-editorial-links">
-          <a class="reveal" href="https://youtu.be/xdNZR03pYIQ" target="_blank" rel="noopener"><span>WORK 01</span><strong>Tìm hiểu về sự sống để vượt qua “bản án bệnh tật”</strong><em>Watch on YouTube ↗</em></a>
-          <a class="reveal" href="https://youtu.be/LsbflGj3A-Y" target="_blank" rel="noopener"><span>WORK 02</span><strong>Từ trào ngược dạ dày đến Barrett thực quản</strong><em>Watch on YouTube ↗</em></a>
-          <a class="reveal" href="https://youtu.be/fELoYFKPzsw" target="_blank" rel="noopener"><span>WORK 03</span><strong>Làm sao để chữa bệnh trào ngược dạ dày thực quản?</strong><em>Watch on YouTube ↗</em></a>
+    <section class="ocpb-section bg-neutral-50">
+      <div class="ocpb-shell">
+        <div class="max-w-3xl"><p class="ocpb-kicker" data-vi="Định dạng nền tảng" data-en="Platform formats">Định dạng nền tảng</p><h2 class="ocpb-heading" data-vi="Điều chỉnh tỷ lệ, phụ đề, logo và thời lượng theo hành vi xem." data-en="Adjusted aspect ratio, subtitles, logo placement and duration to viewing behavior.">Điều chỉnh tỷ lệ, phụ đề, logo và thời lượng theo hành vi xem.</h2></div>
+        <div class="mt-12 grid gap-12 lg:grid-cols-2">
+          <article>
+            <div class="grid gap-4 sm:grid-cols-2"><figure class="ocpb-image-frame aspect-video"><img src="../assets/images/projects/ong-chu-plant-based/v20/youtube-format-01.jpg" alt="Video YouTube định dạng 16:9" loading="lazy" /></figure><figure class="ocpb-image-frame aspect-video"><img src="../assets/images/projects/ong-chu-plant-based/v20/youtube-format-02.jpg" alt="Video YouTube với subtitle cuối màn hình" loading="lazy" /></figure></div>
+            <h3 class="mt-7 text-xl font-black text-[#6c3795]">YouTube · 16:9</h3>
+            <ul class="mt-4 space-y-2 text-sm leading-7 text-neutral-600"><li data-vi="Subtitle đặt ở khu vực dưới cùng của màn hình video." data-en="Subtitles were positioned along the bottom of the frame.">Subtitle đặt ở khu vực dưới cùng của màn hình video.</li><li data-vi="Logo chèn ở góc phải." data-en="Logo placed in the upper-right corner.">Logo chèn ở góc phải.</li><li data-vi="Mỗi tập dài khoảng 3–5 phút." data-en="Each episode ran for approximately 3–5 minutes.">Mỗi tập dài khoảng 3–5 phút.</li></ul>
+          </article>
+          <article>
+            <div class="grid max-w-lg grid-cols-2 gap-4"><figure class="ocpb-image-frame aspect-[9/16]"><img src="../assets/images/projects/ong-chu-plant-based/v20/tiktok-format-01.jpg" alt="Video TikTok định dạng dọc 9:16" loading="lazy" /></figure><figure class="ocpb-image-frame aspect-[9/16]"><img src="../assets/images/projects/ong-chu-plant-based/v20/tiktok-format-02.jpg" alt="Video TikTok với subtitle ở giữa màn hình" loading="lazy" /></figure></div>
+            <h3 class="mt-7 text-xl font-black text-[#6c3795]">TikTok · 9:16</h3>
+            <ul class="mt-4 space-y-2 text-sm leading-7 text-neutral-600"><li data-vi="Subtitle đặt ở vị trí giữa màn hình để tránh bị che bởi giao diện người dùng." data-en="Subtitles were centered to avoid being covered by platform controls.">Subtitle đặt ở vị trí giữa màn hình để tránh bị che bởi giao diện người dùng.</li><li data-vi="Logo chèn ở góc phải." data-en="Logo placed in the upper-right corner.">Logo chèn ở góc phải.</li><li data-vi="Thời lượng tối ưu khoảng 60 giây, được cắt lặp hoặc repost từ định dạng ngang." data-en="Duration was optimized to around 60 seconds, with edits or reposts adapted from horizontal content.">Thời lượng tối ưu khoảng 60 giây, được cắt lặp hoặc repost từ định dạng ngang.</li></ul>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="case-section" aria-labelledby="ocpb-product-films-title">
-      <div class="container">
-        <div class="case-section-heading reveal">
-          <p class="eyebrow">11 · PRODUCT FILMS</p>
-          <h2 id="ocpb-product-films-title">Farm-to-Product Video Editing</h2>
-          <p class="ocpb-section-intro">Với hai video giới thiệu sản phẩm Vinamit, tôi rà soát footage đã quay, lựa chọn những cảnh phù hợp và sắp xếp chúng thành mạch kể chuyện từ vùng nguyên liệu đến thành phẩm. Tôi thực hiện rough cut, lựa chọn và ghép nhạc, sau đó phối hợp với Video Editor qua các vòng phản hồi để hoàn thiện bản dựng cuối.</p>
+    <section class="ocpb-channel-section ocpb-section text-white">
+      <div class="ocpb-shell">
+        <div class="max-w-4xl"><p class="ocpb-kicker !text-[#88c54f]" data-vi="Kênh TikTok Ông Chú Plant-Based" data-en="Ông Chú Plant-Based TikTok channel">Kênh TikTok Ông Chú Plant-Based</p><h2 class="text-4xl font-black leading-tight tracking-[-0.035em] md:text-5xl" data-vi="Dấu ấn của series trên nền tảng video ngắn." data-en="How the series showed up on short-form video.">Dấu ấn của series trên nền tảng video ngắn.</h2><p class="mt-6 text-sm leading-7 text-white/70" data-vi="Ảnh chụp màn hình kênh TikTok và một số video nổi bật. Hiện tại kênh TikTok OCPB đã được ẩn theo nhu cầu nội bộ của công ty nên không còn truy cập công khai." data-en="Archived screenshots of the TikTok channel and selected standout videos. The OCPB TikTok channel was later hidden based on an internal company decision and is no longer publicly accessible.">Ảnh chụp màn hình kênh TikTok và một số video nổi bật. Hiện tại kênh TikTok OCPB đã được ẩn theo nhu cầu nội bộ của công ty nên không còn truy cập công khai.</p></div>
+        <div class="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
+          <figure class="ocpb-image-frame aspect-[9/16]"><img src="../assets/images/projects/ong-chu-plant-based/v20/tiktok-showcase-01.jpg" alt="Ảnh chụp kênh TikTok Ông Chú Plant-Based" loading="lazy" /></figure>
+          <figure class="ocpb-image-frame aspect-[9/16]"><img src="../assets/images/projects/ong-chu-plant-based/v20/tiktok-showcase-02.jpg" alt="Video TikTok nổi bật của dự án" loading="lazy" /></figure>
+          <figure class="ocpb-image-frame aspect-[9/16]"><img src="../assets/images/projects/ong-chu-plant-based/v20/tiktok-format-01.jpg" alt="Video TikTok với Host tại vườn cây" loading="lazy" /></figure>
+          <figure class="ocpb-image-frame aspect-[9/16]"><img src="../assets/images/projects/ong-chu-plant-based/v20/tiktok-format-02.jpg" alt="Video TikTok với Host tại thư viện" loading="lazy" /></figure>
         </div>
-        <div class="ocpb-product-video-grid">
-          <figure class="ocpb-video-card reveal">
-            <video controls preload="metadata" playsinline poster="../assets/images/projects/ong-chu-plant-based/vinamit-dried-jackfruit-poster.jpg" aria-label="Video giới thiệu sản phẩm mít sấy Vinamit">
-              <source src="../assets/videos/projects/ong-chu-plant-based/vinamit-dried-jackfruit.mp4" type="video/mp4" />
-              Trình duyệt của bạn không hỗ trợ video HTML5.
-            </video>
-            <figcaption>
-              <span>PRODUCT FILM 01 · 00:45</span>
-              <h3>Mít sấy Vinamit</h3>
-              <p>Mạch hình ảnh đi từ nông trại và quá trình thu hoạch đến nguyên liệu thành phẩm và nhận diện thương hiệu.</p>
-              <small><strong>My contribution:</strong> Footage selection · Narrative sequencing · Rough-cut editing · Music integration · Post-production coordination</small>
-            </figcaption>
+
+        <div class="mt-24 grid gap-10 lg:grid-cols-[.7fr_1.3fr] lg:items-center">
+          <div><p class="ocpb-kicker !text-[#88c54f]" data-vi="Series trên YouTube Maybe Podcast" data-en="Series on Maybe Podcast YouTube">Series trên YouTube Maybe Podcast</p><h2 class="text-3xl font-black leading-tight md:text-4xl" data-vi="36 video bản ngắn được đăng tải trên YouTube Maybe Podcast." data-en="A 36-episode short-form series was published through Maybe Podcast on YouTube.">36 video bản ngắn được đăng tải trên YouTube Maybe Podcast.</h2><a class="mt-8 inline-flex items-center gap-3 rounded-full bg-[#88c54f] px-6 py-4 text-[10px] font-extrabold uppercase tracking-[0.16em] text-neutral-950 transition hover:-translate-y-1 hover:bg-white" href="https://www.youtube.com/playlist?list=PLkN7AKFo3XrqFO7gssuxqgtxfhVySqcMj" target="_blank" rel="noopener noreferrer"><span data-vi="Xem toàn bộ series trên YouTube" data-en="Watch the full series on YouTube">Xem toàn bộ series trên YouTube</span><span aria-hidden="true">↗</span></a></div>
+          <a class="group ocpb-image-frame relative aspect-video" href="https://www.youtube.com/playlist?list=PLkN7AKFo3XrqFO7gssuxqgtxfhVySqcMj" target="_blank" rel="noopener noreferrer" aria-label="Mở playlist Ông Chú Plant-Based trên YouTube"><img src="../assets/images/projects/ong-chu-plant-based/v20/youtube-playlist.jpg" alt="Playlist 36 video Ông Chú Plant-Based trên YouTube Maybe Podcast" loading="lazy" /><span class="ocpb-play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" aria-hidden="true">▶</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="ocpb-section bg-white">
+      <div class="ocpb-shell">
+        <div class="max-w-4xl"><p class="ocpb-kicker" data-vi="Video quảng bá sản phẩm của Vinamit" data-en="Vinamit product films">Video quảng bá sản phẩm của Vinamit</p><h2 class="ocpb-heading" data-vi="Hai câu chuyện hình ảnh từ vùng nguyên liệu đến sản phẩm." data-en="Two visual stories connecting source farms to finished products.">Hai câu chuyện hình ảnh từ vùng nguyên liệu đến sản phẩm.</h2></div>
+        <div class="mt-12 grid gap-8 lg:grid-cols-2">
+          <figure class="ocpb-video-card overflow-hidden rounded-[26px] border border-neutral-200 bg-neutral-50">
+            <video controls preload="none" playsinline poster="../assets/images/projects/ong-chu-plant-based/vinamit-dried-banana-poster.jpg" aria-label="Video quảng bá chuối sấy Vinamit"><source src="../assets/videos/projects/ong-chu-plant-based/vinamit-dried-banana.mp4" type="video/mp4" /><span data-vi="Trình duyệt không hỗ trợ video HTML5." data-en="Your browser does not support HTML5 video.">Trình duyệt không hỗ trợ video HTML5.</span></video>
+            <figcaption class="p-6"><span class="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#6c3795]">Product Film 01</span><h3 class="mt-2 text-xl font-black" data-vi="Chuối sấy Vinamit" data-en="Vinamit dried banana">Chuối sấy Vinamit</h3></figcaption>
           </figure>
-          <figure class="ocpb-video-card reveal">
-            <video controls preload="metadata" playsinline poster="../assets/images/projects/ong-chu-plant-based/vinamit-dried-banana-poster.jpg" aria-label="Video giới thiệu sản phẩm chuối sấy Vinamit">
-              <source src="../assets/videos/projects/ong-chu-plant-based/vinamit-dried-banana.mp4" type="video/mp4" />
-              Trình duyệt của bạn không hỗ trợ video HTML5.
-            </video>
-            <figcaption>
-              <span>PRODUCT FILM 02 · 00:40</span>
-              <h3>Chuối sấy Vinamit</h3>
-              <p>Mạch kể chuyện theo hành trình từ vườn chuối, thu hoạch và vận chuyển đến sản phẩm được giới thiệu trong bối cảnh nguyên liệu.</p>
-              <small><strong>My contribution:</strong> Footage selection · Narrative sequencing · Rough-cut editing · Music integration · Post-production coordination</small>
-            </figcaption>
+          <figure class="ocpb-video-card overflow-hidden rounded-[26px] border border-neutral-200 bg-neutral-50">
+            <video controls preload="none" playsinline poster="../assets/images/projects/ong-chu-plant-based/vinamit-dried-jackfruit-poster.jpg" aria-label="Video quảng bá mít sấy Vinamit"><source src="../assets/videos/projects/ong-chu-plant-based/vinamit-dried-jackfruit.mp4" type="video/mp4" /><span data-vi="Trình duyệt không hỗ trợ video HTML5." data-en="Your browser does not support HTML5 video.">Trình duyệt không hỗ trợ video HTML5.</span></video>
+            <figcaption class="p-6"><span class="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#6c3795]">Product Film 02</span><h3 class="mt-2 text-xl font-black" data-vi="Mít sấy Vinamit" data-en="Vinamit dried jackfruit">Mít sấy Vinamit</h3></figcaption>
           </figure>
-        </div>
-        <div class="ocpb-product-process reveal" aria-label="Quy trình biên tập hai video sản phẩm">
-          <span>Raw Footage Review</span><span>Shot Selection</span><span>Narrative Sequencing</span><span>Rough Cut</span><span>Music Integration</span><span>Editor Handoff</span><span>Feedback &amp; Finalization</span>
         </div>
       </div>
     </section>
 
-    <section class="case-section" aria-labelledby="ocpb-role-title">
-      <div class="container">
-        <div class="execution-role-grid">
-          <article class="role-panel reveal"><p class="eyebrow">12 · MY ROLE</p><h3 id="ocpb-role-title">Content Editor</h3><ul class="role-list"><li>Nghiên cứu và đối chiếu nguồn thông tin trước vòng review chuyên môn.</li><li>Phân tích transcript và xác định luận điểm phù hợp cho từng short-form video.</li><li>Trích xuất highlight, xây lại mạch kể chuyện và chuẩn bị rough cut.</li><li>Loại bỏ đoạn vấp, lặp từ, khoảng dừng dài và phần diễn giải không cần thiết.</li><li>Đề xuất B-roll, caption, hình minh họa và motion assets theo ngữ cảnh.</li><li>Rà soát và lựa chọn footage, xây dựng visual narrative và ghép nhạc cho hai video sản phẩm.</li><li>Phối hợp với Video Editor trong hậu kỳ và kiểm tra phiên bản trước xuất bản.</li><li>Viết nội dung Facebook và hỗ trợ phân phối trên các nền tảng.</li></ul></article>
-          <article class="learning-card reveal"><p class="eyebrow">13 · KEY LEARNING</p><h2>Biên tập là thiết kế lại trải nghiệm tiếp nhận</h2><p><strong>One video, one clear idea.</strong> Một short-form video chỉ thực sự mạnh khi người xem có thể nắm được một luận điểm rõ ràng.</p><p><strong>Structure creates speed.</strong> Workflow và video architecture nhất quán giúp tăng tốc sản xuất mà vẫn giữ chất lượng.</p><p><strong>Visuals should clarify.</strong> B-roll, caption và animation chỉ có giá trị khi làm nội dung dễ hiểu hơn, không phải chỉ để trang trí.</p></article>
+    <section class="ocpb-section bg-neutral-50">
+      <div class="ocpb-shell">
+        <p class="ocpb-kicker" data-vi="Điểm đúc kết" data-en="Key takeaways">Điểm đúc kết</p>
+        <div class="mt-8 grid gap-5 lg:grid-cols-3">
+          <article class="ocpb-card"><span class="text-4xl font-black text-[#88c54f]">01</span><h2 class="mt-7 text-xl font-black" data-vi="“Edutainment” là phễu dẫn dắt tự nhiên cho sản phẩm" data-en="Edutainment is a natural product-discovery funnel">“Edutainment” là phễu dẫn dắt tự nhiên cho sản phẩm</h2><p class="mt-4 text-sm leading-7 text-neutral-600" data-vi="Thay vì quảng cáo trực tiếp, giáo dục thị trường bằng nội dung hữu ích về dinh dưỡng và thực phẩm tự nhiên tạo ra một mạng lưới tin cậy. Đây là chiến lược phù hợp để ra mắt sản phẩm ngách như nước mía lên men, được minh chứng qua 3 triệu lượt xem organic và sự quan tâm tự nhiên từ người dùng." data-en="Instead of hard-selling, educating the market with useful nutrition and natural-food content built trust. This was a fitting approach for introducing a niche product such as fermented sugarcane juice, reflected in 3 million organic views and natural audience interest.">Thay vì quảng cáo trực tiếp, giáo dục thị trường bằng nội dung hữu ích về dinh dưỡng và thực phẩm tự nhiên tạo ra một mạng lưới tin cậy. Đây là chiến lược phù hợp để ra mắt sản phẩm ngách như nước mía lên men, được minh chứng qua 3 triệu lượt xem organic và sự quan tâm tự nhiên từ người dùng.</p></article>
+          <article class="ocpb-card"><span class="text-4xl font-black text-[#88c54f]">02</span><h2 class="mt-7 text-xl font-black" data-vi="Tư duy “tái cấu trúc” tối ưu hóa ROI" data-en="A repurposing mindset improves content ROI">Tư duy “tái cấu trúc” tối ưu hóa ROI</h2><p class="mt-4 text-sm leading-7 text-neutral-600" data-vi="Không phải cứ cắt nhỏ video dài là thành short-form video. Thành công nằm ở việc tái cấu trúc theo phễu giữ chân: Highlight → Context → Explanation → Payoff → Brand Outro. Công thức này giải quyết bài toán rớt nhịp trong ba giây đầu tiên." data-en="Simply cutting a long video into smaller pieces does not create effective short-form content. Success came from restructuring the retention funnel: Highlight → Context → Explanation → Payoff → Brand Outro, addressing early audience drop-off.">Không phải cứ cắt nhỏ video dài là thành short-form video. Thành công nằm ở việc tái cấu trúc theo phễu giữ chân: Highlight → Context → Explanation → Payoff → Brand Outro. Công thức này giải quyết bài toán rớt nhịp trong ba giây đầu tiên.</p></article>
+          <article class="ocpb-card"><span class="text-4xl font-black text-[#88c54f]">03</span><h2 class="mt-7 text-xl font-black" data-vi="Chuẩn hóa là chìa khóa để mở rộng quy mô" data-en="Standardization is the key to scale">Chuẩn hóa là chìa khóa để mở rộng quy mô</h2><p class="mt-4 text-sm leading-7 text-neutral-600" data-vi="Đóng gói quy chuẩn từ font chữ, nhịp dựng và logo đến định dạng cho TikTok, Shorts và Reels giúp duy trì nhận diện thương hiệu, đồng thời tối ưu chi phí và tốc độ sản xuất để bảo đảm KPI ba bài mỗi tuần." data-en="Packaging standards for typography, editing rhythm, logos and formats across TikTok, Shorts and Reels maintained brand consistency while optimizing production cost and speed to sustain three posts per week.">Đóng gói quy chuẩn từ font chữ, nhịp dựng và logo đến định dạng cho TikTok, Shorts và Reels giúp duy trì nhận diện thương hiệu, đồng thời tối ưu chi phí và tốc độ sản xuất để bảo đảm KPI ba bài mỗi tuần.</p></article>
         </div>
-        <aside class="case-attribution reveal"><strong>Attribution statement</strong><p>Kết quả tăng trưởng và tương tác của kênh là thành quả phối hợp giữa Host, đội ngũ nội dung, Video Editor, Quản lý dự án, chuyên gia tư vấn và bộ phận phân phối. Trong vai trò Content Editor, tôi chịu trách nhiệm nghiên cứu và đối chiếu nguồn, phân tích transcript, tái cấu trúc nội dung dài thành video ngắn, thực hiện rough cut và dialogue cleanup, đề xuất B-roll/motion assets, phối hợp hậu kỳ, viết nội dung Facebook và hỗ trợ phân phối. Nội dung cuối cùng được Quản lý dự án, Host và Bác sĩ tư vấn duyệt trước khi phát hành.</p><p>Đối với hai video sản phẩm, tôi chịu trách nhiệm rà soát và lựa chọn footage, xây dựng mạch kể chuyện hình ảnh, thực hiện rough cut, lựa chọn và ghép nhạc, đồng thời phối hợp phản hồi trong quá trình hậu kỳ. Video Editor phụ trách tinh chỉnh bản dựng cuối cùng và hoàn thiện master output.</p></aside>
-        <div class="case-footer-button reveal"><a class="button button-primary" href="../index.html#projects">← Xem các dự án khác</a></div>
+        <div class="mt-14"><a class="inline-flex items-center gap-3 rounded-full bg-[#6c3795] px-7 py-4 text-xs font-extrabold uppercase tracking-[0.14em] text-white transition hover:-translate-y-1 hover:bg-[#88c54f] hover:text-neutral-950" href="../index.html#projects"><span aria-hidden="true">←</span><span data-vi="Xem thêm các dự án khác" data-en="Explore other projects">Xem thêm các dự án khác</span></a></div>
       </div>
     </section>
   </main>
-  <script src="../assets/js/case-study.js"></script>
+
+  <footer class="bg-neutral-950 py-8 text-white/55">
+    <div class="ocpb-shell flex flex-col gap-2 text-[10px] font-semibold uppercase tracking-[0.15em] sm:flex-row sm:items-center sm:justify-between"><span>© 2026 Tran Quang Nhat</span><span data-vi="Marketing Portfolio · TP. Hồ Chí Minh" data-en="Marketing Portfolio · Ho Chi Minh City">Marketing Portfolio · TP. Hồ Chí Minh</span></div>
+  </footer>
+
+  <script src="../assets/js/ocpb-case-study.js?v=21"></script>
 </body>
 </html>

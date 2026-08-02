@@ -1,0 +1,255 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --ocpb-purple: #6c3795;
+    --ocpb-green: #88c54f;
+    --ocpb-black: #101010;
+    --ocpb-white: #ffffff;
+    --ocpb-muted: #696969;
+    --ocpb-line: #e7e7e7;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply m-0 bg-white font-sans text-neutral-950 antialiased;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  img,
+  video {
+    @apply block max-w-full;
+  }
+
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .ocpb-shell {
+    @apply mx-auto w-[min(1280px,calc(100%-40px))] lg:w-[min(1280px,calc(100%-96px))];
+  }
+
+  .ocpb-section {
+    @apply py-16 md:py-24 lg:py-28;
+  }
+
+  .ocpb-kicker {
+    @apply mb-4 text-[11px] font-extrabold uppercase tracking-[0.28em] text-[#6c3795] md:text-xs;
+  }
+
+  .ocpb-heading {
+    @apply max-w-4xl text-3xl font-extrabold leading-tight tracking-[-0.035em] text-neutral-950 md:text-5xl;
+  }
+
+  .ocpb-body {
+    @apply text-sm leading-7 text-neutral-600 md:text-base md:leading-8;
+  }
+
+  .ocpb-card {
+    @apply rounded-[26px] border border-neutral-200 bg-white p-6 shadow-[0_18px_55px_rgba(16,16,16,0.06)] md:p-8;
+  }
+
+  .ocpb-image-frame {
+    @apply overflow-hidden rounded-[24px] bg-neutral-100;
+  }
+
+  .ocpb-image-frame img {
+    @apply h-full w-full object-cover transition duration-700 ease-out;
+  }
+
+  .ocpb-image-frame:hover img {
+    @apply scale-[1.025];
+  }
+
+  .ocpb-pill {
+    @apply inline-flex items-center rounded-full bg-[#88c54f] px-4 py-2 text-[10px] font-extrabold uppercase tracking-[0.16em] text-neutral-950;
+  }
+
+  .ocpb-play {
+    @apply grid h-14 w-14 place-items-center rounded-full bg-white text-xl text-[#6c3795] shadow-xl transition duration-300 group-hover:scale-110 group-hover:bg-[#88c54f] group-hover:text-neutral-950;
+  }
+
+  .ocpb-nav-link {
+    @apply text-[11px] font-bold uppercase tracking-[0.18em] text-white/90 transition hover:text-[#88c54f];
+  }
+
+  .ocpb-stat {
+    @apply border-t border-neutral-200 pt-6;
+  }
+
+  .ocpb-stat strong {
+    @apply block text-4xl font-black tracking-[-0.05em] text-[#6c3795] md:text-5xl;
+  }
+
+  .ocpb-stat span {
+    @apply mt-3 block text-[10px] font-bold uppercase leading-5 tracking-[0.13em] text-[#6f9f3f];
+  }
+
+  .ocpb-script-step {
+    @apply overflow-hidden rounded-[26px] border border-white/15 bg-white/5;
+  }
+
+  .ocpb-script-step video {
+    @apply aspect-video w-full bg-neutral-950 object-cover;
+  }
+
+  .ocpb-script-caption {
+    @apply grid grid-cols-[44px_1fr] gap-4 p-5 md:p-6;
+  }
+
+  .ocpb-script-caption > span {
+    @apply grid h-10 w-10 place-items-center rounded-full bg-[#88c54f] text-xs font-black text-neutral-950;
+  }
+
+  .ocpb-script-caption strong {
+    @apply block text-sm font-extrabold text-white;
+  }
+
+  .ocpb-script-caption p {
+    @apply mt-2 text-xs leading-6 text-white/60;
+  }
+}
+
+.ocpb-progress {
+  position: fixed;
+  inset: 0 auto auto 0;
+  z-index: 100;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--ocpb-purple), var(--ocpb-green));
+}
+
+.ocpb-header {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 50;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.ocpb-header.is-scrolled {
+  position: fixed;
+  background: rgba(16, 16, 16, 0.92);
+  backdrop-filter: blur(18px);
+}
+
+.ocpb-mobile-nav {
+  display: none;
+}
+
+.ocpb-mobile-nav.open {
+  display: grid;
+}
+
+.ocpb-hero {
+  min-height: min(880px, 100svh);
+}
+
+.ocpb-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.74) 0%, rgba(0, 0, 0, 0.38) 48%, rgba(0, 0, 0, 0.12) 100%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.22));
+}
+
+.ocpb-channel-section {
+  background-image:
+    linear-gradient(rgba(16, 16, 16, 0.76), rgba(16, 16, 16, 0.82)),
+    url("../images/projects/ong-chu-plant-based/v20/channel-background.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.ocpb-video-card video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  background: #101010;
+  object-fit: cover;
+}
+
+.ocpb-language [aria-pressed="true"] {
+  color: var(--ocpb-green);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+[data-theme="dark"] body,
+[data-theme="dark"] .ocpb-light-surface {
+  background: #101010;
+  color: #fff;
+}
+
+[data-theme="dark"] .ocpb-heading,
+[data-theme="dark"] .ocpb-card {
+  color: #fff;
+}
+
+[data-theme="dark"] .ocpb-card {
+  border-color: #353535;
+  background: #1a1a1a;
+}
+
+[data-theme="dark"] .ocpb-body,
+[data-theme="dark"] .ocpb-card p {
+  color: #bdbdbd;
+}
+
+[data-theme="dark"] .bg-white,
+[data-theme="dark"] .bg-neutral-50 {
+  background-color: #101010;
+}
+
+[data-theme="dark"] .bg-neutral-100 {
+  background-color: #242424;
+}
+
+[data-theme="dark"] .text-neutral-950,
+[data-theme="dark"] .text-neutral-700 {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .text-neutral-600,
+[data-theme="dark"] .text-neutral-500 {
+  color: #bdbdbd;
+}
+
+[data-theme="dark"] .border-neutral-200,
+[data-theme="dark"] .ocpb-stat {
+  border-color: #353535;
+}
+
+@media (max-width: 767px) {
+  .ocpb-hero {
+    min-height: 760px;
+  }
+
+  .ocpb-hero::after {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.72) 67%, rgba(0, 0, 0, 0.88) 100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
