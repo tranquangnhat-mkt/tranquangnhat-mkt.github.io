@@ -3,303 +3,421 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Case study xây dựng và phát triển các kênh digital cho SMEG Vietnam của Trần Quang Nhật.">
+  <meta name="description" content="Case study xây dựng và phát triển các kênh Digital cho SMEG Vietnam của Trần Quang Nhật.">
   <meta name="author" content="Trần Quang Nhật">
   <meta property="og:title" content="SMEG Vietnam Digital Brand System | Trần Quang Nhật">
-  <meta property="og:description" content="Từ hiện diện phân mảnh đến một hệ thống digital nhất quán trên social media, website và e-commerce.">
+  <meta property="og:description" content="Từ hiện diện phân mảnh đến hệ thống digital nhất quán trên social media, website và e-commerce.">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="../assets/images/projects/smeg-digital-brand-system-v22/homepage-cover.webp">
+  <meta property="og:image" content="../assets/images/projects/smeg-digital-brand-system/homepage-cover.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700&amp;subset=vietnamese&amp;display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="../assets/images/favicon.png">
-  <link rel="stylesheet" href="../assets/css/case-studies-v22.css">
-  <link rel="stylesheet" href="../assets/css/smeg-case-study.css">
+  <link rel="stylesheet" href="../assets/css/smeg-ocpb-tailwind.css?v=1">
   <title>SMEG Vietnam Digital Brand System | Trần Quang Nhật</title>
 </head>
-<body class="v22-case smeg-editorial-case" data-title-vi="SMEG Vietnam Digital Brand System | Trần Quang Nhật" data-title-en="SMEG Vietnam Digital Brand System | Tran Quang Nhat">
-  <div class="v22-progress" id="scrollProgress" aria-hidden="true"></div>
+<body class="ocpb-light-surface overflow-x-hidden">
+  <div class="ocpb-progress" id="scrollProgress" aria-hidden="true"></div>
 
-  <header class="v22-site-header smeg-header" id="siteHeader">
-    <div class="v22-shell v22-nav">
-      <a class="v22-brand" href="../index.html#home" aria-label="Portfolio Trần Quang Nhật">
-        <span class="v22-brand-mark">N.</span>
-        <span>Trần Quang Nhật</span>
+  <header class="ocpb-header" id="siteHeader">
+    <div class="ocpb-shell flex h-[74px] items-center justify-between gap-5">
+      <a class="flex items-center gap-3 text-white" href="../index.html#home" aria-label="Trở về trang chủ Portfolio">
+        <span class="grid h-9 w-9 place-items-center rounded-full bg-[#6c3795] text-xs font-black">N.</span>
+        <span class="hidden text-[11px] font-extrabold uppercase tracking-[0.16em] sm:block">Tran Quang Nhat</span>
       </a>
-      <nav class="v22-desktop-nav" aria-label="Điều hướng chính">
-        <a href="../index.html#home" data-vi="Trang chủ" data-en="Home">Trang chủ</a>
-        <a href="../index.html#projects" data-vi="Dự án" data-en="Projects">Dự án</a>
-        <a href="../index.html#skills" data-vi="Kỹ năng" data-en="Skills">Kỹ năng</a>
-        <a href="../index.html#contact" data-vi="Liên hệ" data-en="Contact">Liên hệ</a>
+
+      <nav class="hidden items-center gap-8 lg:flex" aria-label="Điều hướng chính">
+        <a class="ocpb-nav-link" href="../index.html#home" data-vi="Trang chủ" data-en="Home">Trang chủ</a>
+        <a class="ocpb-nav-link" href="../index.html#projects" data-vi="Dự án" data-en="Projects">Dự án</a>
+        <a class="ocpb-nav-link" href="../index.html#skills" data-vi="Kỹ năng" data-en="Skills">Kỹ năng</a>
+        <a class="ocpb-nav-link" href="../index.html#contact" data-vi="Liên hệ" data-en="Contact">Liên hệ</a>
       </nav>
-      <div class="v22-nav-actions">
-        <button class="v22-lang-toggle" id="langToggle" type="button" aria-label="Chuyển ngôn ngữ">
-          <span data-lang-option="vi" class="active">VI</span><span aria-hidden="true">&nbsp;|&nbsp;</span><span data-lang-option="en">EN</span>
-        </button>
-        <button class="v22-theme-toggle" id="themeToggle" type="button" aria-label="Đổi giao diện sáng tối">☾</button>
-        <button class="v22-menu-toggle" id="menuToggle" type="button" aria-label="Mở menu" aria-expanded="false">☰</button>
+
+      <div class="flex items-center gap-3 text-white">
+        <div class="ocpb-language flex items-center gap-1 rounded-full border border-white/40 bg-black/20 px-3 py-2 text-[10px] font-extrabold tracking-[0.12em]" role="group" aria-label="Chọn ngôn ngữ">
+          <button type="button" data-language="vi" aria-pressed="true">VI</button>
+          <span class="text-white/40">|</span>
+          <button type="button" data-language="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="grid h-9 w-9 place-items-center rounded-full border border-white/40 bg-black/20 text-sm" id="themeToggle" type="button" aria-label="Đổi giao diện sáng tối">☾</button>
+        <button class="grid h-9 w-9 place-items-center rounded-full border border-white/40 bg-black/20 text-sm lg:hidden" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Mở menu">☰</button>
       </div>
     </div>
-    <nav class="v22-mobile-nav" id="mobileNav" aria-label="Điều hướng di động">
-      <a href="../index.html#home" data-vi="Trang chủ" data-en="Home">Trang chủ</a>
-      <a href="../index.html#projects" data-vi="Dự án" data-en="Projects">Dự án</a>
-      <a href="../index.html#skills" data-vi="Kỹ năng" data-en="Skills">Kỹ năng</a>
-      <a href="../index.html#contact" data-vi="Liên hệ" data-en="Contact">Liên hệ</a>
+
+    <nav class="ocpb-mobile-nav border-t border-white/20 bg-neutral-950/95 px-5 py-5 text-center backdrop-blur-xl lg:hidden" id="mobileNav" aria-label="Điều hướng di động">
+      <a class="ocpb-nav-link py-2" href="../index.html#home" data-vi="Trang chủ" data-en="Home">Trang chủ</a>
+      <a class="ocpb-nav-link py-2" href="../index.html#projects" data-vi="Dự án" data-en="Projects">Dự án</a>
+      <a class="ocpb-nav-link py-2" href="../index.html#skills" data-vi="Kỹ năng" data-en="Skills">Kỹ năng</a>
+      <a class="ocpb-nav-link py-2" href="../index.html#contact" data-vi="Liên hệ" data-en="Contact">Liên hệ</a>
     </nav>
   </header>
 
   <main>
-    <section class="smeg-hero" id="top" aria-labelledby="smeg-title">
-      <picture class="smeg-hero-media">
-        <source media="(max-width: 767px)" srcset="../assets/images/projects/smeg-digital-brand-system-v22/hero-mobile.webp">
-        <img src="../assets/images/projects/smeg-digital-brand-system-v22/hero-desktop.webp" alt="Không gian bếp với hệ sinh thái thiết bị gia dụng SMEG" fetchpriority="high">
+    <section class="ocpb-hero relative flex items-end overflow-hidden bg-neutral-950 pb-16 pt-32 md:pb-24">
+      <picture class="absolute inset-0 h-full w-full">
+        <source media="(max-width: 640px)" srcset="../assets/images/projects/smeg-digital-brand-system/hero-mobile.jpg"></source>
+        <img class="h-full w-full object-cover" src="../assets/images/projects/smeg-digital-brand-system/hero-desktop.jpg" alt="Không gian bếp với hệ sinh thái thiết bị gia dụng SMEG">
       </picture>
-      <div class="smeg-hero-overlay" aria-hidden="true"></div>
-      <div class="v22-shell smeg-hero-inner">
-        <a class="smeg-back" href="../index.html#projects"><span aria-hidden="true">←</span><span data-vi="Quay lại danh sách dự án" data-en="Back to projects">Quay lại danh sách dự án</span></a>
-        <div class="smeg-hero-copy">
-          <p class="smeg-kicker" data-vi="CASE STUDY · SOCIAL MEDIA · 09/2025–05/2026" data-en="CASE STUDY · SOCIAL MEDIA · 09/2025–05/2026">CASE STUDY · SOCIAL MEDIA · 09/2025–05/2026</p>
-          <h1 id="smeg-title" data-vi="Xây dựng &amp; phát triển các kênh Digital cho SMEG Vietnam" data-en="Building &amp; Growing SMEG Vietnam's Digital Channels">Xây dựng &amp; phát triển các kênh Digital cho SMEG Vietnam</h1>
-          <p data-vi="Xây dựng và chuẩn hóa nền tảng digital cho SMEG Vietnam — từ định hướng thương hiệu, hệ thống nội dung và địa phương hóa tài liệu global đến triển khai social media, website và các điểm chạm hỗ trợ bán hàng." data-en="Building and standardising SMEG Vietnam's digital foundation—from brand direction, content systems and global-to-local adaptation to social media, website and sales-support touchpoints.">Xây dựng và chuẩn hóa nền tảng digital cho SMEG Vietnam — từ định hướng thương hiệu, hệ thống nội dung và địa phương hóa tài liệu global đến triển khai social media, website và các điểm chạm hỗ trợ bán hàng.</p>
-        </div>
-        <a class="smeg-scroll-cue" href="#project-overview" aria-label="Cuộn xuống phần tổng quan"><span>SCROLL</span><i aria-hidden="true"></i></a>
+      <div class="ocpb-shell relative z-10 text-white">
+        <a class="mb-24 inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white/80 transition hover:text-[#88c54f] md:mb-40" href="../index.html#projects">
+          <span aria-hidden="true">←</span><span data-vi="Quay lại danh sách dự án" data-en="Back to selected projects">Quay lại danh sách dự án</span>
+        </a>
+        <p class="mb-5 text-xs font-bold uppercase tracking-[0.25em] text-[#88c54f]" data-vi="Dự án" data-en="Project">Dự án</p>
+        <h1 class="max-w-5xl text-4xl font-black uppercase leading-[1.02] tracking-[0.04em] sm:text-5xl md:text-7xl">Xây dựng &amp; phát triển các kênh Digital cho SMEG Vietnam</h1>
+        <p class="mt-6 text-[10px] font-extrabold uppercase tracking-[0.16em] text-white/90 md:text-xs">Case Study | Digital Brand Building | 02/2025 – 05/2026</p>
       </div>
     </section>
 
-    <nav class="smeg-case-nav" aria-label="Mục lục dự án">
-      <div class="v22-shell">
-        <a href="#project-overview"><span>01</span><span data-vi="Tổng quan" data-en="Overview">Tổng quan</span></a>
-        <a href="#results"><span>02</span><span data-vi="Kết quả" data-en="Results">Kết quả</span></a>
-        <a href="#audit"><span>04</span><span data-vi="Audit" data-en="Audit">Audit</span></a>
-        <a href="#content-system"><span>07</span><span data-vi="Hệ thống nội dung" data-en="Content system">Hệ thống nội dung</span></a>
-        <a href="#analytics"><span>12</span><span data-vi="Đo lường" data-en="Analytics">Đo lường</span></a>
+    <section class="ocpb-section bg-white">
+      <div class="ocpb-shell grid items-center gap-12 lg:grid-cols-[1.25fr_.75fr]">
+        <div>
+          <h2 class="max-w-3xl text-4xl font-black uppercase leading-[1.06] tracking-[0.12em] md:text-6xl">
+            <span class="text-[#6c3795]">SMEG</span><br>
+            <span class="text-[#88c54f]">VIETNAM</span>
+          </h2>
+          <p class="mt-8 max-w-3xl text-xs font-semibold uppercase leading-7 tracking-[0.17em] text-neutral-600" data-vi="Xây dựng và chuẩn hóa nền tảng digital cho SMEG Vietnam — từ định hướng thương hiệu, hệ thống nội dung và địa phương hóa tài liệu Global đến social media, website và e-commerce." data-en="Building and standardising SMEG Vietnam's digital foundation—from brand direction, content systems and global-to-local adaptation to social media, website and e-commerce.">Xây dựng và chuẩn hóa nền tảng digital cho SMEG Vietnam — từ định hướng thương hiệu, hệ thống nội dung và địa phương hóa tài liệu Global đến social media, website và e-commerce.</p>
+        </div>
+        <div class="grid grid-cols-2 items-center gap-6">
+          <div class="ocpb-image-frame aspect-square bg-white p-3"><img class="!object-contain" src="../assets/images/projects/smeg-digital-brand-system/logo-smeg.jpg" alt="Logo SMEG" loading="lazy"></div>
+          <div class="ocpb-image-frame aspect-square bg-white p-3"><img class="!object-contain" src="../assets/images/projects/smeg-digital-brand-system/homepage-cover.jpg" alt="Hệ sinh thái sản phẩm SMEG Vietnam" loading="lazy"></div>
+        </div>
       </div>
-    </nav>
+    </section>
 
-    <section class="smeg-section smeg-intro" id="project-overview" aria-labelledby="overview-title">
-      <div class="v22-shell">
-        <div class="smeg-intro-grid reveal">
-          <div class="smeg-intro-copy">
-            <p class="smeg-eyebrow">01 · <span data-vi="TỔNG QUAN" data-en="OVERVIEW">TỔNG QUAN</span></p>
-            <h2 id="overview-title" data-vi="Từ một hiện diện phân mảnh đến hệ thống thương hiệu thống nhất" data-en="From a fragmented presence to one coherent brand system">Từ một hiện diện phân mảnh đến hệ thống thương hiệu thống nhất</h2>
-            <p data-vi="Cuối năm 2024 và đầu năm 2025, EPICURE VINA bắt đầu phát triển danh mục thiết bị gia dụng SMEG tại Việt Nam. Khi đó, thông tin sản phẩm chủ yếu xuất hiện trên hội nhóm, tài khoản bán hàng và những kênh chưa được vận hành theo một hệ thống thương hiệu thống nhất." data-en="In late 2024 and early 2025, EPICURE VINA began developing SMEG's home-appliance portfolio in Vietnam. Product information was still scattered across groups, sales accounts and channels without one consistent brand system.">Cuối năm 2024 và đầu năm 2025, EPICURE VINA bắt đầu phát triển danh mục thiết bị gia dụng SMEG tại Việt Nam. Khi đó, thông tin sản phẩm chủ yếu xuất hiện trên hội nhóm, tài khoản bán hàng và những kênh chưa được vận hành theo một hệ thống thương hiệu thống nhất.</p>
-            <p data-vi="Dự án tập trung xây dựng và chuẩn hóa nền tảng digital: xác lập định hướng thương hiệu, hệ thống nội dung, quy trình quản trị kênh và cách chuyển hóa tài liệu SMEG Global thành nội dung phù hợp với khách hàng Việt Nam." data-en="The project focused on building and standardising the digital foundation: brand direction, content system, channel management and the adaptation of SMEG Global materials for Vietnamese audiences.">Dự án tập trung xây dựng và chuẩn hóa nền tảng digital: xác lập định hướng thương hiệu, hệ thống nội dung, quy trình quản trị kênh và cách chuyển hóa tài liệu SMEG Global thành nội dung phù hợp với khách hàng Việt Nam.</p>
-          </div>
-          <div class="smeg-logo-panel">
-            <img src="../assets/images/projects/smeg-digital-brand-system-v22/logo-smeg.png" alt="Logo SMEG" loading="lazy" decoding="async">
-            <p>Technology with style</p>
-          </div>
+    <section class="ocpb-section bg-neutral-50">
+      <div class="ocpb-shell">
+        <div class="mx-auto max-w-4xl text-center">
+          <p class="ocpb-kicker" data-vi="Tổng quan" data-en="Overview">Tổng quan</p>
+          <p class="text-sm font-medium uppercase leading-7 tracking-[0.14em] text-neutral-700 md:text-base md:leading-8" data-vi="Cuối năm 2024 và đầu năm 2025, EPICURE VINA bắt đầu phát triển danh mục thiết bị gia dụng SMEG tại Việt Nam. Dự án tập trung xây dựng và chuẩn hóa nền tảng digital, chuyển một hiện diện phân mảnh thành hệ thống thương hiệu nhất quán trên các điểm chạm." data-en="In late 2024 and early 2025, EPICURE VINA began developing SMEG's home-appliance portfolio in Vietnam. The project built and standardised its digital foundation, turning a fragmented presence into a consistent system across touchpoints.">Cuối năm 2024 và đầu năm 2025, EPICURE VINA bắt đầu phát triển danh mục thiết bị gia dụng SMEG tại Việt Nam. Dự án tập trung xây dựng và chuẩn hóa nền tảng digital, chuyển một hiện diện phân mảnh thành hệ thống thương hiệu nhất quán trên các điểm chạm.</p>
         </div>
 
-        <div class="smeg-meta-grid reveal" role="group" aria-label="Thông tin dự án">
-          <article><span data-vi="Thương hiệu" data-en="Brand">Thương hiệu</span><strong>SMEG Vietnam</strong></article>
-          <article><span data-vi="Loại dự án" data-en="Project type">Loại dự án</span><strong>Digital Brand Building</strong></article>
-          <article><span data-vi="Thời gian" data-en="Timeline">Thời gian</span><strong>09/2025–05/2026</strong></article>
-          <article><span data-vi="Kênh triển khai" data-en="Channels">Kênh triển khai</span><strong>Social · Website · E-commerce</strong></article>
-        </div>
-
-        <div class="smeg-role-block reveal">
-          <div class="smeg-section-label"><span>MY ROLE</span><i></i></div>
-          <div class="smeg-role-grid">
-            <article><span>01</span><h3 data-vi="Lập kế hoạch truyền thông" data-en="Communication planning">Lập kế hoạch truyền thông</h3></article>
-            <article><span>02</span><h3 data-vi="Xác định content pillars và nhóm sản phẩm ưu tiên" data-en="Content pillars &amp; product priorities">Xác định content pillars và nhóm sản phẩm ưu tiên</h3></article>
-            <article><span>03</span><h3 data-vi="Xây dựng tài liệu marketing từ SMEG Global" data-en="Marketing materials from SMEG Global">Xây dựng tài liệu marketing từ SMEG Global</h3></article>
-            <article><span>04</span><h3 data-vi="Triển khai chương trình bán hàng &amp; hoạt động marketing" data-en="Sales programmes &amp; marketing activation">Triển khai chương trình bán hàng &amp; hoạt động marketing</h3></article>
+        <div class="mt-14 text-center">
+          <p class="ocpb-kicker" data-vi="Vai trò" data-en="Responsibilities">Vai trò</p>
+          <div class="mx-auto mt-7 grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            <article class="rounded-2xl bg-[#88c54f] px-5 py-8 text-xs font-extrabold uppercase leading-5 tracking-[0.08em] text-neutral-950" data-vi="Lập kế hoạch truyền thông" data-en="Communication planning">Lập kế hoạch truyền thông</article>
+            <article class="rounded-2xl bg-[#88c54f] px-5 py-8 text-xs font-extrabold uppercase leading-5 tracking-[0.08em] text-neutral-950" data-vi="Xác định content pillars và nhóm sản phẩm ưu tiên" data-en="Content pillars and product priorities">Xác định content pillars và nhóm sản phẩm ưu tiên</article>
+            <article class="rounded-2xl bg-[#88c54f] px-5 py-8 text-xs font-extrabold uppercase leading-5 tracking-[0.08em] text-neutral-950" data-vi="Xây dựng tài liệu marketing từ SMEG Global" data-en="Marketing materials from SMEG Global">Xây dựng tài liệu marketing từ SMEG Global</article>
+            <article class="rounded-2xl bg-[#88c54f] px-5 py-8 text-xs font-extrabold uppercase leading-5 tracking-[0.08em] text-neutral-950" data-vi="Triển khai chương trình bán hàng &amp; hoạt động marketing" data-en="Sales programmes and marketing activation">Triển khai chương trình bán hàng &amp; hoạt động marketing</article>
+            <article class="rounded-2xl bg-[#88c54f] px-5 py-8 text-xs font-extrabold uppercase leading-5 tracking-[0.08em] text-neutral-950 sm:col-span-2 lg:col-span-1" data-vi="Theo dõi hiệu quả &amp; tối ưu kế hoạch" data-en="Performance tracking and optimisation">Theo dõi hiệu quả &amp; tối ưu kế hoạch</article>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="smeg-section smeg-results" id="results" aria-labelledby="results-title">
-      <div class="v22-shell">
-        <div class="smeg-section-head reveal">
-          <p class="smeg-eyebrow">02 · <span data-vi="KẾT QUẢ ĐẠT ĐƯỢC" data-en="PROJECT RESULTS">KẾT QUẢ ĐẠT ĐƯỢC</span></p>
-          <h2 id="results-title" data-vi="Một nền tảng tăng trưởng có thể đo lường" data-en="A measurable foundation for growth">Một nền tảng tăng trưởng có thể đo lường</h2>
-          <p data-vi="Kết quả ghi nhận từ báo cáo nội bộ, theo phạm vi ước tính trong giai đoạn 01/2025–12/2025." data-en="Results recorded from internal reporting, based on the estimated period January–December 2025.">Kết quả ghi nhận từ báo cáo nội bộ, theo phạm vi ước tính trong giai đoạn 01/2025–12/2025.</p>
+    <section class="ocpb-section bg-white">
+      <div class="ocpb-shell">
+        <div class="mx-auto max-w-3xl text-center">
+          <p class="ocpb-kicker" data-vi="Kết quả đạt được" data-en="Results achieved">Kết quả đạt được</p>
+          <p class="ocpb-body" data-vi="Kết quả ghi nhận dựa trên báo cáo nội bộ, theo phạm vi ước tính trong giai đoạn 01/2025–12/2025." data-en="Results recorded from internal reporting, based on the estimated period January–December 2025.">Kết quả ghi nhận dựa trên báo cáo nội bộ, theo phạm vi ước tính trong giai đoạn 01/2025–12/2025.</p>
         </div>
-        <div class="smeg-metrics reveal">
-          <article><strong>10K+</strong><span data-vi="Lượt người theo dõi tăng thêm trong năm 2025" data-en="New followers gained in 2025">Lượt người theo dõi tăng thêm trong năm 2025</span></article>
-          <article><strong>1.75M</strong><span data-vi="Tổng lượt người xem nội dung SMEG trong năm 2025" data-en="Total content viewers in 2025">Tổng lượt người xem nội dung SMEG trong năm 2025</span></article>
-          <article><strong>46K+</strong><span data-vi="Lượt tương tác với fanpage SMEG Vietnam" data-en="Interactions with the SMEG Vietnam fanpage">Lượt tương tác với fanpage SMEG Vietnam</span></article>
-          <article><strong>42K+</strong><span data-vi="Lượt xem trang trong năm 2025" data-en="Page views in 2025">Lượt xem trang trong năm 2025</span></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="smeg-section smeg-challenge" id="challenge" aria-labelledby="challenge-title">
-      <div class="v22-shell">
-        <div class="smeg-split-heading reveal">
-          <div><p class="smeg-eyebrow">03 · <span data-vi="THỬ THÁCH" data-en="CHALLENGES">THỬ THÁCH</span></p><h2 id="challenge-title" data-vi="Bốn vấn đề cần giải quyết cùng lúc" data-en="Four problems to solve at once">Bốn vấn đề cần giải quyết cùng lúc</h2></div>
-          <p data-vi="Dự án không đơn thuần là tạo thêm nội dung. Nền tảng, nhận diện, định hướng sản phẩm và quy trình vận hành đều phải được thiết kế lại trong cùng một hệ thống." data-en="The project was not simply about producing more content. The channels, identity, product priorities and operating process all had to be rebuilt as one system.">Dự án không đơn thuần là tạo thêm nội dung. Nền tảng, nhận diện, định hướng sản phẩm và quy trình vận hành đều phải được thiết kế lại trong cùng một hệ thống.</p>
-        </div>
-        <div class="smeg-problem-grid reveal">
-          <article><span>01</span><h3 data-vi="Xây dựng hệ thống mới từ đầu" data-en="Building the system from scratch">Xây dựng hệ thống mới từ đầu</h3></article>
-          <article><span>02</span><h3 data-vi="Nhất quán giữa mọi điểm chạm" data-en="Consistency across every touchpoint">Nhất quán giữa mọi điểm chạm</h3></article>
-          <article><span>03</span><h3 data-vi="Khoảng cách giữa nội dung Global và thị trường Việt Nam" data-en="The gap between global content and Vietnam">Khoảng cách giữa nội dung Global và thị trường Việt Nam</h3></article>
-          <article><span>04</span><h3 data-vi="Nguồn hàng và danh mục ưu tiên còn giới hạn" data-en="Limited supply and changing priorities">Nguồn hàng và danh mục ưu tiên còn giới hạn</h3></article>
-        </div>
-
-        <div class="smeg-strategy-heading reveal"><span data-vi="CHIẾN LƯỢC THỰC HIỆN" data-en="STRATEGIC RESPONSE">CHIẾN LƯỢC THỰC HIỆN</span></div>
-        <div class="smeg-strategy-grid reveal">
-          <article><span>01</span><h3 data-vi="Chuẩn hóa hệ thống nhận diện" data-en="Standardise the identity system">Chuẩn hóa hệ thống nhận diện</h3><p data-vi="Đồng bộ tone of voice, bố cục, hình ảnh và cách trình bày sản phẩm trên mọi nền tảng." data-en="Align tone of voice, layouts, imagery and product presentation across every platform.">Đồng bộ tone of voice, bố cục, hình ảnh và cách trình bày sản phẩm trên mọi nền tảng.</p></article>
-          <article><span>02</span><h3>Global consistency, local relevance</h3><p data-vi="Giữ bản sắc SMEG nhưng chuyển hóa thông điệp theo bối cảnh và hành vi người dùng Việt Nam." data-en="Preserve SMEG's identity while adapting messages to Vietnamese contexts and behaviours.">Giữ bản sắc SMEG nhưng chuyển hóa thông điệp theo bối cảnh và hành vi người dùng Việt Nam.</p></article>
-          <article><span>03</span><h3 data-vi="Ưu tiên sản phẩm theo từng giai đoạn" data-en="Phase product priorities">Ưu tiên sản phẩm theo từng giai đoạn</h3><p data-vi="Cân đối độ nhận diện, khả năng cung ứng, mùa vụ và mục tiêu kinh doanh." data-en="Balance awareness, supply, seasonality and business objectives.">Cân đối độ nhận diện, khả năng cung ứng, mùa vụ và mục tiêu kinh doanh.</p></article>
-          <article><span>04</span><h3 data-vi="Nội dung định hướng phong cách sống" data-en="Lifestyle-led content">Nội dung định hướng phong cách sống</h3><p data-vi="Đưa sản phẩm vào những thói quen, không gian và dịp sử dụng gần gũi với khách hàng." data-en="Place products in routines, spaces and occasions that feel relevant to customers.">Đưa sản phẩm vào những thói quen, không gian và dịp sử dụng gần gũi với khách hàng.</p></article>
+        <div class="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="ocpb-stat"><strong>10K+</strong><span data-vi="Lượt người theo dõi tăng thêm trong năm 2025" data-en="New followers gained in 2025">Lượt người theo dõi tăng thêm trong năm 2025</span></article>
+          <article class="ocpb-stat"><strong>1.75M</strong><span data-vi="Tổng lượt người xem nội dung SMEG trong năm 2025" data-en="Total content viewers in 2025">Tổng lượt người xem nội dung SMEG trong năm 2025</span></article>
+          <article class="ocpb-stat"><strong>46K+</strong><span data-vi="Lượt tương tác với fanpage SMEG Vietnam" data-en="Interactions with the SMEG Vietnam fanpage">Lượt tương tác với fanpage SMEG Vietnam</span></article>
+          <article class="ocpb-stat"><strong>42K+</strong><span data-vi="Lượt xem trang trong năm 2025" data-en="Page views in 2025">Lượt xem trang trong năm 2025</span></article>
         </div>
       </div>
     </section>
 
-    <section class="smeg-section smeg-audit" id="audit" aria-labelledby="audit-title">
-      <div class="v22-shell">
-        <div class="smeg-split-heading reveal">
-          <div><p class="smeg-eyebrow">04 · BRAND PRESENCE AUDIT</p><h2 id="audit-title" data-vi="Rà soát hiện trạng thương hiệu tại thị trường Việt Nam" data-en="Auditing SMEG's brand presence in Vietnam">Rà soát hiện trạng thương hiệu tại thị trường Việt Nam</h2></div>
-          <div><p data-vi="Dù đã hiện diện tại Việt Nam trong thời gian dài, SMEG vẫn thường được biết đến như một thương hiệu hàng xách tay. Nội dung chủ yếu đến từ reseller, thiên về commercial và thiếu một định vị hình ảnh thống nhất." data-en="Despite a long presence in Vietnam, SMEG was still often perceived as an imported hand-carried brand. Most content came from resellers, leaned heavily commercial and lacked a unified visual position.">Dù đã hiện diện tại Việt Nam trong thời gian dài, SMEG vẫn thường được biết đến như một thương hiệu hàng xách tay. Nội dung chủ yếu đến từ reseller, thiên về commercial và thiếu một định vị hình ảnh thống nhất.</p></div>
-        </div>
-      </div>
-      <div class="v22-carousel smeg-carousel reveal" data-carousel data-speed="18">
-        <div class="v22-carousel-viewport">
-          <figure class="v22-carousel-slide square"><img src="../assets/images/projects/smeg-digital-brand-system-v22/brand-presence-audit-collage.webp" alt="Bài đăng bán hàng SMEG trước khi chuẩn hóa hệ thống thương hiệu" loading="lazy" decoding="async" data-lightbox></figure>
-          <figure class="v22-carousel-slide square"><img src="../assets/images/projects/smeg-digital-brand-system-v22/brand-presence-audit-collage-2.webp" alt="Hình ảnh sản phẩm SMEG thiếu nhất quán trên thị trường" loading="lazy" decoding="async" data-lightbox></figure>
-          <figure class="v22-carousel-slide square"><img src="../assets/images/projects/smeg-digital-brand-system-v22/brand-presence-audit-collage-3.webp" alt="Nội dung reseller về thiết bị SMEG tại Việt Nam" loading="lazy" decoding="async" data-lightbox></figure>
-          <figure class="v22-carousel-slide square"><img src="../assets/images/projects/smeg-digital-brand-system-v22/brand-presence-audit-collage-4.webp" alt="Hiện trạng truyền thông SMEG phân mảnh trên mạng xã hội" loading="lazy" decoding="async" data-lightbox></figure>
-        </div>
-        <div class="v22-carousel-controls"><button class="v22-carousel-button" type="button" data-carousel-action="previous" aria-label="Ảnh trước">←</button><button class="v22-carousel-button" type="button" data-carousel-action="next" aria-label="Ảnh sau">→</button></div>
-      </div>
-    </section>
-
-    <section class="smeg-section smeg-system-build" id="system-build" aria-labelledby="system-build-title">
-      <div class="v22-shell">
-        <div class="smeg-section-head reveal">
-          <p class="smeg-eyebrow">05 · SOCIAL MEDIA FOUNDATION</p>
-          <h2 id="system-build-title" data-vi="Xây dựng các kênh social media và chuẩn hóa bộ nhận diện" data-en="Building social channels and standardising the brand identity">Xây dựng các kênh social media và chuẩn hóa bộ nhận diện</h2>
-          <p data-vi="Bắt đầu bằng việc lập kế hoạch cho các kênh social media đầu tiên của SMEG tại Việt Nam và thống nhất cách thương hiệu xuất hiện trên Facebook, Instagram, YouTube, TikTok cùng các điểm chạm bán hàng." data-en="The work began with a plan for SMEG's first official social channels in Vietnam and a consistent approach across Facebook, Instagram, YouTube, TikTok and sales touchpoints.">Bắt đầu bằng việc lập kế hoạch cho các kênh social media đầu tiên của SMEG tại Việt Nam và thống nhất cách thương hiệu xuất hiện trên Facebook, Instagram, YouTube, TikTok cùng các điểm chạm bán hàng.</p>
-        </div>
-
-        <div class="smeg-document-grid">
-          <figure class="smeg-document-card reveal"><div class="smeg-document-label"><span>01</span><strong data-vi="Strategic Planning Matrix" data-en="Strategic Planning Matrix">Strategic Planning Matrix</strong></div><img src="../assets/images/projects/smeg-digital-brand-system-v22/strategic-planning-matrix.webp" alt="Ma trận chiến lược nội dung SMEG Vietnam" loading="lazy" decoding="async" data-lightbox></figure>
-          <figure class="smeg-document-card reveal"><div class="smeg-document-label"><span>02</span><strong data-vi="Content Calendar" data-en="Content Calendar">Content Calendar</strong></div><img src="../assets/images/projects/smeg-digital-brand-system-v22/content-calendar.webp" alt="Lịch nội dung SMEG Vietnam" loading="lazy" decoding="async" data-lightbox></figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="smeg-section smeg-operations" id="operations" aria-labelledby="operations-title">
-      <div class="v22-shell">
-        <div class="smeg-split-heading reveal">
-          <div><p class="smeg-eyebrow">06 · CHANNEL OPERATIONS</p><h2 id="operations-title" data-vi="Lập lịch và quản trị nội dung tập trung với Metricool" data-en="Centralised content scheduling and management with Metricool">Lập lịch và quản trị nội dung tập trung với Metricool</h2></div>
-          <p data-vi="Metricool được sử dụng như trung tâm quản lý lịch xuất bản, phối hợp nội dung và theo dõi hiệu suất giữa các kênh digital." data-en="Metricool served as the central hub for publishing calendars, content coordination and performance monitoring across digital channels.">Metricool được sử dụng như trung tâm quản lý lịch xuất bản, phối hợp nội dung và theo dõi hiệu suất giữa các kênh digital.</p>
-        </div>
-        <div class="v22-carousel smeg-carousel smeg-landscape-carousel reveal" data-carousel data-speed="14">
-          <div class="v22-carousel-viewport">
-            <figure class="v22-carousel-slide"><img src="../assets/images/projects/smeg-digital-brand-system-v22/metricool-1902-x-910.webp" alt="Lịch xuất bản nội dung SMEG trên Metricool" loading="lazy" decoding="async" data-lightbox></figure>
-            <figure class="v22-carousel-slide"><img src="../assets/images/projects/smeg-digital-brand-system-v22/metricool-1902-x-910-2.webp" alt="Quản trị lịch nội dung đa kênh trên Metricool" loading="lazy" decoding="async" data-lightbox></figure>
+    <section class="ocpb-section bg-neutral-950 text-white">
+      <div class="ocpb-shell">
+        <div class="grid gap-14 lg:grid-cols-[.78fr_1.22fr]">
+          <div>
+            <p class="ocpb-kicker !text-[#88c54f]" data-vi="02 · Thử thách" data-en="02 · Challenges">02 · Thử thách</p>
+            <h2 class="max-w-lg text-4xl font-black leading-tight tracking-[-0.035em] md:text-5xl" data-vi="Bốn vấn đề cần giải quyết cùng lúc." data-en="Four problems had to be solved at once.">Bốn vấn đề cần giải quyết cùng lúc.</h2>
           </div>
-          <div class="v22-carousel-controls"><button class="v22-carousel-button" type="button" data-carousel-action="previous" aria-label="Ảnh trước">←</button><button class="v22-carousel-button" type="button" data-carousel-action="next" aria-label="Ảnh sau">→</button></div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <article class="rounded-3xl border border-white/15 bg-white/5 p-6"><h3 class="text-sm font-extrabold text-[#88c54f]" data-vi="Xây dựng hệ thống mới từ đầu" data-en="Building from scratch">Xây dựng hệ thống mới từ đầu</h3>
+<p class="mt-3 text-sm leading-7 text-white/65" data-vi="Không có kênh social chính thức và quy trình vận hành thống nhất." data-en="There were no official social channels or unified operating process.">Không có kênh social chính thức và quy trình vận hành thống nhất.</p></article>
+            <article class="rounded-3xl border border-white/15 bg-white/5 p-6"><h3 class="text-sm font-extrabold text-[#88c54f]" data-vi="Nhất quán giữa mọi điểm chạm" data-en="Cross-touchpoint consistency">Nhất quán giữa mọi điểm chạm</h3>
+<p class="mt-3 text-sm leading-7 text-white/65" data-vi="Social media, website và e-commerce cần cùng một nhận diện thương hiệu." data-en="Social, website and e-commerce needed one coherent brand identity.">Social media, website và e-commerce cần cùng một nhận diện thương hiệu.</p></article>
+            <article class="rounded-3xl border border-white/15 bg-white/5 p-6"><h3 class="text-sm font-extrabold text-[#88c54f]" data-vi="Global và thị trường Việt Nam" data-en="Global versus local market">Global và thị trường Việt Nam</h3>
+<p class="mt-3 text-sm leading-7 text-white/65" data-vi="Tài liệu Global cần được chuyển hóa theo bối cảnh và hành vi người dùng Việt Nam." data-en="Global materials had to be adapted to Vietnamese contexts and behaviours.">Tài liệu Global cần được chuyển hóa theo bối cảnh và hành vi người dùng Việt Nam.</p></article>
+            <article class="rounded-3xl border border-white/15 bg-white/5 p-6"><h3 class="text-sm font-extrabold text-[#88c54f]" data-vi="Nguồn hàng &amp; danh mục ưu tiên" data-en="Supply and product priorities">Nguồn hàng &amp; danh mục ưu tiên</h3>
+<p class="mt-3 text-sm leading-7 text-white/65" data-vi="Nguồn lực và nguồn hàng giới hạn đòi hỏi lựa chọn sản phẩm theo từng giai đoạn." data-en="Limited resources and supply required phased product prioritisation.">Nguồn lực và nguồn hàng giới hạn đòi hỏi lựa chọn sản phẩm theo từng giai đoạn.</p></article>
+          </div>
+        </div>
+
+        <div class="mt-24">
+          <p class="ocpb-kicker !text-[#88c54f]" data-vi="03 · Chiến lược thực hiện" data-en="03 · Strategic approach">03 · Chiến lược thực hiện</p>
+          <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            <article class="rounded-3xl bg-[#88c54f] p-7 text-neutral-950"><span class="text-[10px] font-black tracking-[0.2em]">01</span><h3 class="mt-5 text-lg font-black" data-vi="Chuẩn hóa hệ thống nhận diện" data-en="Standardise the identity system">Chuẩn hóa hệ thống nhận diện</h3>
+<p class="mt-3 text-sm leading-7" data-vi="Đồng bộ tone of voice, bố cục, hình ảnh và cách trình bày sản phẩm." data-en="Align tone of voice, layouts, imagery and product presentation.">Đồng bộ tone of voice, bố cục, hình ảnh và cách trình bày sản phẩm.</p></article>
+            <article class="rounded-3xl bg-[#88c54f] p-7 text-neutral-950"><span class="text-[10px] font-black tracking-[0.2em]">02</span><h3 class="mt-5 text-lg font-black" data-vi="Global consistency, local relevance" data-en="Global consistency, local relevance">Global consistency, local relevance</h3>
+<p class="mt-3 text-sm leading-7" data-vi="Giữ bản sắc SMEG và chuyển hóa thông điệp cho khách hàng Việt Nam." data-en="Preserve SMEG's identity while adapting messages for Vietnamese customers.">Giữ bản sắc SMEG và chuyển hóa thông điệp cho khách hàng Việt Nam.</p></article>
+            <article class="rounded-3xl bg-[#88c54f] p-7 text-neutral-950"><span class="text-[10px] font-black tracking-[0.2em]">03</span><h3 class="mt-5 text-lg font-black" data-vi="Ưu tiên sản phẩm theo giai đoạn" data-en="Phase product priorities">Ưu tiên sản phẩm theo giai đoạn</h3>
+<p class="mt-3 text-sm leading-7" data-vi="Cân đối mức độ nhận diện, khả năng cung ứng, mùa vụ và mục tiêu kinh doanh." data-en="Balance awareness, availability, seasonality and business objectives.">Cân đối mức độ nhận diện, khả năng cung ứng, mùa vụ và mục tiêu kinh doanh.</p></article>
+            <article class="rounded-3xl bg-[#6c3795] p-7 text-white"><span class="text-[10px] font-black tracking-[0.2em]">04</span><h3 class="mt-5 text-lg font-black" data-vi="Nội dung định hướng lifestyle" data-en="Lifestyle-led content">Nội dung định hướng lifestyle</h3>
+<p class="mt-3 text-sm leading-7 text-white/75" data-vi="Đặt sản phẩm trong thói quen, không gian và dịp sử dụng gần gũi." data-en="Place products in relevant routines, spaces and usage occasions.">Đặt sản phẩm trong thói quen, không gian và dịp sử dụng gần gũi.</p></article>
+            <article class="rounded-3xl bg-[#6c3795] p-7 text-white"><span class="text-[10px] font-black tracking-[0.2em]">05</span><h3 class="mt-5 text-lg font-black" data-vi="Quản trị nội dung tập trung" data-en="Centralised content operations">Quản trị nội dung tập trung</h3>
+<p class="mt-3 text-sm leading-7 text-white/75" data-vi="Dùng Metricool để lập lịch, phối hợp nội dung và duy trì nhịp xuất bản." data-en="Use Metricool to schedule, coordinate and sustain publishing cadence.">Dùng Metricool để lập lịch, phối hợp nội dung và duy trì nhịp xuất bản.</p></article>
+            <article class="rounded-3xl bg-[#6c3795] p-7 text-white"><span class="text-[10px] font-black tracking-[0.2em]">06</span><h3 class="mt-5 text-lg font-black" data-vi="Đo lường và tối ưu" data-en="Measure and optimise">Đo lường và tối ưu</h3>
+<p class="mt-3 text-sm leading-7 text-white/75" data-vi="Theo dõi reach, engagement, phản hồi thị trường và tình hình nguồn hàng." data-en="Track reach, engagement, market response and product availability.">Theo dõi reach, engagement, phản hồi thị trường và tình hình nguồn hàng.</p></article>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="smeg-section smeg-content-system" id="content-system" aria-labelledby="content-system-title">
-      <div class="v22-shell">
-        <div class="smeg-section-head reveal">
-          <p class="smeg-eyebrow">07 · CONTENT SYSTEM</p>
-          <h2 id="content-system-title" data-vi="Một hệ nội dung nhất quán, đủ linh hoạt cho nhiều nhóm sản phẩm" data-en="One coherent content system, flexible across product groups">Một hệ nội dung nhất quán, đủ linh hoạt cho nhiều nhóm sản phẩm</h2>
-          <p data-vi="Từ coffee experience và breakfast set đến food preparation, mỗi nhóm sản phẩm có câu chuyện riêng nhưng vẫn dùng chung một nguyên tắc thiết kế, tone of voice và cách tổ chức thông tin." data-en="From coffee experience and breakfast sets to food preparation, each product family has its own story while sharing one design logic, tone of voice and information structure.">Từ coffee experience và breakfast set đến food preparation, mỗi nhóm sản phẩm có câu chuyện riêng nhưng vẫn dùng chung một nguyên tắc thiết kế, tone of voice và cách tổ chức thông tin.</p>
-        </div>
-      </div>
-      <div class="v22-carousel smeg-carousel smeg-landscape-carousel reveal" data-carousel data-speed="16">
-        <div class="v22-carousel-viewport">
-          <figure class="v22-carousel-slide"><img src="../assets/images/projects/smeg-digital-brand-system-v22/content-system-gallery.webp" alt="Hệ thống nội dung cho dòng máy pha cà phê SMEG" loading="lazy" decoding="async" data-lightbox></figure>
-          <figure class="v22-carousel-slide"><img src="../assets/images/projects/smeg-digital-brand-system-v22/content-system-gallery-2.webp" alt="Hệ thống nội dung cho sản phẩm coffee experience SMEG" loading="lazy" decoding="async" data-lightbox></figure>
-          <figure class="v22-carousel-slide"><img src="../assets/images/projects/smeg-digital-brand-system-v22/content-system-gallery-3.webp" alt="Hệ thống nội dung lifestyle cho SMEG Vietnam" loading="lazy" decoding="async" data-lightbox></figure>
-        </div>
-        <div class="v22-carousel-controls"><button class="v22-carousel-button" type="button" data-carousel-action="previous" aria-label="Ảnh trước">←</button><button class="v22-carousel-button" type="button" data-carousel-action="next" aria-label="Ảnh sau">→</button></div>
-      </div>
-    </section>
-
-    <section class="smeg-section smeg-localisation" id="localisation" aria-labelledby="localisation-title">
-      <div class="v22-shell">
-        <div class="smeg-split-heading reveal">
-          <div><p class="smeg-eyebrow">08 · GLOBAL TO LOCAL</p><h2 id="localisation-title">Global consistency,<br>local relevance</h2></div>
-          <p data-vi="Duy trì ngôn ngữ thiết kế và tinh thần của SMEG Global, đồng thời địa phương hóa thông điệp, hình ảnh và tình huống sử dụng để phù hợp hơn với khách hàng Việt Nam." data-en="Maintain SMEG Global's design language and spirit while adapting messages, imagery and usage occasions for Vietnamese customers.">Duy trì ngôn ngữ thiết kế và tinh thần của SMEG Global, đồng thời địa phương hóa thông điệp, hình ảnh và tình huống sử dụng để phù hợp hơn với khách hàng Việt Nam.</p>
-        </div>
-      </div>
-      <div class="v22-carousel smeg-carousel smeg-landscape-carousel reveal" data-carousel data-speed="15">
-        <div class="v22-carousel-viewport">
-          <figure class="v22-carousel-slide"><img src="../assets/images/projects/smeg-digital-brand-system-v22/global-to-local.webp" alt="Nội dung SMEG được chuyển hóa cho bối cảnh Việt Nam" loading="lazy" decoding="async" data-lightbox></figure>
-          <figure class="v22-carousel-slide"><img src="../assets/images/projects/smeg-digital-brand-system-v22/global-to-local-2.webp" alt="Nội dung SMEG mùa lễ hội và phong cách sống" loading="lazy" decoding="async" data-lightbox></figure>
-          <figure class="v22-carousel-slide"><img src="../assets/images/projects/smeg-digital-brand-system-v22/global-to-local-3.webp" alt="Nội dung lifestyle của SMEG Vietnam" loading="lazy" decoding="async" data-lightbox></figure>
-        </div>
-        <div class="v22-carousel-controls"><button class="v22-carousel-button" type="button" data-carousel-action="previous" aria-label="Ảnh trước">←</button><button class="v22-carousel-button" type="button" data-carousel-action="next" aria-label="Ảnh sau">→</button></div>
-      </div>
-    </section>
-
-    <section class="smeg-section smeg-priorities" id="priorities" aria-labelledby="priorities-title">
-      <div class="v22-shell">
-        <div class="smeg-section-head reveal">
-          <p class="smeg-eyebrow">09 · PRODUCT PRIORITISATION</p>
-          <h2 id="priorities-title" data-vi="Triển khai nội dung theo nhóm sản phẩm ưu tiên và từng mốc thời gian" data-en="Activating content by priority product group and timing">Triển khai nội dung theo nhóm sản phẩm ưu tiên và từng mốc thời gian</h2>
-          <p data-vi="Ưu tiên sản phẩm dựa trên mức độ nhận diện, khả năng cung ứng, mục tiêu kinh doanh và mùa vụ. Cách tiếp cận này giúp nguồn lực tập trung vào những câu chuyện có khả năng tạo tác động rõ nhất." data-en="Products were prioritised by awareness, availability, business goals and seasonality, focusing resources on stories with the clearest potential impact.">Ưu tiên sản phẩm dựa trên mức độ nhận diện, khả năng cung ứng, mục tiêu kinh doanh và mùa vụ. Cách tiếp cận này giúp nguồn lực tập trung vào những câu chuyện có khả năng tạo tác động rõ nhất.</p>
-        </div>
-        <div class="smeg-priority-grid">
-          <figure class="reveal"><div><span>01</span><strong data-vi="Brand Heritage" data-en="Brand Heritage">Brand Heritage</strong></div><img src="../assets/images/projects/smeg-digital-brand-system-v22/brand-heritage.webp" alt="Nội dung di sản thương hiệu và thiết kế SMEG" loading="lazy" decoding="async" data-lightbox></figure>
-          <figure class="reveal"><div><span>02</span><strong data-vi="Product Roadmap" data-en="Product Roadmap">Product Roadmap</strong></div><img src="../assets/images/projects/smeg-digital-brand-system-v22/product-roadmap.webp" alt="Chiến dịch sản phẩm và seasonal gifting của SMEG Vietnam" loading="lazy" decoding="async" data-lightbox></figure>
+    <section class="ocpb-section bg-white">
+      <div class="ocpb-shell">
+        <div class="max-w-3xl">
+<p class="ocpb-kicker" data-vi="04 · Brand Presence Audit" data-en="04 · Brand Presence Audit">04 · Brand Presence Audit</p>
+<h2 class="ocpb-heading" data-vi="Rà soát hiện trạng thương hiệu tại thị trường Việt Nam." data-en="Auditing SMEG's brand presence in Vietnam.">Rà soát hiện trạng thương hiệu tại thị trường Việt Nam.</h2>
+</div>
+        <div class="mt-12 grid auto-rows-[180px] grid-cols-2 gap-3 md:auto-rows-[250px] md:grid-cols-4 md:gap-5">
+          <figure class="ocpb-image-frame row-span-2"><img src="../assets/images/projects/smeg-digital-brand-system/brand-presence-audit-01.jpg" alt="Bài đăng bán hàng SMEG trước khi chuẩn hóa thương hiệu" loading="lazy"></figure>
+          <figure class="ocpb-image-frame row-span-2"><img src="../assets/images/projects/smeg-digital-brand-system/brand-presence-audit-02.jpg" alt="Hình ảnh sản phẩm SMEG thiếu nhất quán trên thị trường" loading="lazy"></figure>
+          <figure class="ocpb-image-frame row-span-2"><img src="../assets/images/projects/smeg-digital-brand-system/brand-presence-audit-03.jpg" alt="Nội dung reseller về thiết bị SMEG tại Việt Nam" loading="lazy"></figure>
+          <figure class="ocpb-image-frame row-span-2"><img src="../assets/images/projects/smeg-digital-brand-system/brand-presence-audit-04.jpg" alt="Hiện trạng truyền thông SMEG phân mảnh trên mạng xã hội" loading="lazy"></figure>
+          <figure class="ocpb-image-frame col-span-2"><img src="../assets/images/projects/smeg-digital-brand-system/brand-presence-audit-01.jpg" alt="Tổng hợp hiện trạng nội dung SMEG tại Việt Nam" loading="lazy"></figure>
+          <figure class="ocpb-image-frame col-span-2"><img src="../assets/images/projects/smeg-digital-brand-system/brand-presence-audit-02.jpg" alt="So sánh cách trình bày sản phẩm SMEG trên thị trường" loading="lazy"></figure>
+          <figure class="ocpb-image-frame col-span-2 md:col-span-4"><img src="../assets/images/projects/smeg-digital-brand-system/brand-presence-audit-03.jpg" alt="Các điểm chạm thương hiệu SMEG trước dự án" loading="lazy"></figure>
         </div>
       </div>
     </section>
 
-    <section class="smeg-section smeg-channels" id="channels" aria-labelledby="channels-title">
-      <div class="v22-shell">
-        <div class="smeg-split-heading reveal">
-          <div><p class="smeg-eyebrow">10 · DIGITAL TOUCHPOINTS</p><h2 id="channels-title" data-vi="Đưa hệ thống thương hiệu vào vận hành đa kênh" data-en="Activating the brand system across digital touchpoints">Đưa hệ thống thương hiệu vào vận hành đa kênh</h2></div>
-          <p data-vi="Cùng một hệ thống nhận diện và nội dung được điều chỉnh theo vai trò riêng của social media, website và e-commerce — từ tạo cảm hứng đến hỗ trợ cân nhắc và chuyển đổi." data-en="The same identity and content system was adapted to the role of each touchpoint—from inspiration on social to consideration and conversion on website and e-commerce.">Cùng một hệ thống nhận diện và nội dung được điều chỉnh theo vai trò riêng của social media, website và e-commerce — từ tạo cảm hứng đến hỗ trợ cân nhắc và chuyển đổi.</p>
+    <section class="ocpb-section bg-neutral-50">
+      <div class="ocpb-shell">
+        <div class="max-w-4xl">
+<p class="ocpb-kicker" data-vi="05 · Social Media Foundation" data-en="05 · Social Media Foundation">05 · Social Media Foundation</p>
+<h2 class="ocpb-heading" data-vi="Xây dựng các kênh social media và chuẩn hóa bộ nhận diện thương hiệu." data-en="Building social channels and standardising the brand identity.">Xây dựng các kênh social media và chuẩn hóa bộ nhận diện thương hiệu.</h2>
+</div>
+        <div class="mt-12 grid gap-5 md:grid-cols-3">
+          <figure class="ocpb-image-frame aspect-square"><img src="../assets/images/projects/smeg-digital-brand-system/strategic-planning-matrix.jpg" alt="Ma trận chiến lược nội dung SMEG Vietnam" loading="lazy"></figure>
+          <figure class="ocpb-image-frame aspect-square"><img src="../assets/images/projects/smeg-digital-brand-system/content-calendar.jpg" alt="Lịch nội dung SMEG Vietnam" loading="lazy"></figure>
+          <figure class="ocpb-image-frame aspect-square"><img src="../assets/images/projects/smeg-digital-brand-system/metricool-calendar-01.jpg" alt="Lịch xuất bản nội dung SMEG trên Metricool" loading="lazy"></figure>
         </div>
-        <div class="smeg-channel-mosaic">
-          <figure class="smeg-mosaic-wide reveal"><img src="../assets/images/projects/smeg-digital-brand-system-v22/social-proof.webp" alt="Kênh Facebook và Instagram chính thức của SMEG Vietnam" loading="lazy" decoding="async" data-lightbox><figcaption><span>01</span><strong>Official Social Channels</strong></figcaption></figure>
-          <figure class="reveal"><img src="../assets/images/projects/smeg-digital-brand-system-v22/content-gallery-instagram.webp" alt="Hệ thống bài đăng Instagram SMEG Vietnam" loading="lazy" decoding="async" data-lightbox><figcaption><span>02</span><strong>Instagram</strong></figcaption></figure>
-          <figure class="reveal"><img src="../assets/images/projects/smeg-digital-brand-system-v22/content-gallery-reels.webp" alt="Nội dung Reels của SMEG Vietnam" loading="lazy" decoding="async" data-lightbox><figcaption><span>03</span><strong>Reels</strong></figcaption></figure>
-          <figure class="smeg-mosaic-wide reveal"><img src="../assets/images/projects/smeg-digital-brand-system-v22/smeg-website-screenshot-1918-x-948.webp" alt="Website chính thức SMEG Vietnam" loading="lazy" decoding="async" data-lightbox><figcaption><span>04</span><strong>Website</strong></figcaption></figure>
-          <figure class="smeg-mosaic-wide reveal"><img src="../assets/images/projects/smeg-digital-brand-system-v22/e-commerce-mockup.webp" alt="Gian hàng thương mại điện tử SMEG Vietnam trên thiết bị di động" loading="lazy" decoding="async" data-lightbox><figcaption><span>05</span><strong>E-commerce</strong></figcaption></figure>
+        <figure class="ocpb-image-frame mt-5 aspect-video"><img src="../assets/images/projects/smeg-digital-brand-system/metricool-calendar-02.jpg" alt="Quản trị lịch nội dung đa kênh trên Metricool" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <section class="ocpb-section bg-white">
+      <div class="ocpb-shell">
+        <div class="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
+          <div>
+<p class="ocpb-kicker" data-vi="06 · Product Prioritisation" data-en="06 · Product Prioritisation">06 · Product Prioritisation</p>
+<h2 class="ocpb-heading" data-vi="Triển khai nội dung theo nhóm sản phẩm ưu tiên và từng giai đoạn." data-en="Activating content by priority product group and phase.">Triển khai nội dung theo nhóm sản phẩm ưu tiên và từng giai đoạn.</h2>
+</div>
+          <div class="ocpb-body space-y-3">
+<p data-vi="Ưu tiên sản phẩm dựa trên mức độ nhận diện, khả năng cung ứng, mùa vụ và mục tiêu kinh doanh." data-en="Products were prioritised by awareness, availability, seasonality and business goals.">Ưu tiên sản phẩm dựa trên mức độ nhận diện, khả năng cung ứng, mùa vụ và mục tiêu kinh doanh.</p>
+<p data-vi="Cách tiếp cận này tập trung nguồn lực vào những câu chuyện có khả năng tạo tác động rõ nhất." data-en="This approach focused resources on stories with the clearest potential impact.">Cách tiếp cận này tập trung nguồn lực vào những câu chuyện có khả năng tạo tác động rõ nhất.</p>
+</div>
+        </div>
+        <div class="mt-12 grid gap-5 md:grid-cols-3">
+          <figure class="ocpb-image-frame aspect-video"><img src="../assets/images/projects/smeg-digital-brand-system/content-system-01.jpg" alt="Hệ thống nội dung cho dòng máy pha cà phê SMEG" loading="lazy"></figure>
+          <figure class="ocpb-image-frame aspect-video"><img src="../assets/images/projects/smeg-digital-brand-system/content-system-02.jpg" alt="Hệ thống nội dung cho trải nghiệm cà phê SMEG" loading="lazy"></figure>
+          <figure class="ocpb-image-frame aspect-video"><img src="../assets/images/projects/smeg-digital-brand-system/content-system-03.jpg" alt="Hệ thống nội dung lifestyle cho SMEG Vietnam" loading="lazy"></figure>
+        </div>
+        <p class="mt-6 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500" data-vi="Hệ thống nội dung và tài liệu định hướng nhóm sản phẩm" data-en="Content system and product-priority documents">Hệ thống nội dung và tài liệu định hướng nhóm sản phẩm</p>
+        <div class="mt-14 grid gap-5 md:grid-cols-2">
+          <figure class="ocpb-image-frame aspect-[8/5]"><img class="!object-contain" src="../assets/images/projects/smeg-digital-brand-system/brand-heritage.jpg" alt="Nội dung di sản thương hiệu và thiết kế SMEG" loading="lazy"></figure>
+          <figure class="ocpb-image-frame aspect-[8/5]"><img class="!object-contain" src="../assets/images/projects/smeg-digital-brand-system/product-roadmap.jpg" alt="Lộ trình sản phẩm ưu tiên của SMEG Vietnam" loading="lazy"></figure>
+        </div>
+        <p class="mt-6 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500" data-vi="Brand Heritage và Product Roadmap" data-en="Brand Heritage and Product Roadmap">Brand Heritage và Product Roadmap</p>
+      </div>
+    </section>
+
+    <section class="ocpb-section bg-neutral-50">
+      <div class="ocpb-shell">
+        <div class="max-w-4xl">
+<p class="ocpb-kicker" data-vi="07 · Global to Local" data-en="07 · Global to Local">07 · Global to Local</p>
+<h2 class="ocpb-heading" data-vi="Global consistency, local relevance." data-en="Global consistency, local relevance.">Global consistency, local relevance.</h2>
+</div>
+        <div class="mt-12 grid gap-8 md:grid-cols-2">
+          <figure><div class="ocpb-image-frame aspect-video"><img src="../assets/images/projects/smeg-digital-brand-system/global-to-local-02.jpg" alt="Nội dung SMEG được địa phương hóa cho bối cảnh Việt Nam" loading="lazy"></div>
+<figcaption class="mt-4 text-xs leading-6 text-neutral-500" data-vi="Duy trì ngôn ngữ thiết kế và tinh thần SMEG Global, đồng thời địa phương hóa thông điệp và tình huống sử dụng." data-en="Maintain SMEG Global's design language while localising messages and usage occasions.">Duy trì ngôn ngữ thiết kế và tinh thần SMEG Global, đồng thời địa phương hóa thông điệp và tình huống sử dụng.</figcaption></figure>
+          <figure><div class="ocpb-image-frame aspect-video"><img src="../assets/images/projects/smeg-digital-brand-system/global-to-local-03.jpg" alt="Nội dung lifestyle SMEG phù hợp với khách hàng Việt Nam" loading="lazy"></div>
+<figcaption class="mt-4 text-xs leading-6 text-neutral-500" data-vi="Chuyển hóa tài liệu Global thành nội dung phù hợp hơn với nhu cầu và văn hóa khách hàng Việt Nam." data-en="Adapt global materials to Vietnamese customer needs and culture.">Chuyển hóa tài liệu Global thành nội dung phù hợp hơn với nhu cầu và văn hóa khách hàng Việt Nam.</figcaption></figure>
         </div>
       </div>
     </section>
 
-    <section class="smeg-section smeg-analytics" id="analytics" aria-labelledby="analytics-title">
-      <div class="v22-shell">
-        <div class="smeg-split-heading reveal">
-          <div><p class="smeg-eyebrow">11 · MEASUREMENT &amp; OPTIMISATION</p><h2 id="analytics-title" data-vi="Theo dõi hiệu quả, phản hồi thị trường và tình hình nguồn hàng" data-en="Tracking performance, market response and product availability">Theo dõi hiệu quả, phản hồi thị trường và tình hình nguồn hàng</h2></div>
-          <p data-vi="Báo cáo trên Metricool được dùng để theo dõi reach, engagement, hiệu suất nội dung và phản hồi của người dùng; từ đó điều chỉnh tuyến nội dung, nhịp xuất bản và nhóm sản phẩm ưu tiên." data-en="Metricool reporting tracked reach, engagement, content performance and audience response, informing content themes, publishing cadence and product priorities.">Báo cáo trên Metricool được dùng để theo dõi reach, engagement, hiệu suất nội dung và phản hồi của người dùng; từ đó điều chỉnh tuyến nội dung, nhịp xuất bản và nhóm sản phẩm ưu tiên.</p>
+    <section class="ocpb-section bg-white">
+      <div class="ocpb-shell">
+        <div class="max-w-4xl">
+<p class="ocpb-kicker" data-vi="08 · Content System" data-en="08 · Content System">08 · Content System</p>
+<h2 class="ocpb-heading" data-vi="Một hệ nội dung nhất quán, đủ linh hoạt cho nhiều nhóm sản phẩm." data-en="One coherent content system, flexible across product groups.">Một hệ nội dung nhất quán, đủ linh hoạt cho nhiều nhóm sản phẩm.</h2>
+</div>
+        <div class="mt-12 grid gap-5 md:grid-cols-3">
+          <a class="group relative overflow-hidden rounded-[26px] bg-neutral-950" href="https://www.facebook.com/smegvietnam" target="_blank" rel="noopener noreferrer"><img class="aspect-video h-full w-full object-cover opacity-60 transition duration-700 group-hover:scale-105" src="../assets/images/projects/smeg-digital-brand-system/content-gallery-instagram.jpg" alt="Hệ thống bài đăng social media SMEG Vietnam" loading="lazy"><span class="ocpb-play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" aria-hidden="true">▶</span><span class="absolute bottom-5 left-5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-white">Facebook ↗</span></a>
+          <a class="group relative overflow-hidden rounded-[26px] bg-neutral-950" href="https://www.instagram.com/smegvietnam" target="_blank" rel="noopener noreferrer"><img class="aspect-video h-full w-full object-cover opacity-60 transition duration-700 group-hover:scale-105" src="../assets/images/projects/smeg-digital-brand-system/content-gallery-reels.jpg" alt="Nội dung Reels của SMEG Vietnam" loading="lazy"><span class="ocpb-play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" aria-hidden="true">▶</span><span class="absolute bottom-5 left-5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-white">Instagram ↗</span></a>
+          <a class="group relative overflow-hidden rounded-[26px] bg-neutral-950" href="https://smeg.vn/" target="_blank" rel="noopener noreferrer"><img class="aspect-video h-full w-full object-cover opacity-60 transition duration-700 group-hover:scale-105" src="../assets/images/projects/smeg-digital-brand-system/social-proof.jpg" alt="Kênh Facebook và Instagram chính thức của SMEG Vietnam" loading="lazy"><span class="ocpb-play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" aria-hidden="true">▶</span><span class="absolute bottom-5 left-5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-white">Official channels ↗</span></a>
         </div>
-      </div>
-      <div class="v22-carousel smeg-carousel smeg-dashboard-carousel reveal" data-carousel data-speed="13">
-        <div class="v22-carousel-viewport">
-          <figure class="v22-carousel-slide"><img src="../assets/images/projects/smeg-digital-brand-system-v22/metricool-analytcs-dashboard-1917x882.webp" alt="Dashboard tổng quan hiệu quả nội dung SMEG trên Metricool" loading="lazy" decoding="async" data-lightbox></figure>
-          <figure class="v22-carousel-slide"><img src="../assets/images/projects/smeg-digital-brand-system-v22/metricool-analytcs-dashboard-1917x882-2.webp" alt="Dashboard reach và interaction của SMEG Vietnam" loading="lazy" decoding="async" data-lightbox></figure>
-          <figure class="v22-carousel-slide"><img src="../assets/images/projects/smeg-digital-brand-system-v22/metricool-analytcs-dashboard-1917x882-3.webp" alt="Dashboard hiệu suất bài đăng SMEG Vietnam" loading="lazy" decoding="async" data-lightbox></figure>
-          <figure class="v22-carousel-slide"><img src="../assets/images/projects/smeg-digital-brand-system-v22/metricool-analytcs-dashboard-1917x882-4.webp" alt="Danh sách nội dung và dữ liệu hiệu suất trên Metricool" loading="lazy" decoding="async" data-lightbox></figure>
-        </div>
-        <div class="v22-carousel-controls"><button class="v22-carousel-button" type="button" data-carousel-action="previous" aria-label="Dashboard trước">←</button><button class="v22-carousel-button" type="button" data-carousel-action="next" aria-label="Dashboard sau">→</button></div>
       </div>
     </section>
 
-    <section class="smeg-section smeg-learnings" id="learnings" aria-labelledby="learnings-title">
-      <div class="v22-shell">
-        <div class="smeg-learnings-intro reveal"><p class="smeg-eyebrow">12 · <span data-vi="ĐÚC KẾT" data-en="KEY LEARNINGS">ĐÚC KẾT</span></p><h2 id="learnings-title" data-vi="Ba nguyên tắc có thể tiếp tục áp dụng cho các thương hiệu premium" data-en="Three principles that transfer to other premium brands">Ba nguyên tắc có thể tiếp tục áp dụng cho các thương hiệu premium</h2></div>
-        <div class="smeg-learning-list reveal">
-          <article><span>01</span><div><h3 data-vi="Sự nhất quán tạo nên khả năng ghi nhớ" data-en="Consistency builds memorability">Sự nhất quán tạo nên khả năng ghi nhớ</h3><p data-vi="Cảm nhận cao cấp không chỉ đến từ một thiết kế đẹp, mà từ sự nhất quán giữa hình ảnh, thông điệp, website, nội dung và trải nghiệm tại điểm bán." data-en="Premium perception comes not from one beautiful design, but from consistency across imagery, messaging, website, content and point-of-sale experience.">Cảm nhận cao cấp không chỉ đến từ một thiết kế đẹp, mà từ sự nhất quán giữa hình ảnh, thông điệp, website, nội dung và trải nghiệm tại điểm bán.</p></div></article>
-          <article><span>02</span><div><h3 data-vi="Địa phương hóa không dừng ở dịch thuật" data-en="Localisation goes beyond translation">Địa phương hóa không dừng ở dịch thuật</h3><p data-vi="Địa phương hóa là chuyển hóa giá trị thương hiệu thành những tình huống sử dụng phù hợp với nhu cầu và văn hóa của khách hàng Việt Nam." data-en="Localisation means translating brand value into usage occasions that fit Vietnamese customer needs and culture.">Địa phương hóa là chuyển hóa giá trị thương hiệu thành những tình huống sử dụng phù hợp với nhu cầu và văn hóa của khách hàng Việt Nam.</p></div></article>
-          <article><span>03</span><div><h3 data-vi="Khi nguồn lực giới hạn, ưu tiên là chiến lược" data-en="When resources are limited, prioritisation is strategy">Khi nguồn lực giới hạn, ưu tiên là chiến lược</h3><p data-vi="Việc lựa chọn đúng sản phẩm để khai thác trong từng giai đoạn tạo hiệu quả tốt hơn so với truyền tải dàn trải toàn bộ danh mục." data-en="Choosing the right product story for each phase creates more impact than spreading communication thinly across the entire portfolio.">Việc lựa chọn đúng sản phẩm để khai thác trong từng giai đoạn tạo hiệu quả tốt hơn so với truyền tải dàn trải toàn bộ danh mục.</p></div></article>
+    <section class="ocpb-section bg-neutral-950 text-white">
+      <div class="ocpb-shell">
+        <div class="grid gap-10 lg:grid-cols-[.72fr_1.28fr] lg:items-end">
+          <div>
+            <p class="ocpb-kicker !text-[#88c54f]" data-vi="09 · Digital Operating System" data-en="09 · Digital Operating System">09 · Digital Operating System</p>
+            <h2 class="text-4xl font-black leading-tight tracking-[-0.035em] md:text-5xl" data-vi="Không chỉ mở kênh, mà thiết kế một hệ thống có thể vận hành và tối ưu." data-en="Not merely opening channels, but designing a system that can operate and improve.">Không chỉ mở kênh, mà thiết kế một hệ thống có thể vận hành và tối ưu.</h2>
+          </div>
+          <p class="max-w-2xl text-sm leading-7 text-white/65" data-vi="Quy trình được tổ chức từ chiến lược, lịch nội dung và quản trị xuất bản đến địa phương hóa tài liệu, triển khai đa kênh và đo lường hiệu suất. Năm phần dưới đây thể hiện cách hệ thống được đưa vào vận hành." data-en="The workflow connected strategy, content planning, publishing operations, localisation, multi-channel execution and performance measurement. The five parts below show how the system was put into operation.">Quy trình được tổ chức từ chiến lược, lịch nội dung và quản trị xuất bản đến địa phương hóa tài liệu, triển khai đa kênh và đo lường hiệu suất. Năm phần dưới đây thể hiện cách hệ thống được đưa vào vận hành.</p>
         </div>
-        <a class="smeg-project-cta reveal" href="../index.html#projects"><span aria-hidden="true">←</span><strong data-vi="Xem thêm các dự án khác" data-en="Explore more projects">Xem thêm các dự án khác</strong></a>
+
+        <ol class="mt-14 grid gap-6 md:grid-cols-2">
+          <li class="ocpb-script-step">
+            <video controls preload="none" playsinline poster="../assets/images/projects/smeg-digital-brand-system/strategic-planning-matrix.jpg" aria-label="Bước 1: Chiến lược"><source src="../assets/videos/projects/smeg-digital-brand-system/step-01-strategy.mp4" type="video/mp4"></source><span data-vi="Trình duyệt không hỗ trợ video HTML5." data-en="Your browser does not support HTML5 video.">Trình duyệt không hỗ trợ video HTML5.</span></video>
+            <div class="ocpb-script-caption">
+<span>01</span><div>
+<strong data-vi="Chiến lược &amp; định hướng" data-en="Strategy and direction">Chiến lược &amp; định hướng</strong><p data-vi="Xác lập mục tiêu, nhóm sản phẩm, content pillars và vai trò của từng kênh." data-en="Define objectives, product groups, content pillars and the role of each channel.">Xác lập mục tiêu, nhóm sản phẩm, content pillars và vai trò của từng kênh.</p>
+</div>
+</div>
+          </li>
+          <li class="ocpb-script-step">
+            <video controls preload="none" playsinline poster="../assets/images/projects/smeg-digital-brand-system/content-calendar.jpg" aria-label="Bước 2: Lịch nội dung"><source src="../assets/videos/projects/smeg-digital-brand-system/step-02-calendar.mp4" type="video/mp4"></source><span data-vi="Trình duyệt không hỗ trợ video HTML5." data-en="Your browser does not support HTML5 video.">Trình duyệt không hỗ trợ video HTML5.</span></video>
+            <div class="ocpb-script-caption">
+<span>02</span><div>
+<strong data-vi="Content Calendar" data-en="Content calendar">Content Calendar</strong><p data-vi="Chuyển chiến lược thành kế hoạch nội dung, topic, format, deadline và đầu việc cụ thể." data-en="Translate strategy into topics, formats, deadlines and clear deliverables.">Chuyển chiến lược thành kế hoạch nội dung, topic, format, deadline và đầu việc cụ thể.</p>
+</div>
+</div>
+          </li>
+          <li class="ocpb-script-step">
+            <video controls preload="none" playsinline poster="../assets/images/projects/smeg-digital-brand-system/metricool-calendar-01.jpg" aria-label="Bước 3: Quản trị xuất bản"><source src="../assets/videos/projects/smeg-digital-brand-system/step-03-scheduling.mp4" type="video/mp4"></source><span data-vi="Trình duyệt không hỗ trợ video HTML5." data-en="Your browser does not support HTML5 video.">Trình duyệt không hỗ trợ video HTML5.</span></video>
+            <div class="ocpb-script-caption">
+<span>03</span><div>
+<strong data-vi="Lập lịch &amp; vận hành" data-en="Scheduling and operations">Lập lịch &amp; vận hành</strong><p data-vi="Dùng Metricool để phối hợp, lập lịch và duy trì nhịp xuất bản đa kênh." data-en="Use Metricool to coordinate, schedule and sustain multi-channel publishing.">Dùng Metricool để phối hợp, lập lịch và duy trì nhịp xuất bản đa kênh.</p>
+</div>
+</div>
+          </li>
+          <li class="ocpb-script-step">
+            <video controls preload="none" playsinline poster="../assets/images/projects/smeg-digital-brand-system/content-system-01.jpg" aria-label="Bước 4: Hệ thống nội dung"><source src="../assets/videos/projects/smeg-digital-brand-system/step-04-content.mp4" type="video/mp4"></source><span data-vi="Trình duyệt không hỗ trợ video HTML5." data-en="Your browser does not support HTML5 video.">Trình duyệt không hỗ trợ video HTML5.</span></video>
+            <div class="ocpb-script-caption">
+<span>04</span><div>
+<strong data-vi="Triển khai nội dung" data-en="Content activation">Triển khai nội dung</strong><p data-vi="Phát triển nội dung theo nhóm sản phẩm ưu tiên, mùa vụ và mục tiêu kinh doanh." data-en="Develop content around priority products, seasonality and business goals.">Phát triển nội dung theo nhóm sản phẩm ưu tiên, mùa vụ và mục tiêu kinh doanh.</p>
+</div>
+</div>
+          </li>
+          <li class="ocpb-script-step md:col-span-2 md:grid md:grid-cols-[1.35fr_.65fr] md:items-stretch">
+            <video class="md:!aspect-auto md:h-full" controls preload="none" playsinline poster="../assets/images/projects/smeg-digital-brand-system/global-to-local-01.jpg" aria-label="Bước 5: Địa phương hóa"><source src="../assets/videos/projects/smeg-digital-brand-system/step-05-localisation.mp4" type="video/mp4"></source><span data-vi="Trình duyệt không hỗ trợ video HTML5." data-en="Your browser does not support HTML5 video.">Trình duyệt không hỗ trợ video HTML5.</span></video>
+            <div class="ocpb-script-caption md:content-center">
+<span>05</span><div>
+<strong data-vi="Global to Local" data-en="Global to local">Global to Local</strong><p data-vi="Giữ bản sắc Global và chuyển hóa thông điệp thành bối cảnh phù hợp với Việt Nam." data-en="Preserve the global identity while adapting messages to Vietnamese contexts.">Giữ bản sắc Global và chuyển hóa thông điệp thành bối cảnh phù hợp với Việt Nam.</p>
+</div>
+</div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="ocpb-section bg-white">
+      <div class="ocpb-shell">
+        <div class="max-w-4xl">
+<p class="ocpb-kicker" data-vi="10 · Chuẩn hóa hệ thống" data-en="10 · System Standardisation">10 · Chuẩn hóa hệ thống</p>
+<h2 class="ocpb-heading" data-vi="Một nhận diện thống nhất trên social media, website và e-commerce." data-en="A consistent identity across social media, website and e-commerce.">Một nhận diện thống nhất trên social media, website và e-commerce.</h2>
+<p class="ocpb-body mt-6" data-vi="Chuẩn hóa tone of voice, bố cục, hình ảnh, quy tắc trình bày sản phẩm, nhịp xuất bản và cách chuyển hóa tài liệu Global trên từng nền tảng." data-en="Standardise tone of voice, layouts, imagery, product presentation, publishing cadence and global-to-local adaptation across platforms.">Chuẩn hóa tone of voice, bố cục, hình ảnh, quy tắc trình bày sản phẩm, nhịp xuất bản và cách chuyển hóa tài liệu Global trên từng nền tảng.</p>
+</div>
+        <div class="mt-12 grid gap-5 md:grid-cols-3">
+          <article class="ocpb-card"><span class="ocpb-pill" data-vi="Nhận diện" data-en="Identity">Nhận diện</span><h3 class="mt-6 text-xl font-black" data-vi="Brand Identity" data-en="Brand identity">Brand Identity</h3>
+<p class="mt-4 text-sm leading-7 text-neutral-600" data-vi="Đồng bộ màu sắc, typography, bố cục và cách đặt sản phẩm để tăng khả năng ghi nhớ." data-en="Align colour, typography, layout and product placement to strengthen memorability.">Đồng bộ màu sắc, typography, bố cục và cách đặt sản phẩm để tăng khả năng ghi nhớ.</p></article>
+          <article class="ocpb-card"><span class="ocpb-pill" data-vi="Nội dung" data-en="Content">Nội dung</span><h3 class="mt-6 text-xl font-black" data-vi="Content System" data-en="Content system">Content System</h3>
+<p class="mt-4 text-sm leading-7 text-neutral-600" data-vi="Tổ chức nội dung theo content pillars, nhóm sản phẩm và từng giai đoạn ưu tiên." data-en="Organise content by pillars, product groups and priority phases.">Tổ chức nội dung theo content pillars, nhóm sản phẩm và từng giai đoạn ưu tiên.</p></article>
+          <article class="ocpb-card"><span class="ocpb-pill" data-vi="Vận hành" data-en="Operations">Vận hành</span><h3 class="mt-6 text-xl font-black" data-vi="Channel Operations" data-en="Channel operations">Channel Operations</h3>
+<p class="mt-4 text-sm leading-7 text-neutral-600" data-vi="Chuẩn hóa lịch xuất bản, quy trình phối hợp và cách theo dõi hiệu suất đa kênh." data-en="Standardise publishing, coordination and multi-channel performance tracking.">Chuẩn hóa lịch xuất bản, quy trình phối hợp và cách theo dõi hiệu suất đa kênh.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="ocpb-section bg-neutral-50">
+      <div class="ocpb-shell">
+        <div class="max-w-3xl">
+<p class="ocpb-kicker" data-vi="11 · Digital Touchpoints" data-en="11 · Digital Touchpoints">11 · Digital Touchpoints</p>
+<h2 class="ocpb-heading" data-vi="Điều chỉnh nội dung theo vai trò của từng nền tảng trong hành trình khách hàng." data-en="Adapting content to each platform's role in the customer journey.">Điều chỉnh nội dung theo vai trò của từng nền tảng trong hành trình khách hàng.</h2>
+</div>
+        <div class="mt-12 grid gap-12 lg:grid-cols-2">
+          <article>
+            <div class="grid gap-4 sm:grid-cols-2">
+<figure class="ocpb-image-frame aspect-video"><img src="../assets/images/projects/smeg-digital-brand-system/content-gallery-instagram.jpg" alt="Hệ thống nội dung Instagram SMEG Vietnam" loading="lazy"></figure><figure class="ocpb-image-frame aspect-video"><img src="../assets/images/projects/smeg-digital-brand-system/content-gallery-reels.jpg" alt="Nội dung Reels SMEG Vietnam" loading="lazy"></figure>
+</div>
+            <h3 class="mt-7 text-xl font-black text-[#6c3795]">Social Media · Inspiration</h3>
+            <ul class="mt-4 space-y-2 text-sm leading-7 text-neutral-600">
+<li data-vi="Tạo nhận biết bằng nội dung lifestyle, product education và brand story." data-en="Build awareness through lifestyle, product education and brand stories.">Tạo nhận biết bằng nội dung lifestyle, product education và brand story.</li>
+<li data-vi="Điều chỉnh format cho Facebook, Instagram và Reels." data-en="Adapt formats for Facebook, Instagram and Reels.">Điều chỉnh format cho Facebook, Instagram và Reels.</li>
+<li data-vi="Duy trì nhịp xuất bản và nhận diện nhất quán." data-en="Maintain consistent publishing cadence and brand identity.">Duy trì nhịp xuất bản và nhận diện nhất quán.</li>
+</ul>
+          </article>
+          <article>
+            <div class="grid max-w-lg grid-cols-2 gap-4">
+<figure class="ocpb-image-frame aspect-[9/16]"><img src="../assets/images/projects/smeg-digital-brand-system/smeg-website.jpg" alt="Website chính thức SMEG Vietnam" loading="lazy"></figure><figure class="ocpb-image-frame aspect-[9/16]"><img src="../assets/images/projects/smeg-digital-brand-system/e-commerce-mockup.jpg" alt="Gian hàng e-commerce SMEG Vietnam" loading="lazy"></figure>
+</div>
+            <h3 class="mt-7 text-xl font-black text-[#6c3795]">Website &amp; E-commerce · Conversion</h3>
+            <ul class="mt-4 space-y-2 text-sm leading-7 text-neutral-600">
+<li data-vi="Website cung cấp thông tin thương hiệu và danh mục sản phẩm có cấu trúc." data-en="Website provides structured brand and product information.">Website cung cấp thông tin thương hiệu và danh mục sản phẩm có cấu trúc.</li>
+<li data-vi="Gian hàng e-commerce hỗ trợ cân nhắc, khuyến mại và chuyển đổi." data-en="E-commerce supports consideration, promotion and conversion.">Gian hàng e-commerce hỗ trợ cân nhắc, khuyến mại và chuyển đổi.</li>
+<li data-vi="Hình ảnh và thông tin sản phẩm được chuẩn hóa giữa các điểm chạm." data-en="Product imagery and information are standardised across touchpoints.">Hình ảnh và thông tin sản phẩm được chuẩn hóa giữa các điểm chạm.</li>
+</ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="ocpb-channel-section ocpb-section text-white" style="background-image:linear-gradient(rgba(10,10,10,.88),rgba(10,10,10,.94)),url('../assets/images/projects/smeg-digital-brand-system/hero-desktop.jpg')">
+      <div class="ocpb-shell">
+        <div class="max-w-4xl">
+<p class="ocpb-kicker !text-[#88c54f]" data-vi="Kênh Social Media SMEG Vietnam" data-en="SMEG Vietnam Social Channels">Kênh Social Media SMEG Vietnam</p>
+<h2 class="text-4xl font-black leading-tight tracking-[-0.035em] md:text-5xl" data-vi="Từ con số 0 đến hệ thống kênh chính thức có nhận diện nhất quán." data-en="From zero to an official channel system with a consistent identity.">Từ con số 0 đến hệ thống kênh chính thức có nhận diện nhất quán.</h2>
+<p class="mt-6 text-sm leading-7 text-white/70" data-vi="Facebook và Instagram được xây dựng từ đầu, kết hợp nội dung organic và paid media. Hệ thống hình ảnh được triển khai đồng bộ với website và các điểm chạm hỗ trợ bán hàng." data-en="Facebook and Instagram were built from scratch using organic content and paid media, with visuals aligned to website and sales-support touchpoints.">Facebook và Instagram được xây dựng từ đầu, kết hợp nội dung organic và paid media. Hệ thống hình ảnh được triển khai đồng bộ với website và các điểm chạm hỗ trợ bán hàng.</p>
+</div>
+        <div class="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
+          <figure class="ocpb-image-frame aspect-[9/16]"><img src="../assets/images/projects/smeg-digital-brand-system/content-system-01.jpg" alt="Nội dung sản phẩm SMEG Vietnam" loading="lazy"></figure>
+          <figure class="ocpb-image-frame aspect-[9/16]"><img src="../assets/images/projects/smeg-digital-brand-system/global-to-local-01.jpg" alt="Nội dung SMEG được địa phương hóa" loading="lazy"></figure>
+          <figure class="ocpb-image-frame aspect-[9/16]"><img src="../assets/images/projects/smeg-digital-brand-system/content-gallery-instagram.jpg" alt="Hệ thống bài đăng Instagram SMEG Vietnam" loading="lazy"></figure>
+          <figure class="ocpb-image-frame aspect-[9/16]"><img src="../assets/images/projects/smeg-digital-brand-system/content-gallery-reels.jpg" alt="Nội dung Reels SMEG Vietnam" loading="lazy"></figure>
+        </div>
+
+        <div class="mt-24 grid gap-10 lg:grid-cols-[.7fr_1.3fr] lg:items-center">
+          <div>
+<p class="ocpb-kicker !text-[#88c54f]" data-vi="Website SMEG Vietnam" data-en="SMEG Vietnam Website">Website SMEG Vietnam</p>
+<h2 class="text-3xl font-black leading-tight md:text-4xl" data-vi="Website smeg.vn hoàn thiện hệ sinh thái thông tin và hỗ trợ bán hàng." data-en="smeg.vn completes the information and sales-support ecosystem.">Website smeg.vn hoàn thiện hệ sinh thái thông tin và hỗ trợ bán hàng.</h2>
+<a class="mt-8 inline-flex items-center gap-3 rounded-full bg-[#88c54f] px-6 py-4 text-[10px] font-extrabold uppercase tracking-[0.16em] text-neutral-950 transition hover:-translate-y-1 hover:bg-white" href="https://smeg.vn/" target="_blank" rel="noopener noreferrer"><span data-vi="Truy cập website SMEG Vietnam" data-en="Visit SMEG Vietnam website">Truy cập website SMEG Vietnam</span><span aria-hidden="true">↗</span></a>
+</div>
+          <a class="group ocpb-image-frame relative aspect-video" href="https://smeg.vn/" target="_blank" rel="noopener noreferrer" aria-label="Mở website chính thức SMEG Vietnam"><img src="../assets/images/projects/smeg-digital-brand-system/smeg-website.jpg" alt="Website chính thức SMEG Vietnam" loading="lazy"><span class="ocpb-play absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" aria-hidden="true">▶</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="ocpb-section bg-white">
+      <div class="ocpb-shell">
+        <div class="max-w-4xl">
+<p class="ocpb-kicker" data-vi="12 · Digital Channel Activation" data-en="12 · Digital Channel Activation">12 · Digital Channel Activation</p>
+<h2 class="ocpb-heading" data-vi="Đưa hệ thống thương hiệu vào vận hành trên các điểm chạm hỗ trợ bán hàng." data-en="Activating the brand system across sales-support touchpoints.">Đưa hệ thống thương hiệu vào vận hành trên các điểm chạm hỗ trợ bán hàng.</h2>
+</div>
+        <div class="mt-12 grid gap-8 lg:grid-cols-2">
+          <figure class="ocpb-video-card overflow-hidden rounded-[26px] border border-neutral-200 bg-neutral-50">
+            <video controls preload="none" playsinline poster="../assets/images/projects/smeg-digital-brand-system/social-proof.jpg" aria-label="Social media SMEG Vietnam"><source src="../assets/videos/projects/smeg-digital-brand-system/channel-social.mp4" type="video/mp4"></source><span data-vi="Trình duyệt không hỗ trợ video HTML5." data-en="Your browser does not support HTML5 video.">Trình duyệt không hỗ trợ video HTML5.</span></video>
+            <figcaption class="p-6"><span class="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#6c3795]">Digital Channel 01</span><h3 class="mt-2 text-xl font-black" data-vi="Social Media &amp; Website" data-en="Social media and website">Social Media &amp; Website</h3></figcaption>
+          </figure>
+          <figure class="ocpb-video-card overflow-hidden rounded-[26px] border border-neutral-200 bg-neutral-50">
+            <video controls preload="none" playsinline poster="../assets/images/projects/smeg-digital-brand-system/e-commerce-mockup.jpg" aria-label="Gian hàng e-commerce SMEG Vietnam"><source src="../assets/videos/projects/smeg-digital-brand-system/channel-ecommerce.mp4" type="video/mp4"></source><span data-vi="Trình duyệt không hỗ trợ video HTML5." data-en="Your browser does not support HTML5 video.">Trình duyệt không hỗ trợ video HTML5.</span></video>
+            <figcaption class="p-6"><span class="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#6c3795]">Digital Channel 02</span><h3 class="mt-2 text-xl font-black" data-vi="E-commerce" data-en="E-commerce">E-commerce</h3></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="ocpb-section bg-neutral-50">
+      <div class="ocpb-shell">
+        <p class="ocpb-kicker" data-vi="Điểm đúc kết" data-en="Key takeaways">Điểm đúc kết</p>
+        <div class="mt-8 grid gap-5 lg:grid-cols-3">
+          <article class="ocpb-card"><span class="text-4xl font-black text-[#88c54f]">01</span><h2 class="mt-7 text-xl font-black" data-vi="Sự nhất quán tạo nên khả năng ghi nhớ" data-en="Consistency builds memorability">Sự nhất quán tạo nên khả năng ghi nhớ</h2>
+<p class="mt-4 text-sm leading-7 text-neutral-600" data-vi="Cảm nhận cao cấp không chỉ đến từ một thiết kế đẹp, mà từ sự nhất quán giữa hình ảnh, thông điệp, website, nội dung và trải nghiệm tại điểm bán." data-en="Premium perception comes not from one beautiful design, but from consistency across imagery, messaging, website, content and point-of-sale experience.">Cảm nhận cao cấp không chỉ đến từ một thiết kế đẹp, mà từ sự nhất quán giữa hình ảnh, thông điệp, website, nội dung và trải nghiệm tại điểm bán.</p></article>
+          <article class="ocpb-card"><span class="text-4xl font-black text-[#88c54f]">02</span><h2 class="mt-7 text-xl font-black" data-vi="Địa phương hóa không chỉ là dịch thuật" data-en="Localisation goes beyond translation">Địa phương hóa không chỉ là dịch thuật</h2>
+<p class="mt-4 text-sm leading-7 text-neutral-600" data-vi="Địa phương hóa là chuyển hóa giá trị thương hiệu thành những tình huống sử dụng phù hợp với nhu cầu và văn hóa khách hàng Việt Nam." data-en="Localisation means translating brand value into usage occasions that fit Vietnamese customer needs and culture.">Địa phương hóa là chuyển hóa giá trị thương hiệu thành những tình huống sử dụng phù hợp với nhu cầu và văn hóa khách hàng Việt Nam.</p></article>
+          <article class="ocpb-card"><span class="text-4xl font-black text-[#88c54f]">03</span><h2 class="mt-7 text-xl font-black" data-vi="Khi nguồn lực giới hạn, ưu tiên là chiến lược" data-en="When resources are limited, prioritisation is strategy">Khi nguồn lực giới hạn, ưu tiên là chiến lược</h2>
+<p class="mt-4 text-sm leading-7 text-neutral-600" data-vi="Lựa chọn đúng sản phẩm để khai thác trong từng giai đoạn tạo hiệu quả tốt hơn so với truyền tải dàn trải toàn bộ danh mục." data-en="Choosing the right product story for each phase creates more impact than spreading communication thinly across the full portfolio.">Lựa chọn đúng sản phẩm để khai thác trong từng giai đoạn tạo hiệu quả tốt hơn so với truyền tải dàn trải toàn bộ danh mục.</p></article>
+        </div>
+        <div class="mt-14"><a class="inline-flex items-center gap-3 rounded-full bg-[#6c3795] px-7 py-4 text-xs font-extrabold uppercase tracking-[0.14em] text-white transition hover:-translate-y-1 hover:bg-[#88c54f] hover:text-neutral-950" href="../index.html#projects"><span aria-hidden="true">←</span><span data-vi="Xem thêm các dự án khác" data-en="Explore other projects">Xem thêm các dự án khác</span></a></div>
       </div>
     </section>
   </main>
 
-  <footer class="smeg-footer"><div class="v22-shell"><span>© 2026 Trần Quang Nhật</span><a href="#top" data-vi="Lên đầu trang ↑" data-en="Back to top ↑">Lên đầu trang ↑</a></div></footer>
+  <footer class="bg-neutral-950 py-8 text-white/55">
+    <div class="ocpb-shell flex flex-col gap-2 text-[10px] font-semibold uppercase tracking-[0.15em] sm:flex-row sm:items-center sm:justify-between">
+<span>© 2026 Tran Quang Nhat</span><span data-vi="Marketing Portfolio · TP. Hồ Chí Minh" data-en="Marketing Portfolio · Ho Chi Minh City">Marketing Portfolio · TP. Hồ Chí Minh</span>
+</div>
+  </footer>
 
-  <div class="v22-lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Xem ảnh lớn">
-    <button class="v22-lightbox-close" type="button" aria-label="Đóng ảnh" disabled>×</button>
-    <img src="../assets/images/favicon.png" alt="">
-    <p class="v22-lightbox-caption"></p>
-  </div>
-
-  <script src="../assets/js/case-studies-v22.js" defer></script>
-  <script src="../assets/js/smeg-case-study.js" defer></script>
+  <script src="../assets/js/ocpb-case-study.js?v=21"></script>
 </body>
 </html>
